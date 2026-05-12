@@ -1,0 +1,96 @@
+run_id: R618
+title: "W3 Wi-Fi auto latency under moderate iperf load (rep4)"
+date: "2026-04-25"
+
+git:
+  branch: "testbed-dev"
+  commit: "db9c9e5"
+  tag: "v0.4.0"
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  analysis: "0.4.0"
+  pipeline: "0.4.0"
+
+experiment:
+  plan_id: "W3_A"
+  workload: "W3"
+  comparison_group: "W3_wifi_auto"
+  run_type: "load"
+  replicate_id: "rep4"
+  baseline_ref: "R600"
+  protocol: "wifi"
+  topology: "near"
+  interference: "iperf"
+  load_level: "moderate"
+  node_count: 1
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  trigger: "auto"
+  timestamp_source: "ESP32_RTT"
+  normalization_method: "none"
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  iperf_server: "iperf-server (<private-ip>)"
+  esp32_node: "wifi01"
+  node_id: "wifi01"
+  sensor: null
+
+software:
+  home_assistant: "2026.3.4"
+  mqtt_broker: "Mosquitto"
+  iperf_profile: "20Mbps_tcp"
+  iperf_target_mbps: 20
+  iperf_mean_interval_mbps: 19.995
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+
+timing:
+  timestamp_source: "ESP32 RTT using rtt_us"
+  expected_events: 100
+  actual_events: 100
+  mean_interval_ms: 2978.364
+  jitter_ms: 140.64
+  selected_boot_id: 346572485
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - "raw/W3_wifi_auto_moderate_iperf.log"
+    - "raw/W3_wifi_auto_moderate_iperf_summary.json"
+    - "raw/W3_wifi_auto_moderate_mqtt_events.csv"
+    - "raw/W3_wifi_auto_moderate_power_samples.csv"
+    - "raw/W3_wifi_auto_moderate_serial.log"
+  analysis:
+    - "analysis/metrics.json"
+    - "analysis/summary.json"
+  derived: []
+  figures: []
+
+result_summary:
+  status: "complete"
+  baseline_run: "R600"
+  power_sample_count: 0
+  event_count: 100
+  expected_event_count: 100
+  latency_sample_count: 100
+  mean_latency_ms: 40.79
+  median_latency_ms: 13.986
+  p95_latency_ms: 26.13
+  max_latency_ms: 1310.258
+  drop_rate: 0.0
+  reliability_rate: 1.0
+  delta_mean_latency_ms: 11.79
+  delta_p95_latency_ms: 6.096
+  impact_label: "high"
+  key_observation: "Moderate load replicate completed with 100 of 100 expected events, median RTT 13.99 ms, and impact label high."
+  anomalies:
+    - "Extreme RTT sample reached 1310.258 ms."
+    - "Boot-aware analysis selected 200 rows from 204 original MQTT rows."
+
+notes: >
+  W3 Wi-Fi automated latency replicate `rep4` under moderate iperf load, compared against baseline `R600`. Event reliability was complete for the selected boot segment. An extreme RTT tail sample inflates the mean and temporal standard deviation; median and P95 are the more stable summary statistics for this run. Relative to R600, mean RTT delta is 11.79 ms and P95 delta is 6.10 ms.

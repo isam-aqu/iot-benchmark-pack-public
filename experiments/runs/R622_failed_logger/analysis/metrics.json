@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "script": "python/analyze_w3_run.py",
+    "generated_at_utc": "2026-04-30T13:03:23Z",
+    "generated_at_local": "2026-04-30T16:03:23+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.4",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.1",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.3"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R622/analysis/summary.json",
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R622/analysis/metrics.json"
+    ],
+    "extra": {
+      "run_id": "R622"
+    }
+  },
+  "run_id": "R622",
+  "baseline_run_id": "R620",
+  "w3_context": {
+    "comparison_group": "W3_zigbee_auto",
+    "load_level": "moderate",
+    "interference": "iperf",
+    "iperf_profile": "20Mbps_tcp",
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0
+  },
+  "w3": {
+    "mean_latency_ms": 1.0991240533333344,
+    "std_latency_ms": 4.181734960997758,
+    "p95_latency_ms": 9.664204799999997,
+    "temporal_std_ms": 1.7167845995921518,
+    "drop_rate": 0.25,
+    "reliability_rate": 0.75
+  },
+  "baseline": {
+    "mean_latency_ms": 2.1605913599999993,
+    "std_latency_ms": 4.339528411093452,
+    "p95_latency_ms": 11.215231999999999,
+    "temporal_std_ms": 0.9744398036475812,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0
+  },
+  "w3_delta": {
+    "delta_mean_latency_ms": -1.061467306666665,
+    "delta_std_latency_ms": -0.1577934500956939,
+    "delta_p95_latency_ms": -1.5510272000000018,
+    "delta_temporal_std_ms": 0.7423447959445706,
+    "delta_drop_rate": 0.25,
+    "delta_reliability_rate": -0.25,
+    "pct_mean_latency_increase": -49.128554631759016,
+    "pct_p95_latency_increase": -13.829648820461335
+  },
+  "impact_label": "negligible"
+}

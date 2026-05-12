@@ -1,0 +1,71 @@
+run_id: R500
+title: W2 v2 connected idle control run
+date: 2026-04-10
+git:
+  branch: testbed-dev
+  commit: 7253543
+  tag: v0.2.1
+versions:
+  firmware: 0.2.1
+  ha_config: 0.2.1
+  analysis: 0.2.1
+  pipeline: 0.2.1
+experiment:
+  plan_id: W2
+  workload: W2
+  comparison_group: null
+  run_type: control
+  replicate_id: primary
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 0
+  trigger: idle_connected
+  timestamp_source: INA231 + python_logger
+  normalization_method: none
+  is_baseline: null
+hardware:
+  controller: Raspberry Pi 4 running Home Assistant OS
+  logger_host: external laptop (Ethernet; Wi-Fi disabled)
+  esp32_node: wifi01_power
+  node_id: wifi01_power
+  sensor: INA231
+  shunt_resistor_ohm: 0.1
+  bus_connection: BUS pin connected to ESP32 VIN
+software:
+  home_assistant: 2026.3.4
+  supervisor: 2026.03.2
+  os: 17.1
+  frontend: 20260312.1
+  mqtt_broker: Mosquitto
+  mqtt_telemetry_enabled: false
+  mqtt_power_reporting_enabled: false
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+  ack_helper_enabled: false
+timing:
+  timestamp_source: INA231 + python_logger
+  power_sampling_interval_ms: 100
+  experiment_duration_ms: null
+  ntp_enabled: false
+  timezone: Asia/Hebron
+artifacts:
+  raw:
+    - raw/W2_wifi_idle_quiet_test_mqtt_events.csv
+    - raw/W2_wifi_idle_quiet_test_power_samples.csv
+  analysis: []
+  derived: []
+  figures: []
+result_summary:
+  status: planned
+  power_sample_count: null
+  event_count: null
+  key_observation: Idle connected baseline for ESP32 + INA231 power node; Wi-Fi and MQTT connected; periodic telemetry disabled; target duration 5 min
+  anomalies: []
+analysis:
+  summary: null
+  metrics: null
+notes: Idle connected baseline for ESP32 + INA231 power node; Wi-Fi and MQTT connected; periodic telemetry disabled; target duration 5 min

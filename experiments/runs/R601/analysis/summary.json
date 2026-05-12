@@ -1,0 +1,39 @@
+{
+  "run_id": "W3_wifi_auto_light",
+  "latency": {
+    "available": true,
+    "source": "rtt_us",
+    "mean_latency_ms": 30.007599999999996,
+    "std_latency_ms": 146.41978946587906,
+    "p95_latency_ms": 23.095649999999996,
+    "p99_latency_ms": 55.55210000000736,
+    "max_latency_ms": 1478.984,
+    "temporal_std_ms": 46.082179415619365,
+    "outlier_rate": 0.01,
+    "sample_count": 100,
+    "median_latency_ms": 14.0005,
+    "mad_latency_ms": 1.8685,
+    "p99_threshold_ms": 55.55210000000736,
+    "extreme_count": 1,
+    "extreme_max_ms": 1478.984
+  },
+  "reliability": {
+    "loss_rate": 0.0,
+    "actual_events": 100,
+    "expected_events": 100,
+    "missing_events": 0,
+    "duplicates": 0
+  },
+  "timing": {
+    "mean_interval_ms": 3000.140888888889,
+    "std_interval_ms": 144.33442252296763,
+    "jitter_ms": 144.33442252296763
+  },
+  "data_quality": {
+    "total_rows": 200,
+    "unique_payload_rows": 200,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

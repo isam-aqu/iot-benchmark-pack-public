@@ -1,0 +1,9 @@
+{
+  "run_id": "W2_wifi_periodic_5s_quiet_telemetry_v2_rep5",
+  "source_log": "<local-path>",
+  "type": "experiment_complete",
+  "exp": "W2_wifi_periodic_5s_quiet_telemetry_v2_rep5",
+  "duration_ms": "300000",
+  "power_sample_count": "3000",
+  "event_count": "60"
+}

@@ -1,0 +1,26 @@
+exp_run_id: R533
+run_id: W2_wifi_periodic_4s_quiet_telemetry_v2
+
+classification:
+  protocol: wifi
+  mode: telemetry
+  comparison_group: W2_4s
+  replicate_id: primary
+
+execution:
+  interval_ms: 4000
+  duration_sec: 450
+
+environment:
+  topology: near
+  interference: quiet
+
+software:
+  pipeline_version: 0.3.0
+  commit: 3a23203
+
+status:
+  accepted: true
+
+notes: >
+  Telemetry run paired with R532 for 4 s interval energy comparison.

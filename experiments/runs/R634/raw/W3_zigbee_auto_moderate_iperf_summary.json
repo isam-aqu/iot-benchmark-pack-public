@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "script": "run_all.sh:analyze_iperf_log",
+    "generated_at_utc": "2026-04-30T15:39:08Z",
+    "generated_at_local": "2026-04-30T18:39:08+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.5",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.2",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.4"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260430183301-44405",
+    "inputs": [
+      "experiments/runs/R634/raw/W3_zigbee_auto_moderate_iperf.log"
+    ],
+    "outputs": [
+      "experiments/runs/R634/raw/W3_zigbee_auto_moderate_iperf_summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_zigbee_auto_moderate"
+    }
+  },
+  "iperf_log": "W3_zigbee_auto_moderate_iperf.log",
+  "interval_samples": 368,
+  "target_mbps": 20,
+  "mean_interval_mbps": 19.997282608695652,
+  "std_interval_mbps": 0.30933383027451805,
+  "min_interval_mbps": 18.9,
+  "max_interval_mbps": 21.1
+}

@@ -1,0 +1,37 @@
+{
+  "plot_name": "W2 telemetry energy detectability and low-rate validation",
+  "primary_csv": "analysis/w2/primary_fw05/tables/groups.csv",
+  "primary_json": "analysis/w2/primary_fw05/tables/groups.json",
+  "run_sheet": "docs/run_sheet.csv",
+  "output_png": "analysis/w2/primary_fw05/figures/w2_energy_delta_power_fw05_primary.png",
+  "output_pdf": "analysis/w2/primary_fw05/figures/w2_energy_delta_power_fw05_primary.pdf",
+  "output_svg": "analysis/w2/primary_fw05/figures/w2_energy_delta_power_fw05_primary.svg",
+  "paper_output_png": "docs/paper_figures/fig08_w2_telemetry_energy_detectability.png",
+  "paper_output_pdf": "docs/paper_figures/fig08_w2_telemetry_energy_detectability.pdf",
+  "paper_output_svg": "docs/paper_figures/fig08_w2_telemetry_energy_detectability.svg",
+  "low_rate_groups": [
+    "W2_7s",
+    "W2_8s",
+    "W2_9s",
+    "W2_10s"
+  ],
+  "event_ranges": {
+    "W2_7s": [
+      103,
+      103
+    ],
+    "W2_8s": [
+      103,
+      103
+    ],
+    "W2_9s": [
+      103,
+      103
+    ],
+    "W2_10s": [
+      102,
+      103
+    ]
+  },
+  "encoding": "Formal/unresolved classes use marker shape and marker fill; low-rate series use marker shape and line style; noise band uses hatching."
+}

@@ -1,0 +1,1 @@
+pi_rx_time_ns,topic,type,node,protocol,exp,seq,trigger,t_local_us,wifi_rssi,rtt_us,old_state,new_state,ha_time,event_id,ha_context_id,mqtt_retain,pipeline_version

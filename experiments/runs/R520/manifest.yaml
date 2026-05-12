@@ -1,0 +1,94 @@
+exp_run_id: R520
+run_id: W2_wifi_periodic_3s_quiet_ctrl_v2
+
+study:
+  workload: W2
+  objective: >
+    Matched control run for 3 s Wi-Fi periodic workload under W2 v2.
+    Quantifies scheduler-enabled baseline power without telemetry publication.
+
+classification:
+  protocol: wifi
+  mode: control
+  comparison_group: W2_3s
+  replicate_id: primary
+  is_baseline: false
+
+environment:
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+
+software:
+  pipeline_version: 0.3.0
+  firmware_version: 0.3.0
+  ha_config_version: 0.3.0
+  analysis_version: 0.3.0
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+
+execution:
+  duration_sec: 330
+  target_effective_window_sec: 300
+  interval_ms: 3000
+  serial_port: /dev/serial-port
+  serial_baud: 115200
+  ble_logger: disabled
+  ack_helper: disabled
+  timestamp_source: "ESP32 t_local_us + serial_power + MQTT_event"
+
+logging:
+  raw_dir: experiments/runs/R520/raw
+  analysis_dir: experiments/runs/R520/analysis
+
+artifacts:
+  raw:
+    - W2_wifi_periodic_3s_quiet_ctrl_v2_serial.log
+    - W2_wifi_periodic_3s_quiet_ctrl_v2_power_samples.csv
+    - W2_wifi_periodic_3s_quiet_ctrl_v2_mqtt_events.csv
+    - W2_wifi_periodic_3s_quiet_ctrl_v2_meta.json
+  analysis:
+    - summary.json
+    - summary.md
+    - metrics.json
+
+results:
+  power_sample_count: 3001
+  event_count: 100
+  mean_power_mW: 368.77273934155284
+  median_power_mW: 332.213715
+  std_power_mW: 115.02273976289169
+  min_power_mW: 300.458008
+  p95_power_mW: 715.725159
+  max_power_mW: 813.435059
+  energy_mJ: 110606.55691147584
+
+  timing:
+    mean_interval_ms: 2999.999161616162
+    median_interval_ms: 3000.0
+    std_interval_ms: 0.037990521661809155
+    jitter_ms: 0.037990521661809155
+    max_interval_ms: 3000.074
+    min_interval_ms: 2999.92
+
+  reliability:
+    expected_events: 100
+    actual_events: 100
+    missing_events: 0
+    loss_rate: 0.0
+    duplicates: 0
+
+  latency:
+    available: false
+    reason: "No recognized latency column with valid numeric samples."
+
+quality_assessment:
+  parse_status: passed
+  summary_status: passed
+  metrics_status: passed
+  accepted: true
+  notes: >
+    Clean 3 s control run with correct event count, very low scheduler jitter,
+    no observed event loss, and valid use as baseline for R521.

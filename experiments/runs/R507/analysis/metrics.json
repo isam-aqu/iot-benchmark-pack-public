@@ -1,0 +1,17 @@
+{
+  "run_id": "W2_wifi_idle_quiet_ctrl_v2",
+  "run_sheet_id": "R507",
+  "baseline_run_id": null,
+  "energy": null,
+  "timing": {},
+  "reliability": {
+    "expected_events": 0,
+    "actual_events": 0,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "event_coupling": {},
+  "power_event_relation": {},
+  "quality_flags": {}
+}

@@ -1,0 +1,42 @@
+{
+  "run_id": "W2_wifi_periodic_1s_quiet_ctrl_v2",
+  "power": {
+    "power_sample_count": 3001,
+    "mean_power_mW": 358.6891879133622,
+    "median_power_mW": 324.885498,
+    "std_power_mW": 103.77273925646057,
+    "min_power_mW": 295.57251,
+    "p95_power_mW": 688.854919,
+    "max_power_mW": 764.580139,
+    "samples_above_500mW": 278,
+    "fraction_above_500mW": 0.09263578807064311,
+    "mean_current_mA": 72.69819839020326,
+    "median_current_mA": 65.172516,
+    "max_current_mA": 167.57251,
+    "mean_bus_v": 4.982204681772742,
+    "min_bus_v": 4.6825,
+    "max_bus_v": 5.01375,
+    "duration_s_from_t_local": 299.999189,
+    "mean_sample_interval_ms": 99.99972966666667,
+    "median_sample_interval_ms": 100.0,
+    "max_sample_interval_ms": 100.947,
+    "energy_mJ": 107600.5582804612,
+    "unique_last_event_seq_count": 301,
+    "mean_dt_since_event_ms": 538.3319063333333,
+    "median_dt_since_event_ms": 538.0825,
+    "max_dt_since_event_ms": 988.788
+  },
+  "events": {
+    "event_count": 301,
+    "first_event_seq": 1,
+    "last_event_seq": 301,
+    "unique_event_seq_count": 301,
+    "duration_s_from_events": 299.999085,
+    "mean_event_interval_ms": 999.99695,
+    "median_event_interval_ms": 999.999,
+    "max_event_interval_ms": 1000.707,
+    "trigger_counts": {
+      "periodic": 301
+    }
+  }
+}

@@ -1,0 +1,101 @@
+run_id: R665
+title: W3 BLE AP-channel extension ch1 adv37 heavy-load
+date: '2026-05-02'
+git:
+  branch: testbed-dev
+  commit: eaf2d88
+  tag: null
+  dirty: true
+versions:
+  pipeline: 0.4.6
+  firmware: 0.4.1
+  ha_config: 0.3.0
+  analysis: 0.4.4
+  logger: 0.4.1
+  ha_automation: 0.4.0
+  experiment_protocol: 0.4.5
+experiment:
+  plan_id: W3_BLE_CH
+  workload: W3
+  protocol: ble
+  topology: near
+  interference: iperf
+  load_level: heavy
+  node_count: 1
+  interval_ms: "3000\xB1250"
+  comparison_group: W3_ble_ap_ch1_20mhz
+  run_type: load
+  replicate_id: rep3
+  baseline_ref: R664
+  trigger: esp32_auto_advertising
+  normalization_method: median_offset
+  ap_channel: '1'
+  ap_width_mhz: 20
+  target_ble_advertising_channel: '37'
+  target_ble_advertising_frequency: 2402 MHz
+  rf_channel_note: AP channel/width is based on the manual planned setup for this
+    block; raw run metadata does not independently encode AP RF settings.
+hardware:
+  controller: Raspberry Pi 4 running Home Assistant OS
+  logger_host: external laptop (Ethernet; Wi-Fi disabled)
+  esp32_node: ble01
+  node_id: ble01
+  wifi_ap: netis WF2419, firmware V2.2.36123
+  iperf_server: iperf-server (<private-ip>)
+software:
+  home_assistant: 2026.3.4
+  mqtt_broker: Mosquitto
+  ble_logger_expected_exp_code: W3BL
+  iperf_profile: 50Mbps_tcp
+timing:
+  timestamp_source: t_local_us + python_logger
+  expected_events: 100
+  actual_events: 99
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  timezone: Asia/Hebron
+commands:
+  run: EXP_RUN_ID=R665 ./run_all.sh --run-id W3_ble_auto_heavy --enable-ble --disable-ack
+    --duration-sec 360 --serial-port /dev/serial-port --serial-baud 115200 --iperf-load
+    heavy --reset-esp32
+  analysis:
+  - python3 python/summarize_w3_run.py experiments/runs/R665/raw --run-id W3_ble_auto_heavy
+    --expected-events 100
+  - python3 python/analyze_w3_run.py experiments/runs/R665/raw --run-id R665 --run-sheet
+    docs/run_sheet.csv
+artifacts:
+  raw:
+  - raw/W3_ble_auto_heavy_ble_events.csv
+  - raw/W3_ble_auto_heavy_iperf.log
+  - raw/W3_ble_auto_heavy_iperf_summary.json
+  - raw/W3_ble_auto_heavy_mqtt_events.csv
+  - raw/W3_ble_auto_heavy_power_samples.csv
+  - raw/W3_ble_auto_heavy_serial.log
+  - raw/run_metadata.json
+  analysis:
+  - analysis/metrics.json
+  - analysis/summary.json
+  notes:
+  - notes.md
+result_summary:
+  status: complete
+  expected_events: 100
+  actual_events: 99
+  missing_events: 1
+  missing_sequences:
+  - 71
+  duplicate_payload_rows: 0
+  median_latency_ms: 0.0
+  mad_latency_ms: 85.945068
+  p95_latency_ms: 173.461792
+  p99_latency_ms: 319.296138
+  max_latency_ms: 320.240967
+  iperf_mean_mbps: 50.002168
+  key_observation: The ESP32 emitted 100/100 scheduled advertisements; the BLE logger
+    captured 99/100 unique advertisements.
+  anomalies:
+  - BLE sequences 71 were missed by the logger.
+  - MQTT and power CSVs are header-only, as expected for BLE latency capture.
+notes: Completed W3 BLE AP-channel extension run for AP channel 1 / BLE advertising
+  channel 37. Interpret RF-channel attribution using the manual AP setup note because
+  raw metadata does not encode AP RF settings.

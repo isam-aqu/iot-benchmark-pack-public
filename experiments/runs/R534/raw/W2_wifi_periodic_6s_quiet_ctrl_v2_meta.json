@@ -1,0 +1,9 @@
+{
+  "run_id": "W2_wifi_periodic_6s_quiet_ctrl_v2",
+  "source_log": "experiments/runs/R534/raw/W2_wifi_periodic_6s_quiet_ctrl_v2_serial.log",
+  "type": "experiment_complete",
+  "exp": "W2_wifi_periodic_6s_quiet_ctrl_v2",
+  "duration_ms": "360000",
+  "power_sample_count": "3601",
+  "event_count": "60"
+}

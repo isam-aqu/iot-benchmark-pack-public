@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "script": "run_all.sh",
+    "generated_at_utc": "2026-05-02T13:49:59Z",
+    "generated_at_local": "2026-05-02T16:49:59+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "eaf2d88",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260502164350-52914",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R665/raw/run_metadata.json"
+    ],
+    "extra": {
+      "phase": "end",
+      "exp_run_id": "R665",
+      "run_id": "W3_ble_auto_heavy"
+    }
+  },
+  "run": {
+    "exp_run_id": "R665",
+    "run_id": "W3_ble_auto_heavy",
+    "run_instance_id": "20260502164350-52914",
+    "command": {
+      "cwd": "<local-path>",
+      "shell": "EXP_RUN_ID=R665 ./run_all.sh --run-id W3_ble_auto_heavy --enable-ble --disable-ack --duration-sec 360 --serial-port /dev/serial-port --serial-baud 115200 --iperf-load heavy --reset-esp32",
+      "secrets_omitted": [
+        "HA_TOKEN",
+        "HOME_ASSISTANT_TOKEN"
+      ]
+    },
+    "status": "complete",
+    "exit_code": 0,
+    "duration_sec": "360",
+    "enable_ble": "1",
+    "ble_expected_exp_code": "W3BL",
+    "enable_ack": "0",
+    "reset_esp32": "1",
+    "iperf_load": "heavy",
+    "iperf_load_mbps": "50",
+    "iperf_proto": "tcp",
+    "iperf_server": "<private-ip>",
+    "iperf_port": "5201",
+    "zigbee_trigger": "0",
+    "zigbee_entity_id": "light.benchmark_device",
+    "zigbee_event_count": "100",
+    "zigbee_base_interval_ms": "3000",
+    "zigbee_jitter_ms": "250",
+    "started_at_utc": "2026-05-02T13:43:50Z",
+    "started_at_local": "2026-05-02T16:43:50+03:00",
+    "ended_at_utc": "2026-05-02T13:49:59Z",
+    "ended_at_local": "2026-05-02T16:49:59+03:00"
+  },
+  "history": [
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-02T13:43:50Z",
+      "generated_at_local": "2026-05-02T16:43:50+03:00"
+    },
+    {
+      "phase": "end",
+      "status": "complete",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-02T13:49:59Z",
+      "generated_at_local": "2026-05-02T16:49:59+03:00"
+    }
+  ]
+}

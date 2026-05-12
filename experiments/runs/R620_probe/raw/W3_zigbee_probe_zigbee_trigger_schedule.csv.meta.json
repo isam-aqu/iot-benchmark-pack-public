@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "script": "python/ha_zigbee_trigger.py",
+    "generated_at_utc": "2026-04-30T11:16:39Z",
+    "generated_at_local": "2026-04-30T14:16:39+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.1",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.1",
+      "logger": "0.4.0",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.1"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260430141639-99065",
+    "outputs": [
+      "experiments/runs/R620_probe/raw/W3_zigbee_probe_zigbee_trigger_schedule.csv",
+      "experiments/runs/R620_probe/raw/W3_zigbee_probe_zigbee_trigger_schedule.csv.meta.json"
+    ],
+    "extra": {
+      "run_id": "W3_zigbee_probe",
+      "entity_id": "light.benchmark_device",
+      "events": 4,
+      "base_interval_ms": 3000,
+      "jitter_ms": 0,
+      "seed": 12388
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "run_id": "W2_wifi_periodic_1s_quiet_ctrl_v2",
+  "run_sheet_id": "R508",
+  "baseline_run_id": null,
+  "energy": {
+    "total_per_event_mJ": 357.4769378088413,
+    "incremental_per_event_mJ": null
+  },
+  "latency": {
+    "available": false,
+    "source": null,
+    "sample_count": 0
+  },
+  "timing": {
+    "mean_interval_ms": 999.9969500000001,
+    "median_interval_ms": 999.999,
+    "std_interval_ms": 0.1190798367696382,
+    "jitter_ms": 0.1190798367696382,
+    "max_interval_ms": 1000.707,
+    "min_interval_ms": 999.002
+  },
+  "reliability": {
+    "expected_events": 301,
+    "actual_events": 301,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "event_coupling": {},
+  "power_event_relation": {},
+  "quality_flags": {
+    "missing_latency": true
+  }
+}

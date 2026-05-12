@@ -1,0 +1,38 @@
+# W2_wifi_periodic_10s_quiet_ctrl_v2 Summary
+
+## Power
+- power_sample_count: 3001
+- mean_power_mW: 365.3068189270243
+- median_power_mW: 332.213715
+- std_power_mW: 107.83098655677726
+- min_power_mW: 227.175568
+- p95_power_mW: 708.396912
+- max_power_mW: 803.664063
+- samples_above_500mW: 272
+- fraction_above_500mW: 0.09063645451516161
+- mean_current_mA: 72.9993699986671
+- median_current_mA: 65.758774
+- max_current_mA: 159.853424
+- mean_bus_v: 5.031352465844718
+- min_bus_v: 4.83125
+- max_bus_v: 5.0825
+- duration_s_from_t_local: 299.999112
+- mean_sample_interval_ms: 99.999704
+- median_sample_interval_ms: 99.999
+- max_sample_interval_ms: 100.187
+- energy_mJ: 109606.21688072695
+- unique_last_event_seq_count: 31
+- mean_dt_since_event_ms: 4978.113204926445
+- median_dt_since_event_ms: 4958.408
+- max_dt_since_event_ms: 9958.496
+
+## Events
+- event_count: 30
+- first_event_seq: 1
+- last_event_seq: 30
+- unique_event_seq_count: 30
+- duration_s_from_events: 290.000038
+- mean_event_interval_ms: 10000.00131034483
+- median_event_interval_ms: 10000.0
+- max_event_interval_ms: 10000.084
+- trigger_counts: {'periodic': 30}

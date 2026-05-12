@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "script": "python/summarize_w3_run.py",
+    "generated_at_utc": "2026-04-30T11:19:05Z",
+    "generated_at_local": "2026-04-30T14:19:05+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.2",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.1",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.1"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R620_probe2/raw"
+    ],
+    "outputs": [
+      "experiments/runs/R620_probe2/analysis/summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_zigbee_probe2"
+    }
+  },
+  "run_id": "W3_zigbee_probe2",
+  "boot_selection": {
+    "original_rows": 4,
+    "selected_rows": 4,
+    "selected_boot_id": []
+  },
+  "latency": {
+    "available": true,
+    "source": "ha_time_pi_rx_median_normalized",
+    "mean_latency_ms": 7.200447999999998,
+    "std_latency_ms": 15.32510219925605,
+    "p95_latency_ms": 25.775103999999985,
+    "p99_latency_ms": 29.25844479999999,
+    "max_latency_ms": 30.129279999999994,
+    "temporal_std_ms": null,
+    "outlier_rate": 0.0,
+    "sample_count": 4,
+    "median_latency_ms": 0.0,
+    "mad_latency_ms": 1.2144639999999995,
+    "p99_threshold_ms": 29.25844479999999,
+    "extreme_count": 1,
+    "extreme_max_ms": 30.129279999999994
+  },
+  "reliability": {
+    "loss_rate": 0.0,
+    "actual_events": 4,
+    "expected_events": 4,
+    "missing_events": 0,
+    "extra_events": 0,
+    "duplicates": 0,
+    "method": "event_id_count"
+  },
+  "timing": {
+    "mean_interval_ms": 2994.2016666666664,
+    "std_interval_ms": 37.20597366463251,
+    "jitter_ms": 37.20597366463251,
+    "source": "pi_rx_time_ns"
+  },
+  "data_quality": {
+    "total_rows": 4,
+    "unique_payload_rows": 4,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

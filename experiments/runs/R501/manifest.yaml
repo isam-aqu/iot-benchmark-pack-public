@@ -1,0 +1,82 @@
+run_id: R501
+title: Wi-Fi idle run with MQTT reporting enabled (~10 Hz)
+date: 2026-04-13
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.2.0"
+  ha_config: "0.1.1"
+  analysis: "0.2.0"
+
+experiment:
+  plan_id: W2
+  workload: W2_control
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 0
+  trigger: idle_connected
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "wifi01_power"
+  node_id: "wifi01_power"
+  sensor: "INA231"
+  shunt_resistor_ohm: 0.1
+  bus_connection: "BUS pin connected to ESP32 VIN"
+
+software:
+  home_assistant: "2026.3.4"
+  supervisor: "2026.03.2"
+  os: "17.1"
+  frontend: "20260312.1"
+  mqtt_broker: "Mosquitto"
+  mqtt_reporting_enabled: true
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+  ack_helper_enabled: false
+
+timing:
+  timestamp_source: "MQTT logger (pi_rx_time_ns)"
+  power_sampling_interval_ms: 100
+  experiment_duration_ms: 300000
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W2_wifi_idle_quiet_v1_power_samples.csv
+    - raw/W2_wifi_idle_quiet_v1_mqtt_events.csv
+  derived: []
+  figures: []
+
+result_summary:
+  status: success
+  power_sample_count: 3001
+  event_count: 0
+
+  mean_power_mW: 373.56
+  median_power_mW: 332.21
+  p95_power_mW: 715.73
+  max_power_mW: 835.42
+  mean_current_mA: 75.02
+  energy_mJ: 112104
+
+  delta_vs_R505_mW: 6.56
+  delta_vs_R505_percent: 1.8
+
+  key_observation: >
+    Enabling MQTT reporting at approximately 10 Hz introduces a small but
+    measurable increase in power consumption (~1.8%). The dominant energy cost
+    remains Wi-Fi connectivity rather than data transmission.
+
+  anomalies: []

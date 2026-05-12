@@ -1,0 +1,75 @@
+run_id: R102
+title: Wi-Fi baseline rerun under stabilized pipeline
+date: 2026-03-29
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: button_press
+  normalization_method: none
+  scenario_label: "W1_wifi_near_quiet"
+  run_label: "W1_wifi_near_quiet_v2"
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "ESP32 dev board"
+  node_id: "wifi01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "versioned via experiments/version_info.yaml"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ESP32 RTT measurement"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_wifi_near_quiet_v2_mqtt_events.csv
+    - raw/W1_wifi_near_quiet_v2_power_samples.csv
+  derived:
+    - derived/W1_wifi_near_quiet_v2_events_only.csv
+    - derived/W1_wifi_near_quiet_v2_wifi_rtt_full.csv
+    - derived/W1_wifi_near_quiet_v2_wifi_rtt_core.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "Typical RTT remained low, but the run showed substantial heavy-tail latency with 19% of samples above 200 ms."
+  anomalies:
+    - "19 out of 100 RTT samples exceeded 200 ms."
+    - "Maximum RTT reached 1786.036 ms."
+
+dataset:
+  total_samples: 100
+  core_samples: 81
+  outlier_handling: "RTT > 200 ms excluded from core dataset"
+  filtering_range_ms: [0, 200]
+
+notes: >
+  Wi-Fi baseline rerun under pipeline 0.1.1. This run is currently the best
+  candidate for the final Wi-Fi baseline because it preserves low typical RTT
+  while revealing the recurring tail-latency problem in the stack.

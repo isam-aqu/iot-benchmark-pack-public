@@ -1,0 +1,27 @@
+# Summary for W2_wifi_idle_quiet_ctrl_v1
+
+## Power
+- power_sample_count: 3001
+- mean_power_mW: 367.00071435588137
+- median_power_mW: 327.328247
+- std_power_mW: 115.5741568473591
+- min_power_mW: 224.732819
+- p95_power_mW: 708.396912
+- max_power_mW: 735.267151
+- samples_above_500mW: 331
+- fraction_above_500mW: 0.11029656781072976
+- mean_current_mA: 73.2670392949017
+- median_current_mA: 64.683968
+- max_current_mA: 150.864105
+- mean_bus_v: 5.031734838387203
+- min_bus_v: 4.86375
+- max_bus_v: 5.0875
+
+## Timing
+
+## Reliability
+- expected_events: 0
+- actual_events: 0
+- missing_events: 0
+- loss_rate: 0.0
+- duplicates: 0

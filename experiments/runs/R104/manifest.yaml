@@ -1,0 +1,75 @@
+run_id: R104
+title: Wi-Fi rerun with reduced host-side application load
+date: 2026-03-29
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 3000-5000
+  trigger: button_press
+  normalization_method: none
+  scenario_label: "W1_wifi_near_quiet"
+  run_label: "W1_wifi_near_quiet_v4"
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "ESP32 dev board"
+  node_id: "wifi01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "versioned via experiments/version_info.yaml"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ESP32 RTT measurement"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_wifi_near_quiet_v4_mqtt_events.csv
+    - raw/W1_wifi_near_quiet_v4_power_samples.csv
+  derived:
+    - derived/W1_wifi_near_quiet_v4_events_only.csv
+    - derived/W1_wifi_near_quiet_v4_wifi_rtt_full.csv
+    - derived/W1_wifi_near_quiet_v4_wifi_rtt_core.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "Reducing host-side application load did not improve Wi-Fi latency stability."
+  anomalies:
+    - "25 out of 100 RTT samples exceeded 200 ms."
+    - "Full median and core P95 both worsened compared to R102."
+
+dataset:
+  total_samples: 100
+  core_samples: 75
+  outlier_handling: "RTT > 200 ms excluded from core dataset"
+  filtering_range_ms: [0, 200]
+
+notes: >
+  Wi-Fi rerun with increased inter-event spacing maintained and many laptop
+  background applications closed. Results indicate that ordinary host-side load
+  is not the dominant source of the persistent latency spikes.

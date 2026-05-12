@@ -1,0 +1,54 @@
+exp_run_id: R527
+run_id: W2_wifi_periodic_10s_quiet_telemetry_v2
+
+study:
+  workload: W2
+  objective: >
+    Second telemetry run for the 10 s Wi-Fi periodic workload under W2 v2.
+    Used to strengthen the W2_10s matched-pair analysis.
+
+classification:
+  protocol: wifi
+  mode: telemetry
+  comparison_group: W2_10s
+  replicate_id: rep1
+  is_baseline: false
+
+environment:
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+
+software:
+  pipeline_version: 0.3.0
+  firmware_version: 0.3.0
+  ha_config_version: 0.3.0
+  analysis_version: 0.3.0
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+
+execution:
+  duration_sec: 450
+  interval_ms: 10000
+  serial_port: /dev/serial-port
+  serial_baud: 115200
+  ble_logger: disabled
+  ack_helper: disabled
+  timestamp_source: "ESP32 t_local_us + serial_power + MQTT_event"
+
+logging:
+  raw_dir: experiments/runs/R527/raw
+  analysis_dir: experiments/runs/R527/analysis
+
+status:
+  parse: passed
+  summarize: passed
+  analyze: passed
+  accepted: true
+
+notes: >
+  Collected as the second telemetry run for the 10 s regime. Together with R526,
+  this repeat pair shows that the 10 s region has a positive mean effect but high
+  variance and remains directionally unresolved.

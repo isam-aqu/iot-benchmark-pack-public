@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "script": "python/analyze_w3_run.py",
+    "generated_at_utc": "2026-05-01T16:08:46Z",
+    "generated_at_local": "2026-05-01T19:08:46+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "c997f4b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R656/analysis/summary.json",
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R656/analysis/metrics.json"
+    ],
+    "extra": {
+      "run_id": "R656"
+    }
+  },
+  "run_id": "R656",
+  "baseline_run_id": null,
+  "w3_context": {
+    "comparison_group": "W3_ble_auto",
+    "load_level": "baseline",
+    "interference": "quiet",
+    "iperf_profile": null,
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0
+  },
+  "w3": {
+    "mean_latency_ms": -0.4521484375,
+    "std_latency_ms": 116.09259576828573,
+    "p95_latency_ms": 254.51826171874978,
+    "temporal_std_ms": 32.283571250977296,
+    "drop_rate": 0.03,
+    "reliability_rate": 0.97,
+    "extra_event_rate": 0.0,
+    "duplicate_event_rate": 0.0
+  },
+  "baseline": null,
+  "w3_delta": {},
+  "impact_label": "baseline"
+}

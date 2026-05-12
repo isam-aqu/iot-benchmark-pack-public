@@ -1,0 +1,36 @@
+{
+  "run_id": "W2_wifi_periodic_4s_quiet_ctrl_v2_rep11",
+  "run_sheet_id": "R838",
+  "baseline_run_id": null,
+  "energy": {
+    "total_per_event_mJ": 1498.8756314185332,
+    "incremental_per_event_mJ": null
+  },
+  "latency": {
+    "available": false,
+    "source": null,
+    "kind": null,
+    "sample_count": 0,
+    "reason": "No recognized latency column with valid numeric samples."
+  },
+  "timing": {
+    "mean_interval_ms": 3999.8518243243248,
+    "median_interval_ms": 3999.997,
+    "std_interval_ms": 1.28699153660412,
+    "jitter_ms": 1.28699153660412,
+    "max_interval_ms": 4000.459,
+    "min_interval_ms": 3989.011
+  },
+  "reliability": {
+    "expected_events": 75,
+    "actual_events": 75,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "event_coupling": {},
+  "power_event_relation": {},
+  "quality_flags": {
+    "missing_latency": true
+  }
+}

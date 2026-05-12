@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "script": "run_all.sh",
+    "generated_at_utc": "2026-05-08T11:05:00Z",
+    "generated_at_local": "2026-05-08T14:05:00+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.8",
+      "firmware": "0.5.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.5",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.6"
+    },
+    "git": {
+      "commit": "0495f8a",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260508135859-59563",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R806/raw/run_metadata.json"
+    ],
+    "extra": {
+      "phase": "end",
+      "exp_run_id": "R806",
+      "run_id": "W2_wifi_periodic_7s_quiet_ctrl_v2_rep9"
+    }
+  },
+  "run": {
+    "exp_run_id": "R806",
+    "run_id": "W2_wifi_periodic_7s_quiet_ctrl_v2_rep9",
+    "run_instance_id": "20260508135859-59563",
+    "command": {
+      "cwd": "<local-path>",
+      "shell": "EXP_RUN_ID=R806 <local-path> --run-id W2_wifi_periodic_7s_quiet_ctrl_v2_rep9 --disable-ble --disable-ack --duration-sec 360 --serial-port /dev/serial-port --serial-baud 115200 --no-reset-esp32 --serial-start-command START --serial-start-delay-sec 0.0",
+      "secrets_omitted": [
+        "HA_TOKEN",
+        "HOME_ASSISTANT_TOKEN"
+      ]
+    },
+    "status": "complete",
+    "exit_code": 0,
+    "duration_sec": "360",
+    "serial_start_command": "START",
+    "serial_start_delay_sec": "0.0",
+    "enable_ble": "0",
+    "ble_expected_exp_code": null,
+    "enable_ack": "0",
+    "reset_esp32": "0",
+    "iperf_load": "0",
+    "iperf_load_mbps": "0",
+    "iperf_proto": "tcp",
+    "iperf_server": "<private-ip>",
+    "iperf_port": "5201",
+    "ap_rf": {
+      "model": "netis WF2419",
+      "firmware": "V2.2.36123",
+      "channel_mode": "unknown",
+      "channel": "unknown",
+      "ap_width_mhz": "unknown",
+      "control_sideband": "unknown",
+      "source": "not_recorded"
+    },
+    "zigbee_trigger": "0",
+    "zigbee_entity_id": "light.benchmark_device",
+    "zigbee_event_count": "100",
+    "zigbee_base_interval_ms": "3000",
+    "zigbee_jitter_ms": "250",
+    "started_at_utc": "2026-05-08T10:58:59Z",
+    "started_at_local": "2026-05-08T13:58:59+03:00",
+    "ended_at_utc": "2026-05-08T11:05:00Z",
+    "ended_at_local": "2026-05-08T14:05:00+03:00"
+  },
+  "history": [
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-08T10:36:09Z",
+      "generated_at_local": "2026-05-08T13:36:09+03:00"
+    },
+    {
+      "phase": "end",
+      "status": "complete",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-08T10:41:30Z",
+      "generated_at_local": "2026-05-08T13:41:30+03:00"
+    },
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-08T10:56:48Z",
+      "generated_at_local": "2026-05-08T13:56:48+03:00"
+    },
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-08T10:58:10Z",
+      "generated_at_local": "2026-05-08T13:58:10+03:00"
+    },
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-08T10:58:59Z",
+      "generated_at_local": "2026-05-08T13:58:59+03:00"
+    },
+    {
+      "phase": "end",
+      "status": "complete",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-08T11:05:00Z",
+      "generated_at_local": "2026-05-08T14:05:00+03:00"
+    }
+  ]
+}

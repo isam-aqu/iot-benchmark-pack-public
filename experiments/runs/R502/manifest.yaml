@@ -1,0 +1,63 @@
+run_id: R502
+title: Wi-Fi + INA231 periodic telemetry power run at 1 s interval
+date: 2026-04-10
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.3.0"
+  ha_config: "0.3.0"
+  analysis: "0.3.0"
+
+experiment:
+  plan_id: W2
+  workload: W2
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 1000
+  trigger: periodic_telemetry
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "wifi01_power"
+  node_id: "wifi01_power"
+  zigbee_device: null
+  coordinator: null
+  sensor: "INA231"
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "INA231 + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W2_wifi_periodic_1s_quiet_v1_power_samples.csv
+    - raw/W2_wifi_periodic_1s_quiet_v1_mqtt_events.csv
+  derived: []
+  figures: []
+
+result_summary:
+  status: planned
+  key_observation: null
+  anomalies: []
+
+notes: >
+  Periodic telemetry power characterization run for the ESP32 + INA231 node
+  using a 1 s telemetry interval. This run is intended to capture high-rate
+  telemetry power behavior, including average power, peak current, and energy
+  per report.

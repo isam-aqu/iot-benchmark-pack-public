@@ -1,0 +1,23 @@
+{
+  "run_id": "R608",
+  "baseline_run_id": null,
+  "w3_context": {
+    "comparison_group": "W3_wifi_auto",
+    "load_level": "baseline",
+    "interference": "quiet",
+    "iperf_profile": null,
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0
+  },
+  "w3": {
+    "mean_latency_ms": 14.051330000000002,
+    "std_latency_ms": 2.959819736030893,
+    "p95_latency_ms": 19.128799999999995,
+    "temporal_std_ms": 0.7863200366969608,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0
+  },
+  "baseline": null,
+  "w3_delta": {},
+  "impact_label": "baseline"
+}

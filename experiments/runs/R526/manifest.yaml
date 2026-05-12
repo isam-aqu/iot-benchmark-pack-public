@@ -1,0 +1,53 @@
+exp_run_id: R526
+run_id: W2_wifi_periodic_10s_quiet_ctrl_v2
+
+study:
+  workload: W2
+  objective: >
+    Second control run for the 10 s Wi-Fi periodic workload under W2 v2.
+    Used to strengthen the W2_10s matched-pair analysis.
+
+classification:
+  protocol: wifi
+  mode: control
+  comparison_group: W2_10s
+  replicate_id: rep1
+  is_baseline: false
+
+environment:
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+
+software:
+  pipeline_version: 0.3.0
+  firmware_version: 0.3.0
+  ha_config_version: 0.3.0
+  analysis_version: 0.3.0
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+
+execution:
+  duration_sec: 450
+  interval_ms: 10000
+  serial_port: /dev/serial-port
+  serial_baud: 115200
+  ble_logger: disabled
+  ack_helper: disabled
+  timestamp_source: "ESP32 t_local_us + serial_power + MQTT_event"
+
+logging:
+  raw_dir: experiments/runs/R526/raw
+  analysis_dir: experiments/runs/R526/analysis
+
+status:
+  parse: passed
+  summarize: passed
+  analyze: passed
+  accepted: true
+
+notes: >
+  Collected as the second control baseline for the 10 s regime to determine
+  whether the long-interval behavior is stable or high-variance.

@@ -1,0 +1,18 @@
+exp_run_id: R530
+run_id: W2_wifi_periodic_2s_quiet_ctrl_v2
+
+classification:
+  protocol: wifi
+  mode: control
+  comparison_group: W2_2s
+  replicate_id: primary
+
+execution:
+  interval_ms: 2000
+  duration_sec: 450
+
+status:
+  accepted: true
+
+notes: >
+  2 s control run to refine short-interval energy behavior.

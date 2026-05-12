@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "script": "python/report_w3_zigbee_channel_overlap.py",
+    "generated_at_utc": "2026-05-11T14:34:16Z",
+    "generated_at_local": "2026-05-11T17:34:16+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.8",
+      "firmware": "0.5.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.5",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.6"
+    },
+    "git": {
+      "commit": "ebfdf67",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "analysis/w3/tables/w3_zigbee_channel_overlap_runs.csv",
+      "analysis/w3/tables/w3_zigbee_channel_overlap_pairs.csv",
+      "analysis/w3/tables/w3_zigbee_channel_overlap_summary.csv",
+      "analysis/w3/reports/w3_zigbee_channel_overlap.md",
+      "analysis/w3/reports/w3_zigbee_channel_overlap.md.meta.json"
+    ]
+  }
+}

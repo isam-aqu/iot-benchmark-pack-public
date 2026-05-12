@@ -1,0 +1,110 @@
+run_id: R658
+title: W3 BLE automated moderate-load replicate rep4
+date: 2026-05-01
+
+git:
+  branch: testbed-dev
+  commit: c997f4b
+  tag: null
+  dirty: true
+
+versions:
+  firmware: "0.4.1"
+  ha_config: "0.3.0"
+  pipeline: "0.4.6"
+  logger: "0.4.1"
+  analysis: "0.4.4"
+  experiment_protocol: "0.4.5"
+
+experiment:
+  plan_id: W3_A
+  workload: W3
+  protocol: ble
+  topology: near
+  interference: iperf
+  load_level: moderate
+  node_count: 1
+  interval_ms: "3000+/-250"
+  comparison_group: W3_ble_auto
+  run_type: load
+  replicate_id: rep4
+  baseline_ref: R640
+  trigger: esp32_auto_advertising
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  esp32_node: "ble01"
+  node_id: "ble01"
+  iperf_server: "iperf-server (<private-ip>)"
+
+software:
+  home_assistant: "2026.3.4"
+  mqtt_broker: "Mosquitto"
+  ble_logger_expected_exp_code: W3BL
+  iperf_profile: 20Mbps_tcp
+
+timing:
+  timestamp_source: "t_local_us + python_logger"
+  expected_events: 100
+  actual_events: 94
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  timezone: "Asia/Hebron"
+
+commands:
+  run: >
+    EXP_RUN_ID=R658 ./run_all.sh --run-id W3_ble_auto_moderate --enable-ble --disable-ack --duration-sec 360 --serial-port /dev/serial-port --serial-baud 115200 --iperf-load moderate --reset-esp32
+  analysis:
+    - >
+      python3 python/summarize_w3_run.py experiments/runs/R658/raw
+      --run-id W3_ble_auto_moderate --expected-events 100
+    - >
+      python3 python/analyze_w3_run.py experiments/runs/R658/raw
+      --run-id R658 --run-sheet docs/run_sheet.csv
+
+artifacts:
+  raw:
+    - raw/W3_ble_auto_moderate_ble_events.csv
+    - raw/W3_ble_auto_moderate_mqtt_events.csv
+    - raw/W3_ble_auto_moderate_power_samples.csv
+    - raw/W3_ble_auto_moderate_serial.log
+    - raw/W3_ble_auto_moderate_iperf.log
+    - raw/W3_ble_auto_moderate_iperf_summary.json
+    - raw/run_metadata.json
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  notes:
+    - notes.md
+
+result_summary:
+  status: complete
+  expected_events: 100
+  actual_events: 94
+  missing_events: 6
+  missing_sequences:
+    - 8
+    - 39
+    - 76
+    - 81
+    - 85
+    - 94
+  duplicate_payload_rows: 0
+  median_latency_ms: 0.000000
+  mad_latency_ms: 84.301025
+  p95_latency_ms: 184.668909
+  p99_latency_ms: 323.615630
+  max_latency_ms: 324.447998
+  iperf_mean_mbps: 20.000271
+  key_observation: "The BLE moderate-load run completed on the device side with 100 scheduled advertisements, while the BLE logger captured 94 unique events."
+  anomalies:
+    - "BLE sequences 8, 39, 76, 81, 85, 94 were missed by the logger."
+    - "MQTT and power CSVs are header-only, as expected for BLE latency capture."
+
+notes: >
+  W3 BLE moderate Wi-Fi interference replicate rep4. The ESP32 emitted the
+  complete 100-advertisement schedule with no scheduler overruns. The BLE logger
+  captured 94 unique advertisements, and the missed-advertisement
+  count is retained as part of the BLE reliability measurement.

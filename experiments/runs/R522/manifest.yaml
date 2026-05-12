@@ -1,0 +1,22 @@
+run_id: R522
+experiment: W2
+role: control
+comparison_group: W2_5s
+replicate_id: rep2
+status: invalid
+description: 5s periodic control repeat after interval misconfiguration fix
+interval_ms: 5000
+protocol: wifi
+distance: near
+environment: quiet
+node_count: 1
+features:
+  ble: false
+  ack: false
+  telemetry: false
+duration_sec: 450
+data_sources:
+  - serial_power
+  - mqtt_events
+  - t_local_us
+notes: This run was excluded from final grouped analysis after paired telemetry run R523 was found to contain physically invalid electrical measurements. R522 was invalidated together with R523 to preserve matched-pair consistency for W2_5s.

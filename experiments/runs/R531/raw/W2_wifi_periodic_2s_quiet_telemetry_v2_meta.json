@@ -1,0 +1,9 @@
+{
+  "run_id": "W2_wifi_periodic_2s_quiet_telemetry_v2",
+  "source_log": "experiments/runs/R531/raw/W2_wifi_periodic_2s_quiet_telemetry_v2_serial.log",
+  "type": "experiment_complete",
+  "exp": "W2_wifi_periodic_2s_quiet_telemetry_v2",
+  "duration_ms": "300000",
+  "power_sample_count": "3002",
+  "event_count": "150"
+}

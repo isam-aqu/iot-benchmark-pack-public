@@ -1,0 +1,18 @@
+exp_run_id: R528
+run_id: W2_wifi_periodic_7s_quiet_ctrl_v2
+
+classification:
+  protocol: wifi
+  mode: control
+  comparison_group: W2_7s
+  replicate_id: rep1
+
+execution:
+  interval_ms: 7000
+  duration_sec: 450
+
+status:
+  accepted: true
+
+notes: >
+  Second control run at 7 s interval to validate stability of the regime.

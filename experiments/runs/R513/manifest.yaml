@@ -1,0 +1,40 @@
+exp_run_id: R513
+run_id: W2_wifi_periodic_10s_quiet_telemetry_v2
+
+workload: W2
+protocol: wifi
+mode: periodic_telemetry
+
+interval_ms: 10000
+duration_s: 300
+
+mqtt_telemetry: true
+mqtt_power_reporting: false
+
+power_measurement:
+  method: ina231
+  transport: serial
+  sample_interval_ms: 100
+
+environment:
+  scenario: W1_equivalent
+  distance: near
+  interference: low
+  nodes: single
+
+results:
+  power_sample_count: 3001
+  event_count: 30
+  mean_power_mw: 370.03
+  energy_mj: 111023.85
+
+comparison:
+  baseline_run: R510
+  delta_power_mw: 4.72
+  delta_energy_mj: 1418
+  energy_per_event_mj: 47.3
+
+validity:
+  power: valid
+  events: valid
+  accepted: true

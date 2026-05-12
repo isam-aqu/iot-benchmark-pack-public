@@ -1,0 +1,3334 @@
+{
+  "W2_0.5s": {
+    "comparison_group": "W2_0.5s",
+    "interval_ms": 500,
+    "interval_s": 0.5,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R514",
+        "R548",
+        "R735",
+        "R754",
+        "R767",
+        "R778",
+        "R809",
+        "R830",
+        "R853",
+        "R868",
+        "R885",
+        "R900"
+      ],
+      "mean_power_mW": 373.23844210847443,
+      "std_power_mW": 4.405438079363081,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 373.23844210847443,
+        "half_width": 2.799081815028363,
+        "lower": 370.43936029344604,
+        "upper": 376.0375239235028,
+        "method": "t"
+      },
+      "total_per_event_mJ": 186.32413567606184,
+      "std_total_per_event_mJ": 2.2266649546798583,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 0.4413403516850349,
+      "std_jitter_ms": 0.122306840913578,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R515",
+        "R549",
+        "R734",
+        "R755",
+        "R766",
+        "R779",
+        "R808",
+        "R831",
+        "R852",
+        "R869",
+        "R884",
+        "R901"
+      ],
+      "mean_power_mW": 374.7103629742763,
+      "std_power_mW": 3.2343346963304027,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 374.7103629742763,
+        "half_width": 2.054998224721974,
+        "lower": 372.6553647495543,
+        "upper": 376.7653611989983,
+        "method": "t"
+      },
+      "total_per_event_mJ": 187.0838824899743,
+      "std_total_per_event_mJ": 1.6880419407016962,
+      "incremental_per_event_mJ": 5.861292480358567,
+      "std_incremental_per_event_mJ": 1.6880419407016964,
+      "jitter_ms": 0.43886527103362566,
+      "std_jitter_ms": 0.12115428053512897,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 1.4719208658018488,
+      "total_per_event_mJ": 0.759746813912443,
+      "incremental_per_event_mJ": 0.759746813912443
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R514",
+          "telemetry_run_id": "R515",
+          "delta_mean_power_mW": 4.396623334665321,
+          "delta_total_per_event_mJ": 2.188127086896884,
+          "delta_jitter_ms": 0.012690787440382906,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R548",
+          "telemetry_run_id": "R549",
+          "delta_mean_power_mW": -0.1570983605465699,
+          "delta_total_per_event_mJ": -0.07643614327648152,
+          "delta_jitter_ms": -0.012791369333006758,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R885",
+          "telemetry_run_id": "R884",
+          "delta_mean_power_mW": 2.656263691231743,
+          "delta_total_per_event_mJ": 1.5785715115242454,
+          "delta_jitter_ms": -0.0043237758413060545,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R900",
+          "telemetry_run_id": "R901",
+          "delta_mean_power_mW": 1.1387554051982534,
+          "delta_total_per_event_mJ": 0.5706710781921345,
+          "delta_jitter_ms": 0.013644194000271281,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R735",
+          "telemetry_run_id": "R734",
+          "delta_mean_power_mW": 2.264487435854619,
+          "delta_total_per_event_mJ": 1.1347558504737947,
+          "delta_jitter_ms": -0.00814688556465265,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R754",
+          "telemetry_run_id": "R755",
+          "delta_mean_power_mW": -2.4215847570808933,
+          "delta_total_per_event_mJ": -1.2103198412794995,
+          "delta_jitter_ms": 0.010730525501418176,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R767",
+          "telemetry_run_id": "R766",
+          "delta_mean_power_mW": 3.835358045184705,
+          "delta_total_per_event_mJ": 2.174228847807541,
+          "delta_jitter_ms": -0.007222576935213387,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R778",
+          "telemetry_run_id": "R779",
+          "delta_mean_power_mW": 5.257634355394941,
+          "delta_total_per_event_mJ": 2.8873557456712433,
+          "delta_jitter_ms": -0.02970931811206612,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R809",
+          "telemetry_run_id": "R808",
+          "delta_mean_power_mW": -2.600308239431854,
+          "delta_total_per_event_mJ": -1.5465550166574644,
+          "delta_jitter_ms": -0.0014946052580641633,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R830",
+          "telemetry_run_id": "R831",
+          "delta_mean_power_mW": -0.014656677999994372,
+          "delta_total_per_event_mJ": -0.014169921468038638,
+          "delta_jitter_ms": -0.03604103255500002,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R853",
+          "telemetry_run_id": "R852",
+          "delta_mean_power_mW": 0.5510634065311137,
+          "delta_total_per_event_mJ": 0.28572012232248767,
+          "delta_jitter_ms": 0.0071280971690145245,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R868",
+          "telemetry_run_id": "R869",
+          "delta_mean_power_mW": 2.7565127506199474,
+          "delta_total_per_event_mJ": 1.1450124467426406,
+          "delta_jitter_ms": 0.025834991671311647,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 1.4719208658017777,
+      "std_delta_mean_power_mW": 2.51752733131539,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 1.4719208658017777,
+        "half_width": 1.5995605533378836,
+        "lower": -0.12763968753610588,
+        "upper": 3.071481419139661,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.06778999116079118,
+        "paired_t_p_greater": 0.03389499558039559,
+        "wilcoxon_p_two_sided": 0.0771484375,
+        "wilcoxon_p_greater": 0.03857421875,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 0.7597468139124572,
+      "std_delta_total_per_event_mJ": 1.358009084675969,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 0.7597468139124572,
+        "half_width": 0.8628378075193319,
+        "lower": -0.10309099360687468,
+        "upper": 1.6225846214317892,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.07870698628163195,
+        "paired_t_p_greater": 0.03935349314081597,
+        "wilcoxon_p_two_sided": 0.10986328125,
+        "wilcoxon_p_greater": 0.054931640625,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.002475080651409218,
+      "std_delta_jitter_ms": 0.01807004943034521,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.5846692695219756,
+      "paired_energy_snr": 0.5594563559887661,
+      "paired_ci_crosses_zero": true,
+      "paired_energy_ci_crosses_zero": true,
+      "interpretation_label": "below_noise_floor"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.33411452829105537,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.5846692695219756,
+      "paired_energy_snr": 0.5594563559887661,
+      "paired_ci_crosses_zero": true,
+      "paired_energy_ci_crosses_zero": true,
+      "interpretation_label": "below_noise_floor"
+    }
+  },
+  "W2_10s": {
+    "comparison_group": "W2_10s",
+    "interval_ms": 10000,
+    "interval_s": 10.0,
+    "control": {
+      "n_runs": 18,
+      "run_ids": [
+        "R510",
+        "R526",
+        "R546",
+        "R744",
+        "R765",
+        "R776",
+        "R829",
+        "R850",
+        "R867",
+        "R882",
+        "R899",
+        "R914",
+        "R917",
+        "R948",
+        "R951",
+        "R952",
+        "R955",
+        "R956"
+      ],
+      "mean_power_mW": 374.510586645304,
+      "std_power_mW": 6.923710762261212,
+      "ci95_mean_power_mW": {
+        "n": 18,
+        "mean": 374.510586645304,
+        "half_width": 3.4430803595928565,
+        "lower": 371.06750628571115,
+        "upper": 377.95366700489683,
+        "method": "t"
+      },
+      "total_per_event_mJ": 3705.2467516441484,
+      "std_total_per_event_mJ": 87.45241048361137,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.3584097719388917,
+      "std_jitter_ms": 0.8302490516511933,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 18,
+      "run_ids": [
+        "R513",
+        "R527",
+        "R547",
+        "R745",
+        "R764",
+        "R777",
+        "R828",
+        "R851",
+        "R866",
+        "R883",
+        "R898",
+        "R915",
+        "R916",
+        "R949",
+        "R950",
+        "R953",
+        "R954",
+        "R957"
+      ],
+      "mean_power_mW": 380.69456488246374,
+      "std_power_mW": 8.640660625711716,
+      "ci95_mean_power_mW": {
+        "n": 18,
+        "mean": 380.69456488246374,
+        "half_width": 4.296899439597492,
+        "lower": 376.39766544286624,
+        "upper": 384.99146432206123,
+        "method": "t"
+      },
+      "total_per_event_mJ": 3763.1098665428735,
+      "std_total_per_event_mJ": 112.28324999633406,
+      "incremental_per_event_mJ": 99.81046131887915,
+      "std_incremental_per_event_mJ": 107.5831270414654,
+      "jitter_ms": 1.4767020612691675,
+      "std_jitter_ms": 0.7865157617276561,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 6.183978237159749,
+      "total_per_event_mJ": 57.863114898725144,
+      "incremental_per_event_mJ": 57.863114898725144
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 18,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R510",
+          "telemetry_run_id": "R513",
+          "delta_mean_power_mW": 4.718633835054959,
+          "delta_total_per_event_mJ": 47.25442035215656,
+          "delta_jitter_ms": -0.004617299625971696,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R526",
+          "telemetry_run_id": "R527",
+          "delta_mean_power_mW": 22.5187928483586,
+          "delta_total_per_event_mJ": 282.4643656088979,
+          "delta_jitter_ms": 0.00479040748181777,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R899",
+          "telemetry_run_id": "R898",
+          "delta_mean_power_mW": 14.135848958497263,
+          "delta_total_per_event_mJ": 18.785997163532556,
+          "delta_jitter_ms": 0.010964487898855069,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R914",
+          "telemetry_run_id": "R915",
+          "delta_mean_power_mW": -1.1208476221258366,
+          "delta_total_per_event_mJ": -10.780390573110253,
+          "delta_jitter_ms": 0.0011350500022651033,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep12",
+          "control_run_id": "R917",
+          "telemetry_run_id": "R916",
+          "delta_mean_power_mW": 5.454480727546468,
+          "delta_total_per_event_mJ": -67.97817897157847,
+          "delta_jitter_ms": 0.010657227394253788,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep13",
+          "control_run_id": "R948",
+          "telemetry_run_id": "R949",
+          "delta_mean_power_mW": 17.663942549117564,
+          "delta_total_per_event_mJ": 176.5431381192716,
+          "delta_jitter_ms": 0.012766441480208002,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep14",
+          "control_run_id": "R951",
+          "telemetry_run_id": "R950",
+          "delta_mean_power_mW": 0.7321436360934399,
+          "delta_total_per_event_mJ": -29.247045335726852,
+          "delta_jitter_ms": 0.010246235338422727,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep15",
+          "control_run_id": "R952",
+          "telemetry_run_id": "R953",
+          "delta_mean_power_mW": 2.300972925784322,
+          "delta_total_per_event_mJ": 23.02939498715341,
+          "delta_jitter_ms": -0.0024050524536889384,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep16",
+          "control_run_id": "R955",
+          "telemetry_run_id": "R954",
+          "delta_mean_power_mW": -1.7288430400000152,
+          "delta_total_per_event_mJ": -17.352180615181624,
+          "delta_jitter_ms": -0.011103967115391411,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep17",
+          "control_run_id": "R956",
+          "telemetry_run_id": "R957",
+          "delta_mean_power_mW": 10.240148857614997,
+          "delta_total_per_event_mJ": 138.74784813942733,
+          "delta_jitter_ms": -0.038537796236081334,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R546",
+          "telemetry_run_id": "R547",
+          "delta_mean_power_mW": 3.692005039493381,
+          "delta_total_per_event_mJ": 36.93084772043994,
+          "delta_jitter_ms": -0.021148796477543197,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R744",
+          "telemetry_run_id": "R745",
+          "delta_mean_power_mW": 12.998794472442512,
+          "delta_total_per_event_mJ": 249.91700042564116,
+          "delta_jitter_ms": -0.012708660600518673,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R765",
+          "telemetry_run_id": "R764",
+          "delta_mean_power_mW": 4.758111094599315,
+          "delta_total_per_event_mJ": 166.34430368952826,
+          "delta_jitter_ms": 0.012506546573077593,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R776",
+          "telemetry_run_id": "R777",
+          "delta_mean_power_mW": 6.21862132410115,
+          "delta_total_per_event_mJ": -57.728543747879485,
+          "delta_jitter_ms": 0.0655136465458761,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R829",
+          "telemetry_run_id": "R828",
+          "delta_mean_power_mW": -1.8762191209597177,
+          "delta_total_per_event_mJ": -18.351526139501402,
+          "delta_jitter_ms": 0.0293859238334071,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R850",
+          "telemetry_run_id": "R851",
+          "delta_mean_power_mW": 0.6772548774992515,
+          "delta_total_per_event_mJ": 5.454988079120994,
+          "delta_jitter_ms": 2.0577626019263264,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R867",
+          "telemetry_run_id": "R866",
+          "delta_mean_power_mW": 3.9157251773333996,
+          "delta_total_per_event_mJ": 39.2810834135812,
+          "delta_jitter_ms": -0.017499658374110272,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R882",
+          "telemetry_run_id": "R883",
+          "delta_mean_power_mW": 6.012041728423753,
+          "delta_total_per_event_mJ": 58.22054586127888,
+          "delta_jitter_ms": 0.021553870353761884,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 6.183978237159711,
+      "std_delta_mean_power_mW": 6.846659278815244,
+      "ci95_delta_mean_power_mW": {
+        "n": 18,
+        "mean": 6.183978237159711,
+        "half_width": 3.404763558322599,
+        "lower": 2.7792146788371124,
+        "upper": 9.58874179548231,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 18,
+        "paired_t_p_two_sided": 0.0013348243301187777,
+        "paired_t_p_greater": 0.0006674121650593888,
+        "wilcoxon_p_two_sided": 0.0005340576171875,
+        "wilcoxon_p_greater": 0.00026702880859375,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 57.863114898725094,
+      "std_delta_total_per_event_mJ": 102.63373017975552,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 18,
+        "mean": 57.863114898725094,
+        "half_width": 51.038553276922244,
+        "lower": 6.82456162180285,
+        "upper": 108.90166817564733,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 18,
+        "paired_t_p_two_sided": 0.028589297851738096,
+        "paired_t_p_greater": 0.014294648925869048,
+        "wilcoxon_p_two_sided": 0.04827880859375,
+        "wilcoxon_p_greater": 0.024139404296875,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": 0.1182922893302759,
+      "std_delta_jitter_ms": 0.4845473861305715,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.9032110384540409,
+      "paired_energy_snr": 0.5637826355661248,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.8931595281054355,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.9032110384540409,
+      "paired_energy_snr": 0.5637826355661248,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_1s": {
+    "comparison_group": "W2_1s",
+    "interval_ms": 1000,
+    "interval_s": 1.0,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R508",
+        "R550",
+        "R737",
+        "R756",
+        "R769",
+        "R780",
+        "R811",
+        "R832",
+        "R855",
+        "R870",
+        "R887",
+        "R902"
+      ],
+      "mean_power_mW": 373.21010015046863,
+      "std_power_mW": 5.547600698296864,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 373.21010015046863,
+        "half_width": 3.5247773210982003,
+        "lower": 369.6853228293704,
+        "upper": 376.73487747156685,
+        "method": "t"
+      },
+      "total_per_event_mJ": 372.1517498053274,
+      "std_total_per_event_mJ": 5.631831171753591,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 0.5737565515004159,
+      "std_jitter_ms": 0.21628678267450835,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R511",
+        "R551",
+        "R736",
+        "R757",
+        "R768",
+        "R781",
+        "R810",
+        "R833",
+        "R854",
+        "R871",
+        "R886",
+        "R903"
+      ],
+      "mean_power_mW": 379.4718384541507,
+      "std_power_mW": 6.265483007854658,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 379.4718384541507,
+        "half_width": 3.9808979796603325,
+        "lower": 375.4909404744904,
+        "upper": 383.452736433811,
+        "method": "t"
+      },
+      "total_per_event_mJ": 378.500653241877,
+      "std_total_per_event_mJ": 6.299823682007569,
+      "incremental_per_event_mJ": 21.02371543303572,
+      "std_incremental_per_event_mJ": 6.299823682007569,
+      "jitter_ms": 0.5726462205923273,
+      "std_jitter_ms": 0.20660085492069652,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 6.26173830368208,
+      "total_per_event_mJ": 6.348903436549563,
+      "incremental_per_event_mJ": 6.348903436549563
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R508",
+          "telemetry_run_id": "R511",
+          "delta_mean_power_mW": 14.894161095301456,
+          "delta_total_per_event_mJ": 14.917472085542101,
+          "delta_jitter_ms": 0.019754575158170043,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R550",
+          "telemetry_run_id": "R551",
+          "delta_mean_power_mW": 0.5836244915028601,
+          "delta_total_per_event_mJ": 0.5807452368217696,
+          "delta_jitter_ms": 0.0188154741956644,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R887",
+          "telemetry_run_id": "R886",
+          "delta_mean_power_mW": 12.467771678526105,
+          "delta_total_per_event_mJ": 13.608643765942134,
+          "delta_jitter_ms": -0.020679172876211793,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R902",
+          "telemetry_run_id": "R903",
+          "delta_mean_power_mW": 18.649864643118974,
+          "delta_total_per_event_mJ": 18.600153152209202,
+          "delta_jitter_ms": -0.031964785672134455,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R737",
+          "telemetry_run_id": "R736",
+          "delta_mean_power_mW": 3.568854708999993,
+          "delta_total_per_event_mJ": 3.602555179531464,
+          "delta_jitter_ms": 0.0018461992687640594,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R756",
+          "telemetry_run_id": "R757",
+          "delta_mean_power_mW": -1.4789982119293654,
+          "delta_total_per_event_mJ": -1.4946888805918093,
+          "delta_jitter_ms": 0.0042790435656812065,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R769",
+          "telemetry_run_id": "R768",
+          "delta_mean_power_mW": 2.1091184477006095,
+          "delta_total_per_event_mJ": 3.1956197355955283,
+          "delta_jitter_ms": -0.021561228677281608,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R780",
+          "telemetry_run_id": "R781",
+          "delta_mean_power_mW": 8.522350028990331,
+          "delta_total_per_event_mJ": 8.49830659740752,
+          "delta_jitter_ms": -0.0005339346187412941,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R811",
+          "telemetry_run_id": "R810",
+          "delta_mean_power_mW": 0.8806303392304926,
+          "delta_total_per_event_mJ": -0.23581503365949175,
+          "delta_jitter_ms": 0.011050828989238815,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R832",
+          "telemetry_run_id": "R833",
+          "delta_mean_power_mW": 6.307989652666606,
+          "delta_total_per_event_mJ": 6.2864097930780645,
+          "delta_jitter_ms": 0.01173669266567201,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R855",
+          "telemetry_run_id": "R854",
+          "delta_mean_power_mW": 5.188295987337483,
+          "delta_total_per_event_mJ": 5.18783013401179,
+          "delta_jitter_ms": -0.000838123824000947,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R870",
+          "telemetry_run_id": "R871",
+          "delta_mean_power_mW": 3.44719678273907,
+          "delta_total_per_event_mJ": 3.4396094727068203,
+          "delta_jitter_ms": -0.005229539071883282,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 6.261738303682051,
+      "std_delta_mean_power_mW": 6.225299186387298,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 6.261738303682051,
+        "half_width": 3.9553663975789664,
+        "lower": 2.306371906103085,
+        "upper": 10.217104701261018,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.005108892965886404,
+        "paired_t_p_greater": 0.002554446482943202,
+        "wilcoxon_p_two_sided": 0.00244140625,
+        "wilcoxon_p_greater": 0.001220703125,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 6.348903436549591,
+      "std_delta_total_per_event_mJ": 6.369608048149093,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 6.348903436549591,
+        "half_width": 4.0470558739552365,
+        "lower": 2.3018475625943546,
+        "upper": 10.395959310504828,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.005400912667951446,
+        "paired_t_p_greater": 0.002700456333975723,
+        "wilcoxon_p_two_sided": 0.00341796875,
+        "wilcoxon_p_greater": 0.001708984375,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.0011103309080885704,
+      "std_delta_jitter_ms": 0.016386409686207047,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 1.0058533921348605,
+      "paired_energy_snr": 0.9967494685005747,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 1.1287290928498979,
+      "detectable_abs_snr_ge_1": true,
+      "paired_snr": 1.0058533921348605,
+      "paired_energy_snr": 0.9967494685005747,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_2s": {
+    "comparison_group": "W2_2s",
+    "interval_ms": 2000,
+    "interval_s": 2.0,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R530",
+        "R552",
+        "R699",
+        "R712",
+        "R723",
+        "R746",
+        "R813",
+        "R834",
+        "R857",
+        "R872",
+        "R889",
+        "R904"
+      ],
+      "mean_power_mW": 373.8238503016648,
+      "std_power_mW": 4.1367822737656725,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 373.8238503016648,
+        "half_width": 2.6283860598270503,
+        "lower": 371.1954642418377,
+        "upper": 376.4522363614918,
+        "method": "t"
+      },
+      "total_per_event_mJ": 743.6866128276006,
+      "std_total_per_event_mJ": 9.236203480640087,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 0.8135474689250047,
+      "std_jitter_ms": 0.3009976954357394,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R531",
+        "R553",
+        "R698",
+        "R713",
+        "R722",
+        "R747",
+        "R812",
+        "R835",
+        "R856",
+        "R873",
+        "R888",
+        "R905"
+      ],
+      "mean_power_mW": 381.60420362211715,
+      "std_power_mW": 6.4489306826277035,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 381.60420362211715,
+        "half_width": 4.0974550714219555,
+        "lower": 377.5067485506952,
+        "upper": 385.7016586935391,
+        "method": "t"
+      },
+      "total_per_event_mJ": 760.0312274723027,
+      "std_total_per_event_mJ": 13.640991819715927,
+      "incremental_per_event_mJ": 25.387530943460032,
+      "std_incremental_per_event_mJ": 13.492346030685797,
+      "jitter_ms": 0.7914855819117506,
+      "std_jitter_ms": 0.351106417015093,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 7.780353320452377,
+      "total_per_event_mJ": 16.34461464470212,
+      "incremental_per_event_mJ": 16.34461464470212
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R530",
+          "telemetry_run_id": "R531",
+          "delta_mean_power_mW": 18.088221786404574,
+          "delta_total_per_event_mJ": 41.1035062076819,
+          "delta_jitter_ms": -0.14846541020817583,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R552",
+          "telemetry_run_id": "R553",
+          "delta_mean_power_mW": 18.786611681439524,
+          "delta_total_per_event_mJ": 42.43651297909582,
+          "delta_jitter_ms": -0.11103333984007123,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R889",
+          "telemetry_run_id": "R888",
+          "delta_mean_power_mW": 7.103473789569875,
+          "delta_total_per_event_mJ": 9.385385727852736,
+          "delta_jitter_ms": -0.014897283666807426,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R904",
+          "telemetry_run_id": "R905",
+          "delta_mean_power_mW": 2.7395818004775947,
+          "delta_total_per_event_mJ": 0.8010712251592622,
+          "delta_jitter_ms": -0.0017917929473093563,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R699",
+          "telemetry_run_id": "R698",
+          "delta_mean_power_mW": -4.5340377408470545,
+          "delta_total_per_event_mJ": -13.76718518807968,
+          "delta_jitter_ms": 0.014477954677911464,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R712",
+          "telemetry_run_id": "R713",
+          "delta_mean_power_mW": -2.8879936704431657,
+          "delta_total_per_event_mJ": -5.7314702351477536,
+          "delta_jitter_ms": 0.037528507659175925,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R723",
+          "telemetry_run_id": "R722",
+          "delta_mean_power_mW": 1.0687532655781524,
+          "delta_total_per_event_mJ": 2.128853562542986,
+          "delta_jitter_ms": 0.005522008031264902,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R746",
+          "telemetry_run_id": "R747",
+          "delta_mean_power_mW": 20.373870018660455,
+          "delta_total_per_event_mJ": 40.54552805579499,
+          "delta_jitter_ms": -0.0397264492540198,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R813",
+          "telemetry_run_id": "R812",
+          "delta_mean_power_mW": 4.293636329593596,
+          "delta_total_per_event_mJ": 13.356206563200885,
+          "delta_jitter_ms": -0.016309067341066963,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R834",
+          "telemetry_run_id": "R835",
+          "delta_mean_power_mW": 11.385110564145407,
+          "delta_total_per_event_mJ": 22.627043503448704,
+          "delta_jitter_ms": -0.008681743169586142,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R857",
+          "telemetry_run_id": "R856",
+          "delta_mean_power_mW": 1.5459684569891579,
+          "delta_total_per_event_mJ": 7.763096406369982,
+          "delta_jitter_ms": 0.0008977250632181688,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R872",
+          "telemetry_run_id": "R873",
+          "delta_mean_power_mW": 15.401043563860583,
+          "delta_total_per_event_mJ": 35.48682692850434,
+          "delta_jitter_ms": 0.017736246836416503,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 7.780353320452392,
+      "std_delta_mean_power_mW": 8.76175291854287,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 7.780353320452392,
+        "half_width": 5.566952212300923,
+        "lower": 2.2134011081514684,
+        "upper": 13.347305532753314,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.010544660297133959,
+        "paired_t_p_greater": 0.0052723301485669795,
+        "wilcoxon_p_two_sided": 0.02099609375,
+        "wilcoxon_p_greater": 0.010498046875,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 16.344614644702016,
+      "std_delta_total_per_event_mJ": 19.665694187779536,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 16.344614644702016,
+        "half_width": 12.494985967180128,
+        "lower": 3.8496286775218884,
+        "upper": 28.839600611882144,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.014995537384521225,
+        "paired_t_p_greater": 0.007497768692260613,
+        "wilcoxon_p_two_sided": 0.02099609375,
+        "wilcoxon_p_greater": 0.010498046875,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.02206188701325415,
+      "std_delta_jitter_ms": 0.05447119336263936,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.8879904960554753,
+      "paired_energy_snr": 0.8311231980236288,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 1.8807741876562427,
+      "detectable_abs_snr_ge_1": true,
+      "paired_snr": 0.8879904960554753,
+      "paired_energy_snr": 0.8311231980236288,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_3s": {
+    "comparison_group": "W2_3s",
+    "interval_ms": 3000,
+    "interval_s": 3.0,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R520",
+        "R554",
+        "R707",
+        "R716",
+        "R725",
+        "R748",
+        "R789",
+        "R794",
+        "R801",
+        "R804",
+        "R815",
+        "R836"
+      ],
+      "mean_power_mW": 373.49554604627764,
+      "std_power_mW": 5.910664850191195,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 373.49554604627764,
+        "half_width": 3.7554572777673547,
+        "lower": 369.7400887685103,
+        "upper": 377.251003324045,
+        "method": "t"
+      },
+      "total_per_event_mJ": 1112.6684296704395,
+      "std_total_per_event_mJ": 14.28710919043551,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 0.9582543697321776,
+      "std_jitter_ms": 0.4297437270512975,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R521",
+        "R555",
+        "R706",
+        "R717",
+        "R724",
+        "R749",
+        "R788",
+        "R795",
+        "R800",
+        "R805",
+        "R814",
+        "R837"
+      ],
+      "mean_power_mW": 378.48501378605766,
+      "std_power_mW": 5.5492780615253094,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 378.48501378605766,
+        "half_width": 3.5258430668481933,
+        "lower": 374.95917071920945,
+        "upper": 382.0108568529059,
+        "method": "t"
+      },
+      "total_per_event_mJ": 1128.5477924501647,
+      "std_total_per_event_mJ": 20.35080277589579,
+      "incremental_per_event_mJ": 18.29052189691939,
+      "std_incremental_per_event_mJ": 14.954662365078622,
+      "jitter_ms": 0.963734701214564,
+      "std_jitter_ms": 0.4308943562041318,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 4.989467739780025,
+      "total_per_event_mJ": 15.87936277972517,
+      "incremental_per_event_mJ": 15.87936277972517
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R520",
+          "telemetry_run_id": "R521",
+          "delta_mean_power_mW": 22.71487039086969,
+          "delta_total_per_event_mJ": 68.59093915876178,
+          "delta_jitter_ms": 0.0006343331121323528,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R554",
+          "telemetry_run_id": "R555",
+          "delta_mean_power_mW": 12.345597760079954,
+          "delta_total_per_event_mJ": 36.672357564806134,
+          "delta_jitter_ms": 0.005919449786828464,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R815",
+          "telemetry_run_id": "R814",
+          "delta_mean_power_mW": -7.383595123292309,
+          "delta_total_per_event_mJ": -21.873766787482054,
+          "delta_jitter_ms": 0.007448689868930991,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R836",
+          "telemetry_run_id": "R837",
+          "delta_mean_power_mW": 0.02360501466171172,
+          "delta_total_per_event_mJ": 0.04630029960003412,
+          "delta_jitter_ms": 0.0042519079814646865,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R707",
+          "telemetry_run_id": "R706",
+          "delta_mean_power_mW": -0.21493191779563858,
+          "delta_total_per_event_mJ": 10.33110385872601,
+          "delta_jitter_ms": -0.00955078905870943,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R716",
+          "telemetry_run_id": "R717",
+          "delta_mean_power_mW": 1.0028212822393243,
+          "delta_total_per_event_mJ": 2.993581506996179,
+          "delta_jitter_ms": 0.027980746035086712,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R725",
+          "telemetry_run_id": "R724",
+          "delta_mean_power_mW": 8.06326554115293,
+          "delta_total_per_event_mJ": 24.00362648621467,
+          "delta_jitter_ms": 0.0015323908642570494,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R748",
+          "telemetry_run_id": "R749",
+          "delta_mean_power_mW": 1.8933130469844173,
+          "delta_total_per_event_mJ": 5.726026258011871,
+          "delta_jitter_ms": -0.006756966833461053,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R789",
+          "telemetry_run_id": "R788",
+          "delta_mean_power_mW": 6.944046444185233,
+          "delta_total_per_event_mJ": 20.548300261877102,
+          "delta_jitter_ms": 0.006202886510049632,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R794",
+          "telemetry_run_id": "R795",
+          "delta_mean_power_mW": 6.882850738857883,
+          "delta_total_per_event_mJ": 31.47857510558174,
+          "delta_jitter_ms": 0.016218556813886176,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R801",
+          "telemetry_run_id": "R800",
+          "delta_mean_power_mW": 3.2105224330852025,
+          "delta_total_per_event_mJ": -1.0560466692866157,
+          "delta_jitter_ms": 0.0019527462173181132,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R804",
+          "telemetry_run_id": "R805",
+          "delta_mean_power_mW": 4.39124726633338,
+          "delta_total_per_event_mJ": 13.09135631289223,
+          "delta_jitter_ms": 0.009930026490850397,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 4.989467739780149,
+      "std_delta_mean_power_mW": 7.501492875952869,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 4.989467739780149,
+        "half_width": 4.766221183088378,
+        "lower": 0.22324655669177051,
+        "upper": 9.755688922868526,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.04173142992453967,
+        "paired_t_p_greater": 0.020865714962269834,
+        "wilcoxon_p_two_sided": 0.02685546875,
+        "wilcoxon_p_greater": 0.013427734375,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 15.879362779724923,
+      "std_delta_total_per_event_mJ": 22.987110006848063,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 15.879362779724923,
+        "half_width": 14.605312897628409,
+        "lower": 1.2740498820965147,
+        "upper": 30.48467567735333,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.03567278381662173,
+        "paired_t_p_greater": 0.017836391908310864,
+        "wilcoxon_p_two_sided": 0.02099609375,
+        "wilcoxon_p_greater": 0.010498046875,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": 0.005480331482386174,
+      "std_delta_jitter_ms": 0.009884221317532848,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.6651299710987684,
+      "paired_energy_snr": 0.6907942222834589,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.844146617384105,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.6651299710987684,
+      "paired_energy_snr": 0.6907942222834589,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_4s": {
+    "comparison_group": "W2_4s",
+    "interval_ms": 4000,
+    "interval_s": 4.0,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R532",
+        "R556",
+        "R703",
+        "R708",
+        "R715",
+        "R720",
+        "R729",
+        "R732",
+        "R793",
+        "R798",
+        "R817",
+        "R838"
+      ],
+      "mean_power_mW": 372.65424219558605,
+      "std_power_mW": 3.176014374271374,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 372.65424219558605,
+        "half_width": 2.0179432599304525,
+        "lower": 370.6362989356556,
+        "upper": 374.6721854555165,
+        "method": "t"
+      },
+      "total_per_event_mJ": 1478.6599547573376,
+      "std_total_per_event_mJ": 14.371611272971254,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.099324123223702,
+      "std_jitter_ms": 0.48539940311313035,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R533",
+        "R557",
+        "R702",
+        "R709",
+        "R714",
+        "R721",
+        "R728",
+        "R733",
+        "R792",
+        "R799",
+        "R816",
+        "R839"
+      ],
+      "mean_power_mW": 379.38702482510683,
+      "std_power_mW": 6.625023334867796,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 379.38702482510683,
+        "half_width": 4.209339004816524,
+        "lower": 375.1776858202903,
+        "upper": 383.59636382992335,
+        "method": "t"
+      },
+      "total_per_event_mJ": 1510.2260055160657,
+      "std_total_per_event_mJ": 24.09197908687723,
+      "incremental_per_event_mJ": 8.43290377049981,
+      "std_incremental_per_event_mJ": 22.77566874720249,
+      "jitter_ms": 1.0963619651037861,
+      "std_jitter_ms": 0.4942953067186244,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 6.732782629520784,
+      "total_per_event_mJ": 31.566050758728124,
+      "incremental_per_event_mJ": 31.566050758728124
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R532",
+          "telemetry_run_id": "R533",
+          "delta_mean_power_mW": 11.127893591469501,
+          "delta_total_per_event_mJ": 44.57424978444692,
+          "delta_jitter_ms": 0.002474140710210619,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R556",
+          "telemetry_run_id": "R557",
+          "delta_mean_power_mW": 3.062188688770391,
+          "delta_total_per_event_mJ": 12.264151080515148,
+          "delta_jitter_ms": -0.04698436161777426,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R817",
+          "telemetry_run_id": "R816",
+          "delta_mean_power_mW": 12.587356613128975,
+          "delta_total_per_event_mJ": 49.7170090448883,
+          "delta_jitter_ms": -0.008030865759434791,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R838",
+          "telemetry_run_id": "R839",
+          "delta_mean_power_mW": 3.173944206333431,
+          "delta_total_per_event_mJ": 12.711220406366692,
+          "delta_jitter_ms": 0.05266780916909175,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R703",
+          "telemetry_run_id": "R702",
+          "delta_mean_power_mW": 4.216325056788264,
+          "delta_total_per_event_mJ": 36.162032139039184,
+          "delta_jitter_ms": 0.016485591617054762,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R708",
+          "telemetry_run_id": "R709",
+          "delta_mean_power_mW": 16.588058373208924,
+          "delta_total_per_event_mJ": 65.57544567473724,
+          "delta_jitter_ms": -0.02589481312632591,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R715",
+          "telemetry_run_id": "R714",
+          "delta_mean_power_mW": 4.79487512120761,
+          "delta_total_per_event_mJ": 38.390501671534594,
+          "delta_jitter_ms": -0.025822528137560807,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R720",
+          "telemetry_run_id": "R721",
+          "delta_mean_power_mW": 4.9709635048317296,
+          "delta_total_per_event_mJ": 19.52582063442196,
+          "delta_jitter_ms": -0.00025528847437961133,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R729",
+          "telemetry_run_id": "R728",
+          "delta_mean_power_mW": -0.22637717312926497,
+          "delta_total_per_event_mJ": 18.24936902579816,
+          "delta_jitter_ms": -0.03613160893171208,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R732",
+          "telemetry_run_id": "R733",
+          "delta_mean_power_mW": 7.300718407646514,
+          "delta_total_per_event_mJ": 9.937319491592916,
+          "delta_jitter_ms": 0.018007154982315088,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R793",
+          "telemetry_run_id": "R792",
+          "delta_mean_power_mW": 8.060254595000004,
+          "delta_total_per_event_mJ": 32.18957440936083,
+          "delta_jitter_ms": 0.027425193234741796,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R798",
+          "telemetry_run_id": "R799",
+          "delta_mean_power_mW": 5.137190568992594,
+          "delta_total_per_event_mJ": 39.49591574203373,
+          "delta_jitter_ms": -0.009486321105216966,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 6.732782629520723,
+      "std_delta_mean_power_mW": 4.701167075463559,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 6.732782629520723,
+        "half_width": 2.986979054814586,
+        "lower": 3.745803574706137,
+        "upper": 9.719761684335309,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.0004280297267947984,
+        "paired_t_p_greater": 0.0002140148633973992,
+        "wilcoxon_p_two_sided": 0.0009765625,
+        "wilcoxon_p_greater": 0.00048828125,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 31.56605075872797,
+      "std_delta_total_per_event_mJ": 17.33217794505618,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 31.56605075872797,
+        "half_width": 11.012340481665875,
+        "lower": 20.553710277062095,
+        "upper": 42.57839124039385,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 5.764929388093069e-05,
+        "paired_t_p_greater": 2.8824646940465344e-05,
+        "wilcoxon_p_two_sided": 0.00048828125,
+        "wilcoxon_p_greater": 0.000244140625,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.002962158119915867,
+      "std_delta_jitter_ms": 0.028648050042685672,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 1.4321513193310274,
+      "paired_energy_snr": 1.821239711408101,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 2.1198841806455575,
+      "detectable_abs_snr_ge_1": true,
+      "paired_snr": 1.4321513193310274,
+      "paired_energy_snr": 1.821239711408101,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_5s": {
+    "comparison_group": "W2_5s",
+    "interval_ms": 5000,
+    "interval_s": 5.0,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R509",
+        "R518",
+        "R738",
+        "R759",
+        "R770",
+        "R783",
+        "R818",
+        "R841",
+        "R858",
+        "R875",
+        "R890",
+        "R907"
+      ],
+      "mean_power_mW": 373.932145837839,
+      "std_power_mW": 4.489649011036833,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 373.932145837839,
+        "half_width": 2.8525868883555257,
+        "lower": 371.0795589494835,
+        "upper": 376.78473272619453,
+        "method": "t"
+      },
+      "total_per_event_mJ": 1851.196142723273,
+      "std_total_per_event_mJ": 30.358234930169115,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.2432707544123371,
+      "std_jitter_ms": 0.5639582849453272,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R512",
+        "R519",
+        "R739",
+        "R758",
+        "R771",
+        "R782",
+        "R819",
+        "R840",
+        "R859",
+        "R874",
+        "R891",
+        "R906"
+      ],
+      "mean_power_mW": 374.9548965301315,
+      "std_power_mW": 3.7651930597207457,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 374.9548965301315,
+        "half_width": 2.392289537084819,
+        "lower": 372.5626069930467,
+        "upper": 377.34718606721634,
+        "method": "t"
+      },
+      "total_per_event_mJ": 1863.7559885636317,
+      "std_total_per_event_mJ": 23.07246009084164,
+      "incremental_per_event_mJ": 22.562819468874313,
+      "std_incremental_per_event_mJ": 23.07246009084164,
+      "jitter_ms": 1.2321093605456443,
+      "std_jitter_ms": 0.5595220203418232,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 1.0227506922925045,
+      "total_per_event_mJ": 12.559845840358776,
+      "incremental_per_event_mJ": 12.559845840358776
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R509",
+          "telemetry_run_id": "R512",
+          "delta_mean_power_mW": -1.2258465181605516,
+          "delta_total_per_event_mJ": -6.09833744695834,
+          "delta_jitter_ms": -0.008554554065813416,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R518",
+          "telemetry_run_id": "R519",
+          "delta_mean_power_mW": -13.78716004731757,
+          "delta_total_per_event_mJ": -68.90553494477376,
+          "delta_jitter_ms": 0.0050566094759943725,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R875",
+          "telemetry_run_id": "R874",
+          "delta_mean_power_mW": 6.382401559146842,
+          "delta_total_per_event_mJ": 31.293659850696486,
+          "delta_jitter_ms": 0.005638205474312263,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R890",
+          "telemetry_run_id": "R891",
+          "delta_mean_power_mW": 3.5313994440000442,
+          "delta_total_per_event_mJ": 17.81443345155435,
+          "delta_jitter_ms": 0.006660270044272609,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep12",
+          "control_run_id": "R907",
+          "telemetry_run_id": "R906",
+          "delta_mean_power_mW": 1.6705040668979905,
+          "delta_total_per_event_mJ": 38.657567097486435,
+          "delta_jitter_ms": 0.0008161135839210854,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R738",
+          "telemetry_run_id": "R739",
+          "delta_mean_power_mW": -1.9633158050649513,
+          "delta_total_per_event_mJ": -9.624710871145226,
+          "delta_jitter_ms": -0.030540539372886588,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R759",
+          "telemetry_run_id": "R758",
+          "delta_mean_power_mW": 2.353928835631052,
+          "delta_total_per_event_mJ": 41.71185291146662,
+          "delta_jitter_ms": -0.0523204969563702,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R770",
+          "telemetry_run_id": "R771",
+          "delta_mean_power_mW": 0.9022981755499586,
+          "delta_total_per_event_mJ": 34.34187273844395,
+          "delta_jitter_ms": -0.03167287766592475,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R783",
+          "telemetry_run_id": "R782",
+          "delta_mean_power_mW": 5.294837756901529,
+          "delta_total_per_event_mJ": -3.6838798489445708,
+          "delta_jitter_ms": -0.020245249918923625,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R818",
+          "telemetry_run_id": "R819",
+          "delta_mean_power_mW": -1.684681994000016,
+          "delta_total_per_event_mJ": -8.519239465142618,
+          "delta_jitter_ms": -0.0031393463652138465,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R841",
+          "telemetry_run_id": "R840",
+          "delta_mean_power_mW": 7.649361878578645,
+          "delta_total_per_event_mJ": 68.10518229491413,
+          "delta_jitter_ms": -0.019854173846793666,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R858",
+          "telemetry_run_id": "R859",
+          "delta_mean_power_mW": 3.1492809553482175,
+          "delta_total_per_event_mJ": 15.625284316705802,
+          "delta_jitter_ms": 0.014219313213111207,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 1.0227506922925993,
+      "std_delta_mean_power_mW": 5.5966432271776325,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 1.0227506922925993,
+        "half_width": 3.555937457338955,
+        "lower": -2.5331867650463558,
+        "upper": 4.578688149631554,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.5396435202660376,
+        "paired_t_p_greater": 0.2698217601330188,
+        "wilcoxon_p_two_sided": 0.2333984375,
+        "wilcoxon_p_greater": 0.11669921875,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 12.559845840358605,
+      "std_delta_total_per_event_mJ": 35.24422860327486,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 12.559845840358605,
+        "half_width": 22.39311450778392,
+        "lower": -9.833268667425315,
+        "upper": 34.952960348142526,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.2427429941505067,
+        "paired_t_p_greater": 0.12137149707525335,
+        "wilcoxon_p_two_sided": 0.20361328125,
+        "wilcoxon_p_greater": 0.101806640625,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.011161393866692881,
+      "std_delta_jitter_ms": 0.019931876231905617,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.18274359303913837,
+      "paired_energy_snr": 0.356366030357423,
+      "paired_ci_crosses_zero": true,
+      "paired_energy_ci_crosses_zero": true,
+      "interpretation_label": "below_noise_floor"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.22780192611455655,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.18274359303913837,
+      "paired_energy_snr": 0.356366030357423,
+      "paired_ci_crosses_zero": true,
+      "paired_energy_ci_crosses_zero": true,
+      "interpretation_label": "below_noise_floor"
+    }
+  },
+  "W2_6s": {
+    "comparison_group": "W2_6s",
+    "interval_ms": 6000,
+    "interval_s": 6.0,
+    "control": {
+      "n_runs": 12,
+      "run_ids": [
+        "R534",
+        "R544",
+        "R701",
+        "R710",
+        "R727",
+        "R750",
+        "R821",
+        "R842",
+        "R861",
+        "R876",
+        "R893",
+        "R908"
+      ],
+      "mean_power_mW": 373.66652548814096,
+      "std_power_mW": 6.091748769124113,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 373.66652548814096,
+        "half_width": 3.8705125107199145,
+        "lower": 369.79601297742107,
+        "upper": 377.53703799886085,
+        "method": "t"
+      },
+      "total_per_event_mJ": 2211.804218967694,
+      "std_total_per_event_mJ": 28.4704511131312,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.350466880173937,
+      "std_jitter_ms": 0.6119300973106878,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 12,
+      "run_ids": [
+        "R535",
+        "R545",
+        "R700",
+        "R711",
+        "R726",
+        "R751",
+        "R820",
+        "R843",
+        "R860",
+        "R877",
+        "R892",
+        "R909"
+      ],
+      "mean_power_mW": 377.45591044313824,
+      "std_power_mW": 7.70585365262212,
+      "ci95_mean_power_mW": {
+        "n": 12,
+        "mean": 377.45591044313824,
+        "half_width": 4.896065825862854,
+        "lower": 372.55984461727536,
+        "upper": 382.3519762690011,
+        "method": "t"
+      },
+      "total_per_event_mJ": 2238.0067642672434,
+      "std_total_per_event_mJ": 49.24619822628885,
+      "incremental_per_event_mJ": 40.31379024031057,
+      "std_incremental_per_event_mJ": 51.62690932799511,
+      "jitter_ms": 1.3434080734436524,
+      "std_jitter_ms": 0.5954660654767397,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 3.7893849549972742,
+      "total_per_event_mJ": 26.202545299549456,
+      "incremental_per_event_mJ": 26.202545299549456
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 12,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R534",
+          "telemetry_run_id": "R535",
+          "delta_mean_power_mW": 7.562956054429264,
+          "delta_total_per_event_mJ": 45.39753648553324,
+          "delta_jitter_ms": 0.00345491874687881,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R544",
+          "telemetry_run_id": "R545",
+          "delta_mean_power_mW": 3.560675619550068,
+          "delta_total_per_event_mJ": 20.740224767470863,
+          "delta_jitter_ms": 0.054119523879335364,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R893",
+          "telemetry_run_id": "R892",
+          "delta_mean_power_mW": 12.195832545151632,
+          "delta_total_per_event_mJ": 71.58225805735492,
+          "delta_jitter_ms": -0.013274364172219721,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R908",
+          "telemetry_run_id": "R909",
+          "delta_mean_power_mW": 3.475686382539152,
+          "delta_total_per_event_mJ": 20.38529753312605,
+          "delta_jitter_ms": -0.0061287841407029475,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R701",
+          "telemetry_run_id": "R700",
+          "delta_mean_power_mW": -1.913662098633779,
+          "delta_total_per_event_mJ": -11.239974036447165,
+          "delta_jitter_ms": -0.021818989121327403,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R710",
+          "telemetry_run_id": "R711",
+          "delta_mean_power_mW": -9.040853881372868,
+          "delta_total_per_event_mJ": -53.09109984717861,
+          "delta_jitter_ms": -0.013453530311677397,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R727",
+          "telemetry_run_id": "R726",
+          "delta_mean_power_mW": 9.013771660798852,
+          "delta_total_per_event_mJ": 97.00643145371669,
+          "delta_jitter_ms": -0.050653434593759705,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R750",
+          "telemetry_run_id": "R751",
+          "delta_mean_power_mW": 1.7209049855186436,
+          "delta_total_per_event_mJ": 53.481035458723454,
+          "delta_jitter_ms": -0.047241779738538936,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R821",
+          "telemetry_run_id": "R820",
+          "delta_mean_power_mW": 13.091579431072148,
+          "delta_total_per_event_mJ": 122.1282449398127,
+          "delta_jitter_ms": 0.04300933089157777,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R842",
+          "telemetry_run_id": "R843",
+          "delta_mean_power_mW": -0.6927306665352262,
+          "delta_total_per_event_mJ": -47.465985740151154,
+          "delta_jitter_ms": -0.01585002397056079,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R861",
+          "telemetry_run_id": "R860",
+          "delta_mean_power_mW": 4.1574587853298794,
+          "delta_total_per_event_mJ": -18.298450075553774,
+          "delta_jitter_ms": -0.012223873610971658,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R876",
+          "telemetry_run_id": "R877",
+          "delta_mean_power_mW": 2.3410006421192406,
+          "delta_total_per_event_mJ": 13.805024598190357,
+          "delta_jitter_ms": -0.004644674621451905,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 3.7893849549972507,
+      "std_delta_mean_power_mW": 6.198423500381916,
+      "ci95_delta_mean_power_mW": {
+        "n": 12,
+        "mean": 3.7893849549972507,
+        "half_width": 3.938290401364998,
+        "lower": -0.14890544636774727,
+        "upper": 7.727675356362249,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.05779344626224572,
+        "paired_t_p_greater": 0.02889672313112286,
+        "wilcoxon_p_two_sided": 0.05224609375,
+        "wilcoxon_p_greater": 0.026123046875,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 26.202545299549797,
+      "std_delta_total_per_event_mJ": 54.52355912355445,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 12,
+        "mean": 26.202545299549797,
+        "half_width": 34.64261671234966,
+        "lower": -8.44007141279986,
+        "upper": 60.845162011899454,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 12,
+        "paired_t_p_two_sided": 0.12415605124616261,
+        "paired_t_p_greater": 0.062078025623081304,
+        "wilcoxon_p_two_sided": 0.12939453125,
+        "wilcoxon_p_greater": 0.064697265625,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.007058806730284878,
+      "std_delta_jitter_ms": 0.030575321128715496,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.6113465713925109,
+      "paired_energy_snr": 0.48057290684514703,
+      "paired_ci_crosses_zero": true,
+      "paired_energy_ci_crosses_zero": true,
+      "interpretation_label": "below_noise_floor"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.6220520738155986,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.6113465713925109,
+      "paired_energy_snr": 0.48057290684514703,
+      "paired_ci_crosses_zero": true,
+      "paired_energy_ci_crosses_zero": true,
+      "interpretation_label": "below_noise_floor"
+    }
+  },
+  "W2_7s": {
+    "comparison_group": "W2_7s",
+    "interval_ms": 7000,
+    "interval_s": 7.0,
+    "control": {
+      "n_runs": 17,
+      "run_ids": [
+        "R524",
+        "R528",
+        "R705",
+        "R718",
+        "R731",
+        "R752",
+        "R791",
+        "R796",
+        "R803",
+        "R806",
+        "R823",
+        "R844",
+        "R919",
+        "R920",
+        "R923",
+        "R924",
+        "R927"
+      ],
+      "mean_power_mW": 372.7016370422465,
+      "std_power_mW": 4.443062840501619,
+      "ci95_mean_power_mW": {
+        "n": 17,
+        "mean": 372.7016370422465,
+        "half_width": 2.2844121193088154,
+        "lower": 370.4172249229377,
+        "upper": 374.9860491615553,
+        "method": "t"
+      },
+      "total_per_event_mJ": 2602.0135201112107,
+      "std_total_per_event_mJ": 30.805494622316854,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.4349603473191634,
+      "std_jitter_ms": 0.6811053384655333,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 17,
+      "run_ids": [
+        "R525",
+        "R529",
+        "R704",
+        "R719",
+        "R730",
+        "R753",
+        "R790",
+        "R797",
+        "R802",
+        "R807",
+        "R822",
+        "R845",
+        "R918",
+        "R921",
+        "R922",
+        "R925",
+        "R926"
+      ],
+      "mean_power_mW": 377.63919345389667,
+      "std_power_mW": 5.107162936137942,
+      "ci95_mean_power_mW": {
+        "n": 17,
+        "mean": 377.63919345389667,
+        "half_width": 2.6258608814277156,
+        "lower": 375.0133325724689,
+        "upper": 380.2650543353244,
+        "method": "t"
+      },
+      "total_per_event_mJ": 2636.378631935974,
+      "std_total_per_event_mJ": 35.82790587317229,
+      "incremental_per_event_mJ": 82.02696471081117,
+      "std_incremental_per_event_mJ": 36.878797438744755,
+      "jitter_ms": 1.3665392866864248,
+      "std_jitter_ms": 0.5766033628394406,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 4.937556411650178,
+      "total_per_event_mJ": 34.36511182476352,
+      "incremental_per_event_mJ": 34.36511182476352
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 17,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R524",
+          "telemetry_run_id": "R525",
+          "delta_mean_power_mW": 13.52785676386577,
+          "delta_total_per_event_mJ": 94.11546814187022,
+          "delta_jitter_ms": -0.002720117338201114,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R528",
+          "telemetry_run_id": "R529",
+          "delta_mean_power_mW": 7.085773202094799,
+          "delta_total_per_event_mJ": 49.64355891498826,
+          "delta_jitter_ms": 0.0018670716918353022,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R823",
+          "telemetry_run_id": "R822",
+          "delta_mean_power_mW": 10.93507224283519,
+          "delta_total_per_event_mJ": 75.35638165067849,
+          "delta_jitter_ms": -0.05163082159315646,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R844",
+          "telemetry_run_id": "R845",
+          "delta_mean_power_mW": 10.101680771003032,
+          "delta_total_per_event_mJ": 69.76355003448452,
+          "delta_jitter_ms": -0.05930881275825417,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep12",
+          "control_run_id": "R919",
+          "telemetry_run_id": "R918",
+          "delta_mean_power_mW": 7.142940892319928,
+          "delta_total_per_event_mJ": 50.28084784552357,
+          "delta_jitter_ms": 0.027498081377848482,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep13",
+          "control_run_id": "R920",
+          "telemetry_run_id": "R921",
+          "delta_mean_power_mW": -1.9702099050131778,
+          "delta_total_per_event_mJ": -13.776368169390935,
+          "delta_jitter_ms": 0.02936786660768953,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep14",
+          "control_run_id": "R923",
+          "telemetry_run_id": "R922",
+          "delta_mean_power_mW": 2.5217869459796702,
+          "delta_total_per_event_mJ": 17.657077305945677,
+          "delta_jitter_ms": -0.007234876582891792,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep15",
+          "control_run_id": "R924",
+          "telemetry_run_id": "R925",
+          "delta_mean_power_mW": 2.115213190003601,
+          "delta_total_per_event_mJ": 14.366212432022621,
+          "delta_jitter_ms": -0.028600429211121048,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep16",
+          "control_run_id": "R927",
+          "telemetry_run_id": "R926",
+          "delta_mean_power_mW": 2.576081459305499,
+          "delta_total_per_event_mJ": 18.008916340973883,
+          "delta_jitter_ms": 0.0005056972949732952,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R705",
+          "telemetry_run_id": "R704",
+          "delta_mean_power_mW": 6.317283654448431,
+          "delta_total_per_event_mJ": 44.0892990640923,
+          "delta_jitter_ms": 0.0008095207994540665,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R718",
+          "telemetry_run_id": "R719",
+          "delta_mean_power_mW": 6.974163760413148,
+          "delta_total_per_event_mJ": 48.711746569526895,
+          "delta_jitter_ms": -0.03823157407800504,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R731",
+          "telemetry_run_id": "R730",
+          "delta_mean_power_mW": 13.139732908332405,
+          "delta_total_per_event_mJ": 90.73968362309006,
+          "delta_jitter_ms": -0.039326611509366005,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R752",
+          "telemetry_run_id": "R753",
+          "delta_mean_power_mW": 0.563898394576654,
+          "delta_total_per_event_mJ": 4.771372457344114,
+          "delta_jitter_ms": -1.0715213252853897,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R791",
+          "telemetry_run_id": "R790",
+          "delta_mean_power_mW": 0.8986315954682027,
+          "delta_total_per_event_mJ": 6.385053867313218,
+          "delta_jitter_ms": 0.07541305400127452,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R796",
+          "telemetry_run_id": "R797",
+          "delta_mean_power_mW": -4.206638589803447,
+          "delta_total_per_event_mJ": -29.416304261450932,
+          "delta_jitter_ms": 0.0010688902804933953,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R803",
+          "telemetry_run_id": "R802",
+          "delta_mean_power_mW": 2.364606330556512,
+          "delta_total_per_event_mJ": 16.705157344340478,
+          "delta_jitter_ms": 0.014837149474117961,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R806",
+          "telemetry_run_id": "R807",
+          "delta_mean_power_mW": 3.8505853816665763,
+          "delta_total_per_event_mJ": 26.80524785962507,
+          "delta_jitter_ms": -0.015950793927856477,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 4.9375564116501645,
+      "std_delta_mean_power_mW": 5.08178333674432,
+      "ci95_delta_mean_power_mW": {
+        "n": 17,
+        "mean": 4.9375564116501645,
+        "half_width": 2.6128118955098283,
+        "lower": 2.324744516140336,
+        "upper": 7.550368307159992,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 17,
+        "paired_t_p_two_sided": 0.0010189026196086514,
+        "paired_t_p_greater": 0.0005094513098043257,
+        "wilcoxon_p_two_sided": 0.001068115234375,
+        "wilcoxon_p_greater": 0.0005340576171875,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 34.36511182476338,
+      "std_delta_total_per_event_mJ": 35.203575499513484,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 17,
+        "mean": 34.36511182476338,
+        "half_width": 18.10000835032353,
+        "lower": 16.26510347443985,
+        "upper": 52.46512017508691,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 17,
+        "paired_t_p_two_sided": 0.0009793965521734031,
+        "paired_t_p_greater": 0.0004896982760867016,
+        "wilcoxon_p_two_sided": 0.001068115234375,
+        "wilcoxon_p_greater": 0.0005340576171875,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.06842106063273855,
+      "std_delta_jitter_ms": 0.2605797067610921,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.971618836235833,
+      "paired_energy_snr": 0.9761824285501429,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 1.1112956509732217,
+      "detectable_abs_snr_ge_1": true,
+      "paired_snr": 0.971618836235833,
+      "paired_energy_snr": 0.9761824285501429,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_8s": {
+    "comparison_group": "W2_8s",
+    "interval_ms": 8000,
+    "interval_s": 8.0,
+    "control": {
+      "n_runs": 17,
+      "run_ids": [
+        "R536",
+        "R540",
+        "R741",
+        "R760",
+        "R773",
+        "R784",
+        "R825",
+        "R846",
+        "R863",
+        "R878",
+        "R895",
+        "R910",
+        "R929",
+        "R930",
+        "R933",
+        "R934",
+        "R937"
+      ],
+      "mean_power_mW": 373.94776706298023,
+      "std_power_mW": 5.527478851572199,
+      "ci95_mean_power_mW": {
+        "n": 17,
+        "mean": 373.94776706298023,
+        "half_width": 2.8419673839970088,
+        "lower": 371.1057996789832,
+        "upper": 376.78973444697726,
+        "method": "t"
+      },
+      "total_per_event_mJ": 2963.231933966057,
+      "std_total_per_event_mJ": 47.59761223541298,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.5100664546816558,
+      "std_jitter_ms": 0.7244431123459719,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 17,
+      "run_ids": [
+        "R537",
+        "R541",
+        "R740",
+        "R761",
+        "R772",
+        "R785",
+        "R824",
+        "R847",
+        "R862",
+        "R879",
+        "R894",
+        "R911",
+        "R928",
+        "R931",
+        "R932",
+        "R935",
+        "R936"
+      ],
+      "mean_power_mW": 378.0741335105537,
+      "std_power_mW": 5.563858177752341,
+      "ci95_mean_power_mW": {
+        "n": 17,
+        "mean": 378.0741335105537,
+        "half_width": 2.8606719075658953,
+        "lower": 375.21346160298776,
+        "upper": 380.9348054181196,
+        "method": "t"
+      },
+      "total_per_event_mJ": 2996.0353645366195,
+      "std_total_per_event_mJ": 44.77107313588438,
+      "incremental_per_event_mJ": 29.75450316327519,
+      "std_incremental_per_event_mJ": 44.94117185374901,
+      "jitter_ms": 1.4330346921562747,
+      "std_jitter_ms": 0.6193162156549126,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 4.126366447573446,
+      "total_per_event_mJ": 32.80343057056234,
+      "incremental_per_event_mJ": 32.80343057056234
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 17,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R536",
+          "telemetry_run_id": "R537",
+          "delta_mean_power_mW": -1.7136403611747255,
+          "delta_total_per_event_mJ": -13.67960546256245,
+          "delta_jitter_ms": -0.008608321364426734,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R540",
+          "telemetry_run_id": "R541",
+          "delta_mean_power_mW": 7.112003229952052,
+          "delta_total_per_event_mJ": 56.95763860916986,
+          "delta_jitter_ms": -0.042079186996025794,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R895",
+          "telemetry_run_id": "R894",
+          "delta_mean_power_mW": 2.584088281521872,
+          "delta_total_per_event_mJ": 19.381941582564195,
+          "delta_jitter_ms": -0.032111034269927785,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R910",
+          "telemetry_run_id": "R911",
+          "delta_mean_power_mW": 15.632773036999936,
+          "delta_total_per_event_mJ": 123.52790831449875,
+          "delta_jitter_ms": 0.015523296221857219,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep12",
+          "control_run_id": "R929",
+          "telemetry_run_id": "R928",
+          "delta_mean_power_mW": 1.3859413630045765,
+          "delta_total_per_event_mJ": 11.043496907894678,
+          "delta_jitter_ms": -0.006143099822453868,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep13",
+          "control_run_id": "R930",
+          "telemetry_run_id": "R931",
+          "delta_mean_power_mW": 3.456488131341473,
+          "delta_total_per_event_mJ": 27.577807715285417,
+          "delta_jitter_ms": 0.008301696539894321,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep14",
+          "control_run_id": "R933",
+          "telemetry_run_id": "R932",
+          "delta_mean_power_mW": 9.505301527008896,
+          "delta_total_per_event_mJ": 75.61259852836838,
+          "delta_jitter_ms": -0.020856694869532788,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep15",
+          "control_run_id": "R934",
+          "telemetry_run_id": "R935",
+          "delta_mean_power_mW": -4.878645402755808,
+          "delta_total_per_event_mJ": -38.82203204929965,
+          "delta_jitter_ms": 0.02320202971024199,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep16",
+          "control_run_id": "R937",
+          "telemetry_run_id": "R936",
+          "delta_mean_power_mW": 5.207184544933568,
+          "delta_total_per_event_mJ": 41.48875196726249,
+          "delta_jitter_ms": 0.015726248300289125,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R741",
+          "telemetry_run_id": "R740",
+          "delta_mean_power_mW": 7.176844332555902,
+          "delta_total_per_event_mJ": 56.49032519994216,
+          "delta_jitter_ms": -0.0006272331885650573,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R760",
+          "telemetry_run_id": "R761",
+          "delta_mean_power_mW": 0.09951796526206635,
+          "delta_total_per_event_mJ": 1.6280823186243651,
+          "delta_jitter_ms": 0.04987287756562586,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R773",
+          "telemetry_run_id": "R772",
+          "delta_mean_power_mW": 4.7381658833722895,
+          "delta_total_per_event_mJ": 37.59376541550728,
+          "delta_jitter_ms": -0.0065042893563325155,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R784",
+          "telemetry_run_id": "R785",
+          "delta_mean_power_mW": 5.813348560047984,
+          "delta_total_per_event_mJ": 47.02585721836476,
+          "delta_jitter_ms": -0.05636604034803128,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R825",
+          "telemetry_run_id": "R824",
+          "delta_mean_power_mW": 2.594961580139966,
+          "delta_total_per_event_mJ": 20.412660714349386,
+          "delta_jitter_ms": -0.05684411458414518,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R846",
+          "telemetry_run_id": "R847",
+          "delta_mean_power_mW": 6.934961504999933,
+          "delta_total_per_event_mJ": 54.857079104479,
+          "delta_jitter_ms": -0.028675615442673275,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R863",
+          "telemetry_run_id": "R862",
+          "delta_mean_power_mW": 3.516385078973542,
+          "delta_total_per_event_mJ": 27.68205595526115,
+          "delta_jitter_ms": -0.005069166660462754,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R878",
+          "telemetry_run_id": "R879",
+          "delta_mean_power_mW": 0.982550352564374,
+          "delta_total_per_event_mJ": 8.879987659852759,
+          "delta_jitter_ms": -1.1582813143668085,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 4.126366447573406,
+      "std_delta_mean_power_mW": 4.651450927119465,
+      "ci95_delta_mean_power_mW": {
+        "n": 17,
+        "mean": 4.126366447573406,
+        "half_width": 2.391555386842623,
+        "lower": 1.7348110607307827,
+        "upper": 6.517921834416029,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 17,
+        "paired_t_p_two_sided": 0.0021240505565487916,
+        "paired_t_p_greater": 0.0010620252782743958,
+        "wilcoxon_p_two_sided": 0.001678466796875,
+        "wilcoxon_p_greater": 0.0008392333984375,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 32.803430570562504,
+      "std_delta_total_per_event_mJ": 36.81956365046254,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 17,
+        "mean": 32.803430570562504,
+        "half_width": 18.930872789834968,
+        "lower": 13.872557780727536,
+        "upper": 51.734303360397476,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 17,
+        "paired_t_p_two_sided": 0.002054726091967136,
+        "paired_t_p_greater": 0.001027363045983568,
+        "wilcoxon_p_two_sided": 0.001678466796875,
+        "wilcoxon_p_greater": 0.0008392333984375,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.077031762525381,
+      "std_delta_jitter_ms": 0.2800636049608786,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.8871138301202649,
+      "paired_energy_snr": 0.8909239360350327,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.746518721894299,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.8871138301202649,
+      "paired_energy_snr": 0.8909239360350327,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  },
+  "W2_9s": {
+    "comparison_group": "W2_9s",
+    "interval_ms": 9000,
+    "interval_s": 9.0,
+    "control": {
+      "n_runs": 17,
+      "run_ids": [
+        "R538",
+        "R542",
+        "R743",
+        "R762",
+        "R775",
+        "R786",
+        "R827",
+        "R848",
+        "R865",
+        "R880",
+        "R897",
+        "R912",
+        "R939",
+        "R940",
+        "R943",
+        "R944",
+        "R947"
+      ],
+      "mean_power_mW": 375.25008771160867,
+      "std_power_mW": 6.710522103547871,
+      "ci95_mean_power_mW": {
+        "n": 17,
+        "mean": 375.25008771160867,
+        "half_width": 3.450232096763174,
+        "lower": 371.7998556148455,
+        "upper": 378.70031980837183,
+        "method": "t"
+      },
+      "total_per_event_mJ": 3329.910227361324,
+      "std_total_per_event_mJ": 67.5272344457492,
+      "incremental_per_event_mJ": null,
+      "std_incremental_per_event_mJ": null,
+      "jitter_ms": 1.50309600898017,
+      "std_jitter_ms": 0.6784329605142365,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "telemetry": {
+      "n_runs": 17,
+      "run_ids": [
+        "R539",
+        "R543",
+        "R742",
+        "R763",
+        "R774",
+        "R787",
+        "R826",
+        "R849",
+        "R864",
+        "R881",
+        "R896",
+        "R913",
+        "R938",
+        "R941",
+        "R942",
+        "R945",
+        "R946"
+      ],
+      "mean_power_mW": 379.31301810706924,
+      "std_power_mW": 6.705550915048789,
+      "ci95_mean_power_mW": {
+        "n": 17,
+        "mean": 379.31301810706924,
+        "half_width": 3.4476761474862134,
+        "lower": 375.865341959583,
+        "upper": 382.76069425455546,
+        "method": "t"
+      },
+      "total_per_event_mJ": 3366.0502784028376,
+      "std_total_per_event_mJ": 67.08808772376089,
+      "incremental_per_event_mJ": 91.216177460425,
+      "std_incremental_per_event_mJ": 67.08808772376089,
+      "jitter_ms": 1.5018657855160256,
+      "std_jitter_ms": 0.6694822996692368,
+      "reliability_rate": 1.0,
+      "mean_latency_ms": null,
+      "std_latency_ms": null,
+      "p95_latency_ms": null
+    },
+    "delta": {
+      "mean_power_mW": 4.062930395460569,
+      "total_per_event_mJ": 36.14005104151374,
+      "incremental_per_event_mJ": 36.14005104151374
+    },
+    "latency": {
+      "control_mean_latency_ms": null,
+      "telemetry_mean_latency_ms": null,
+      "delta_mean_latency_ms": null,
+      "paired_delta_latency_ms": null
+    },
+    "paired": {
+      "n_pairs": 17,
+      "pairs": [
+        {
+          "replicate_id": "primary",
+          "control_run_id": "R538",
+          "telemetry_run_id": "R539",
+          "delta_mean_power_mW": 11.27888147194966,
+          "delta_total_per_event_mJ": 101.56000963546467,
+          "delta_jitter_ms": 0.03420622325282675,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep1",
+          "control_run_id": "R542",
+          "telemetry_run_id": "R543",
+          "delta_mean_power_mW": -1.2550645928532163,
+          "delta_total_per_event_mJ": -11.286454508724546,
+          "delta_jitter_ms": -0.007475267402960874,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep10",
+          "control_run_id": "R897",
+          "telemetry_run_id": "R896",
+          "delta_mean_power_mW": 4.874914492169239,
+          "delta_total_per_event_mJ": 43.02554330027306,
+          "delta_jitter_ms": 0.0512852872392322,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep11",
+          "control_run_id": "R912",
+          "telemetry_run_id": "R913",
+          "delta_mean_power_mW": 0.8424038204721569,
+          "delta_total_per_event_mJ": 8.576219288250286,
+          "delta_jitter_ms": -0.047740206035752575,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep12",
+          "control_run_id": "R939",
+          "telemetry_run_id": "R938",
+          "delta_mean_power_mW": -9.67895346382096,
+          "delta_total_per_event_mJ": -86.11125725157535,
+          "delta_jitter_ms": -0.026429680145071854,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep13",
+          "control_run_id": "R940",
+          "telemetry_run_id": "R941",
+          "delta_mean_power_mW": 7.139684937209893,
+          "delta_total_per_event_mJ": 64.10314981986721,
+          "delta_jitter_ms": 0.0023099314784629232,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep14",
+          "control_run_id": "R943",
+          "telemetry_run_id": "R942",
+          "delta_mean_power_mW": 8.300942882080165,
+          "delta_total_per_event_mJ": 74.61132972671021,
+          "delta_jitter_ms": 0.05542581609474695,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep15",
+          "control_run_id": "R944",
+          "telemetry_run_id": "R945",
+          "delta_mean_power_mW": -0.0020690120360313813,
+          "delta_total_per_event_mJ": -0.36509464584969464,
+          "delta_jitter_ms": 0.0036456120168368855,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep16",
+          "control_run_id": "R947",
+          "telemetry_run_id": "R946",
+          "delta_mean_power_mW": 9.519310426258016,
+          "delta_total_per_event_mJ": 85.04959357624193,
+          "delta_jitter_ms": 0.009605695761818023,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep2",
+          "control_run_id": "R743",
+          "telemetry_run_id": "R742",
+          "delta_mean_power_mW": -5.987622836721073,
+          "delta_total_per_event_mJ": -52.83025559193766,
+          "delta_jitter_ms": -0.022356784817837205,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep3",
+          "control_run_id": "R762",
+          "telemetry_run_id": "R763",
+          "delta_mean_power_mW": 5.77757930684345,
+          "delta_total_per_event_mJ": 49.95426914206155,
+          "delta_jitter_ms": -0.03969697252141691,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep4",
+          "control_run_id": "R775",
+          "telemetry_run_id": "R774",
+          "delta_mean_power_mW": 5.8215703255581275,
+          "delta_total_per_event_mJ": 51.51244456342238,
+          "delta_jitter_ms": 0.04609867628577935,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep5",
+          "control_run_id": "R786",
+          "telemetry_run_id": "R787",
+          "delta_mean_power_mW": 9.672501315894749,
+          "delta_total_per_event_mJ": 85.26954627785972,
+          "delta_jitter_ms": 0.032170436712236405,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep6",
+          "control_run_id": "R827",
+          "telemetry_run_id": "R826",
+          "delta_mean_power_mW": 8.441766037654133,
+          "delta_total_per_event_mJ": 74.67165572764088,
+          "delta_jitter_ms": 0.015399759397910051,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep7",
+          "control_run_id": "R848",
+          "telemetry_run_id": "R849",
+          "delta_mean_power_mW": -0.289811807470187,
+          "delta_total_per_event_mJ": -1.318751525427615,
+          "delta_jitter_ms": -0.05619668372352149,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep8",
+          "control_run_id": "R865",
+          "telemetry_run_id": "R864",
+          "delta_mean_power_mW": 2.9218032946839685,
+          "delta_total_per_event_mJ": 24.671970555021744,
+          "delta_jitter_ms": -0.032776702007758285,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        },
+        {
+          "replicate_id": "rep9",
+          "control_run_id": "R880",
+          "telemetry_run_id": "R881",
+          "delta_mean_power_mW": 11.691980124958263,
+          "delta_total_per_event_mJ": 103.28694961644123,
+          "delta_jitter_ms": -0.03838894047598096,
+          "delta_reliability_rate": 0.0,
+          "delta_latency_ms": null
+        }
+      ],
+      "delta_mean_power_mW": 4.062930395460609,
+      "std_delta_mean_power_mW": 6.072910403890972,
+      "ci95_delta_mean_power_mW": {
+        "n": 17,
+        "mean": 4.062930395460609,
+        "half_width": 3.122402411161683,
+        "lower": 0.9405279842989258,
+        "upper": 7.1853328066222915,
+        "method": "t"
+      },
+      "tests_delta_mean_power_mW": {
+        "n": 17,
+        "paired_t_p_two_sided": 0.013988531498139025,
+        "paired_t_p_greater": 0.0069942657490695125,
+        "wilcoxon_p_two_sided": 0.030517578125,
+        "wilcoxon_p_greater": 0.0152587890625,
+        "method": "scipy"
+      },
+      "delta_latency_ms": null,
+      "std_delta_latency_ms": null,
+      "ci95_delta_latency_ms": null,
+      "tests_delta_latency_ms": {
+        "n": 0,
+        "paired_t_p_two_sided": null,
+        "paired_t_p_greater": null,
+        "wilcoxon_p_two_sided": null,
+        "wilcoxon_p_greater": null,
+        "method": "scipy"
+      },
+      "delta_total_per_event_mJ": 36.14005104151412,
+      "std_delta_total_per_event_mJ": 53.94034898693554,
+      "ci95_delta_total_per_event_mJ": {
+        "n": 17,
+        "mean": 36.14005104151412,
+        "half_width": 27.733568344397053,
+        "lower": 8.406482697117067,
+        "upper": 63.87361938591117,
+        "method": "t"
+      },
+      "tests_delta_total_per_event_mJ": {
+        "n": 17,
+        "paired_t_p_two_sided": 0.013873311276036932,
+        "paired_t_p_greater": 0.006936655638018466,
+        "wilcoxon_p_two_sided": 0.030517578125,
+        "wilcoxon_p_greater": 0.0152587890625,
+        "method": "scipy"
+      },
+      "delta_jitter_ms": -0.0012302234641441534,
+      "std_delta_jitter_ms": 0.036374710131095,
+      "delta_reliability_rate": 0.0,
+      "std_delta_reliability_rate": 0.0,
+      "paired_snr": 0.669025249056441,
+      "paired_energy_snr": 0.6700003192464942,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    },
+    "detectability": {
+      "snr_vs_control_std": 0.605456674274642,
+      "detectable_abs_snr_ge_1": false,
+      "paired_snr": 0.669025249056441,
+      "paired_energy_snr": 0.6700003192464942,
+      "paired_ci_crosses_zero": false,
+      "paired_energy_ci_crosses_zero": false,
+      "interpretation_label": "formal_positive_signal"
+    }
+  }
+}

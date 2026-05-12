@@ -1,0 +1,75 @@
+run_id: R203
+title: Zigbee final baseline rerun with 100 samples
+date: 2026-03-30
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: zigbee
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: state_change
+  normalization_method: median_offset
+  scenario_label: "W1_zigbee_near_quiet"
+  run_label: "W1_zigbee_near_quiet_v2"
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: null
+  node_id: "light.benchmark_device"
+  zigbee_device: "Tuya Zigbee light"
+  coordinator: "Sonoff Zigbee coordinator"
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "versioned via experiments/version_info.yaml"
+  zigbee_stack: "ZHA"
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ha_time + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_zigbee_near_quiet_v2_mqtt_events.csv
+    - raw/W1_zigbee_near_quiet_v2_power_samples.csv
+  derived:
+    - derived/W1_zigbee_near_quiet_v2_zigbee_events_processed_full.csv
+    - derived/W1_zigbee_near_quiet_v2_zigbee_events_processed.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "Zigbee showed the most stable low-latency behavior so far, with 97% of samples in the core range and only 3 outliers."
+  anomalies:
+    - "3 out of 100 samples exceeded the ±200 ms core range."
+    - "One full-dataset spike reached 1119.017 ms."
+
+dataset:
+  total_samples: 100
+  core_samples: 97
+  outlier_handling: "latency outside ±200 ms excluded from core dataset"
+  filtering_range_ms: [-200, 200]
+
+notes: >
+  Final 100-sample Zigbee W1 baseline rerun using light.benchmark_device under near-quiet
+  conditions. Latency was derived from Home Assistant event time and logger receive
+  time, with median-offset normalization applied. This run currently represents the
+  strongest Zigbee baseline dataset in the study.

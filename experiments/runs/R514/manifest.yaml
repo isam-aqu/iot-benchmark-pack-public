@@ -1,0 +1,57 @@
+run_id: R514
+workload: W2
+type: control
+protocol: wifi
+
+interval_ms: 500
+duration_s: 300
+
+environment:
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+
+measurement:
+  timestamp_source: ESP32 t_local_us
+  power_source: serial_power (INA226 pipeline)
+  telemetry: disabled
+  mqtt_connected: true
+
+data_processing:
+  parser: parse_w2_control_serial.py
+  summarizer: summarize_w2_run.py
+  filtering: none
+
+power:
+  samples: 3001
+  mean_mW: 363.00
+  median_mW: 332.0
+  std_mW: 110.0
+  min_mW: 236.0
+  p95_mW: 710.0
+  max_mW: 750.0
+
+current:
+  mean_mA: 72.5
+  max_mA: 155.0
+
+voltage:
+  mean_V: 5.03
+  min_V: ~4.85
+  max_V: ~5.08
+
+energy:
+  total_mJ: 108900
+
+events:
+  count: 601
+  mean_interval_ms: 500.0
+  trigger: periodic
+
+quality:
+  anomalies_detected: false
+  notes: Stable high-rate control baseline
+
+validity: accepted
+comparison_group: W2_0.5s

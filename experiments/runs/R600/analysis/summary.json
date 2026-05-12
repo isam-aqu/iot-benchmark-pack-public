@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "script": "python/summarize_w3_run.py",
+    "generated_at_utc": "2026-04-26T10:14:04Z",
+    "generated_at_local": "2026-04-26T13:14:04+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.0",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.0",
+      "logger": "0.4.0",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.0"
+    },
+    "git": {
+      "commit": "db9c9e5",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R600/raw"
+    ],
+    "outputs": [
+      "experiments/runs/R600/analysis/summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_wifi_auto_baseline"
+    }
+  },
+  "run_id": "W3_wifi_auto_baseline",
+  "boot_selection": {
+    "original_rows": 200,
+    "selected_rows": 200,
+    "selected_boot_id": 1025202867,
+    "boot_candidates": [
+      {
+        "boot_id": 1025202867,
+        "count": 100,
+        "min": 1,
+        "max": 100
+      }
+    ]
+  },
+  "latency": {
+    "available": true,
+    "source": "rtt_us",
+    "mean_latency_ms": 29.000539999999997,
+    "std_latency_ms": 144.0940816996908,
+    "p95_latency_ms": 20.03415,
+    "p99_latency_ms": 42.4071100000073,
+    "max_latency_ms": 1455.247,
+    "temporal_std_ms": 45.4964039454695,
+    "outlier_rate": 0.01,
+    "sample_count": 100,
+    "median_latency_ms": 14.007,
+    "mad_latency_ms": 1.1645000000000003,
+    "p99_threshold_ms": 42.4071100000073,
+    "extreme_count": 1,
+    "extreme_max_ms": 1455.247
+  },
+  "reliability": {
+    "loss_rate": 0.0,
+    "actual_events": 100,
+    "expected_events": 100,
+    "missing_events": 0,
+    "duplicates": 0
+  },
+  "timing": {
+    "mean_interval_ms": 2972.2630404040406,
+    "std_interval_ms": 137.0727032234279,
+    "jitter_ms": 137.0727032234279
+  },
+  "data_quality": {
+    "total_rows": 200,
+    "unique_payload_rows": 200,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

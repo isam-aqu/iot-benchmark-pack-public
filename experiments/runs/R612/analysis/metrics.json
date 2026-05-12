@@ -1,0 +1,23 @@
+{
+  "run_id": "R612",
+  "baseline_run_id": null,
+  "w3_context": {
+    "comparison_group": "W3_wifi_auto",
+    "load_level": "baseline",
+    "interference": "quiet",
+    "iperf_profile": null,
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0
+  },
+  "w3": {
+    "mean_latency_ms": 14.10249,
+    "std_latency_ms": 2.295102741896011,
+    "p95_latency_ms": 19.03455,
+    "temporal_std_ms": 0.7366593505669891,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0
+  },
+  "baseline": null,
+  "w3_delta": {},
+  "impact_label": "baseline"
+}

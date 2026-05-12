@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "script": "python/summarize_w3_run.py",
+    "generated_at_utc": "2026-05-05T15:33:10Z",
+    "generated_at_local": "2026-05-05T18:33:10+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.7",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.5",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.6"
+    },
+    "git": {
+      "commit": "c10cfea",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R691/raw"
+    ],
+    "outputs": [
+      "experiments/runs/R691/analysis/summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_zigbee_auto_heavy_ch9"
+    }
+  },
+  "run_id": "W3_zigbee_auto_heavy_ch9",
+  "event_source": "mqtt_events",
+  "boot_selection": {
+    "original_rows": 100,
+    "selected_rows": 100,
+    "selected_boot_id": []
+  },
+  "latency": {
+    "available": true,
+    "source": "ha_time_pi_rx_median_normalized",
+    "mean_latency_ms": 1.9420313599577639,
+    "std_latency_ms": 4.4192824102557635,
+    "p95_latency_ms": 10.308902399984072,
+    "p99_latency_ms": 13.109276159930161,
+    "max_latency_ms": 13.479551999946125,
+    "temporal_std_ms": 1.5501104146918483,
+    "outlier_rate": 0.0,
+    "sample_count": 100,
+    "median_latency_ms": -2.9103830456733704e-11,
+    "mad_latency_ms": 1.8120960000087507,
+    "p99_threshold_ms": 13.109276159930161,
+    "extreme_count": 1,
+    "extreme_max_ms": 13.479551999946125
+  },
+  "reliability": {
+    "loss_rate": 0.0,
+    "actual_events": 100,
+    "expected_events": 100,
+    "missing_events": 0,
+    "extra_events": 0,
+    "duplicates": 0,
+    "method": "event_identity_count",
+    "repeated_event_id_rows": 0
+  },
+  "timing": {
+    "mean_interval_ms": 3000.599454545454,
+    "std_interval_ms": 147.6850507471187,
+    "jitter_ms": 147.6850507471187,
+    "source": "pi_rx_time_ns"
+  },
+  "data_quality": {
+    "total_rows": 100,
+    "unique_payload_rows": 100,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

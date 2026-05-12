@@ -1,0 +1,12 @@
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+
+input_text:
+  current_experiment_id:
+    name: Current Experiment ID
+    initial: W1_baseline
+
+input_boolean:
+  benchmark_run_enabled:
+    name: Benchmark Run Enabled

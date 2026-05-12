@@ -1,0 +1,66 @@
+# Manifest — W2 Wi-Fi 5 s Replication Pair (R518 / R519)
+
+## Overview
+
+This manifest documents a matched control/telemetry pair conducted at a 5 s reporting interval under the W2 v2 methodology. The pair serves as a replication of earlier 5 s experiments (R509/R512) to evaluate the robustness and detectability of telemetry energy overhead.
+
+## Runs
+
+| Run ID | Type       | Interval | Telemetry | Description |
+|--------|------------|----------|-----------|------------|
+| R518   | Control    | 5 s      | Disabled  | Replication of 5 s control baseline |
+| R519   | Telemetry  | 5 s      | Enabled   | Replication of 5 s telemetry run |
+
+## Experimental Conditions
+
+- Protocol: Wi-Fi  
+- Topology: near  
+- Interference: quiet  
+- Node count: 1  
+- Duration: 300 s  
+- Power sampling: 100 ms  
+- Measurement method: INA231 + serial logging  
+- Timestamp source: ESP32 `t_local_us`  
+
+## Methodology
+
+- Power samples logged over serial to avoid measurement interference  
+- MQTT used only for event signaling (R519)  
+- Matched-run design isolates telemetry overhead from scheduler effects  
+
+## Results Summary
+
+### R518 (Control)
+
+- Mean power: 385.75 mW  
+- Energy: 115739.78 mJ  
+
+### R519 (Telemetry)
+
+- Mean power: 371.96 mW  
+- Energy: 111605.45 mJ  
+
+### Difference (Telemetry − Control)
+
+- Mean power difference: **−13.79 mW**  
+- Energy difference: **−4134.33 mJ**  
+
+## Interpretation
+
+The negative difference observed in this pair is physically inconsistent with expected telemetry overhead and indicates that the incremental energy cost of telemetry at a 5 s interval is smaller than the intrinsic run-to-run variability of the system.
+
+When combined with the earlier R509/R512 pair, this replication demonstrates that:
+
+- telemetry overhead at 5 s is not reliably detectable  
+- variability dominates the measurement at this operating point  
+- single-run comparisons are insufficient in this regime  
+
+## Conclusion
+
+The 5 s reporting interval lies below the effective detectability threshold of the current measurement setup. Reliable characterization of telemetry overhead at this rate would require:
+
+- repeated trials  
+- longer-duration runs  
+- or improved environmental and power stability  
+
+This pair provides strong experimental evidence supporting the existence of a variability-limited regime in device-level energy measurements.

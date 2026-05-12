@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "script": "python/summarize_w3_run.py",
+    "generated_at_utc": "2026-04-30T10:57:03Z",
+    "generated_at_local": "2026-04-30T13:57:03+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.1",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.1",
+      "logger": "0.4.0",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.1"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R620/raw"
+    ],
+    "outputs": [
+      "experiments/runs/R620/analysis/summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_zigbee_auto_baseline"
+    }
+  },
+  "run_id": "W3_zigbee_auto_baseline",
+  "boot_selection": {
+    "original_rows": 1,
+    "selected_rows": 1,
+    "selected_boot_id": []
+  },
+  "latency": {
+    "available": true,
+    "source": "ha_time_pi_rx_median_normalized",
+    "mean_latency_ms": 0.0,
+    "std_latency_ms": null,
+    "p95_latency_ms": 0.0,
+    "p99_latency_ms": 0.0,
+    "max_latency_ms": 0.0,
+    "temporal_std_ms": null,
+    "outlier_rate": 0.0,
+    "sample_count": 1,
+    "median_latency_ms": 0.0,
+    "mad_latency_ms": 0.0,
+    "p99_threshold_ms": 0.0,
+    "extreme_count": 0,
+    "extreme_max_ms": null
+  },
+  "reliability": {
+    "loss_rate": 0.99,
+    "actual_events": 1,
+    "expected_events": 100,
+    "missing_events": 99,
+    "extra_events": 0,
+    "duplicates": 0,
+    "method": "event_id_count"
+  },
+  "timing": {},
+  "data_quality": {
+    "total_rows": 1,
+    "unique_payload_rows": 1,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

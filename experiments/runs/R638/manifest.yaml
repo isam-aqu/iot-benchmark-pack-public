@@ -1,0 +1,78 @@
+run_id: R638
+title: "W3 Zigbee moderate Wi-Fi interference rep4"
+date: 2026-04-30
+
+git:
+  branch: testbed-dev
+  commit: f74f23b
+  tag: null
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  pipeline: "0.4.5"
+  logger: "0.4.1"
+  analysis: "0.4.3"
+
+experiment:
+  plan_id: W3_A
+  workload: W3
+  protocol: zigbee
+  topology: near
+  interference: "iperf"
+  load_level: "moderate"
+  node_count: 1
+  interval_ms: "3000+/-250"
+  comparison_group: W3_zigbee_auto
+  run_type: "load"
+  replicate_id: "rep4"
+  baseline_ref: "R620"
+  trigger: home_assistant_rest_toggle
+  normalization_method: median_offset
+
+load:
+  profile: "20Mbps_tcp"
+  target_mbps: 20
+  mean_interval_mbps: 19.996739
+  std_interval_mbps: 0.298023
+  interval_samples: 368
+commands:
+  run: >
+    EXP_RUN_ID=R638 ./run_all.sh --run-id W3_zigbee_auto_moderate --disable-ble --disable-ack --duration-sec 360 --iperf-load moderate --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100 --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250
+  analysis:
+    - >
+      python3 python/summarize_w3_run.py experiments/runs/R638/raw
+      --run-id W3_zigbee_auto_moderate --expected-events 100
+    - >
+      python3 python/analyze_w3_run.py experiments/runs/R638/raw
+      --run-id R638 --run-sheet docs/run_sheet.csv
+  secrets_omitted:
+    - HA_TOKEN
+    - HOME_ASSISTANT_TOKEN
+
+result_summary:
+  status: complete_with_extra_events
+  expected_events: 100
+  actual_events: 104
+  missing_events: 0
+  extra_events: 4
+  repeated_event_id_rows: 4
+  duplicate_payload_rows: 0
+  mad_latency_ms: 1.858048
+  p95_latency_ms: 11.185754
+  max_latency_ms: 12.966912
+  command_delay_anomalies: 4
+  impact_label: "negligible"
+
+artifacts:
+  raw:
+    - raw/W3_zigbee_auto_moderate_mqtt_events.csv
+    - raw/W3_zigbee_auto_moderate_zigbee_trigger_schedule.csv
+    - raw/W3_zigbee_auto_moderate_iperf.log
+    - raw/W3_zigbee_auto_moderate_iperf_summary.json
+    - raw/run_metadata.json
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  notes:
+    - notes.md

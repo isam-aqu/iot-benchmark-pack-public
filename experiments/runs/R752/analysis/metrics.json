@@ -1,0 +1,36 @@
+{
+  "run_id": "W2_wifi_periodic_7s_quiet_ctrl_v2_rep5",
+  "run_sheet_id": "R752",
+  "baseline_run_id": null,
+  "energy": {
+    "total_per_event_mJ": 2609.7660174709313,
+    "incremental_per_event_mJ": null
+  },
+  "latency": {
+    "available": false,
+    "source": null,
+    "kind": null,
+    "sample_count": 0,
+    "reason": "No recognized latency column with valid numeric samples."
+  },
+  "timing": {
+    "mean_interval_ms": 6999.370714285713,
+    "median_interval_ms": 6999.996,
+    "std_interval_ms": 2.8837003775696486,
+    "jitter_ms": 2.8837003775696486,
+    "max_interval_ms": 7000.465,
+    "min_interval_ms": 6984.993
+  },
+  "reliability": {
+    "expected_events": 43,
+    "actual_events": 43,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "event_coupling": {},
+  "power_event_relation": {},
+  "quality_flags": {
+    "missing_latency": true
+  }
+}

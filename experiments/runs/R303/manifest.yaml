@@ -1,0 +1,73 @@
+run_id: R303
+title: BLE baseline rerun with Ethernet-connected logger
+date: 2026-03-31
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: ble
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: button_press
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "ble01"
+  node_id: "ble01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "t_local_us + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_ble_near_quiet_v3_ble_events.csv
+    - raw/W1_ble_near_quiet_v3_mqtt_events.csv
+    - raw/W1_ble_near_quiet_v3_power_samples.csv
+  derived:
+    - derived/W1_ble_near_quiet_v3_ble_events_processed_full.csv
+    - derived/W1_ble_near_quiet_v3_ble_events_processed.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "BLE improved under the Ethernet-connected logger setup, but still showed broad spread and occasional missed events."
+  anomalies:
+    - "Sequence 69 was not captured during the run."
+    - "Sequence 100 was not captured during the run."
+    - "Captured 99 out of 101 triggered BLE events."
+    - "One captured sample exceeded the ±200 ms core range."
+
+notes: >
+  This run was performed to test whether part of the earlier BLE variability was
+  introduced by the Wi-Fi-connected logger. With the logger moved to Ethernet,
+  BLE latency improved substantially and only one sample fell outside the core
+  range. However, the BLE path still showed two missed events and a broad
+  latency distribution, indicating that advertisement/scanning behavior remains
+  the dominant limitation. This run should be treated as the corrected W1 BLE
+  baseline under controlled measurement conditions.

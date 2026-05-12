@@ -1,0 +1,9 @@
+{
+  "run_id": "W2_wifi_periodic_7s_quiet_ctrl_v2_rep14",
+  "source_log": "<local-path>",
+  "type": "experiment_complete",
+  "exp": "W2_wifi_periodic_7s_quiet_ctrl_v2_rep14",
+  "duration_ms": "720000",
+  "power_sample_count": "7201",
+  "event_count": "103"
+}

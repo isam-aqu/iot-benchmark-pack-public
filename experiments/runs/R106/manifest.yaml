@@ -1,0 +1,68 @@
+run_id: R106
+title: Wi-Fi baseline rerun with Ethernet-connected logger
+date: 2026-03-31
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 3000-5000
+  trigger: button_press
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "wifi01"
+  node_id: "wifi01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ESP32_RTT"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_wifi_near_quiet_v6_mqtt_events.csv
+    - raw/W1_wifi_near_quiet_v6_power_samples.csv
+  derived:
+    - derived/W1_wifi_near_quiet_v6_events_only.csv
+    - derived/W1_wifi_near_quiet_v6_wifi_rtt_full.csv
+    - derived/W1_wifi_near_quiet_v6_wifi_rtt_core.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "With the logger moved to Ethernet and Wi-Fi disabled on the laptop, Wi-Fi RTT became tightly bounded with no outliers."
+  anomalies: []
+
+notes: >
+  This run was performed to test whether the earlier Wi-Fi heavy-tail behavior
+  was caused by measurement-induced RF contention from the Wi-Fi-connected
+  logger. Under the Ethernet-connected logger configuration, all 100 samples
+  remained within the core range, with median RTT about 10.4 ms and P95 about
+  15.9 ms. This run should be treated as the true W1 Wi-Fi baseline under
+  controlled conditions.

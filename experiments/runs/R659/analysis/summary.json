@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "script": "python/summarize_w3_run.py",
+    "generated_at_utc": "2026-05-01T16:08:48Z",
+    "generated_at_local": "2026-05-01T19:08:48+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "c997f4b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R659/raw"
+    ],
+    "outputs": [
+      "experiments/runs/R659/analysis/summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_ble_auto_heavy"
+    }
+  },
+  "run_id": "W3_ble_auto_heavy",
+  "event_source": "ble_events",
+  "boot_selection": {
+    "original_rows": 98,
+    "selected_rows": 98
+  },
+  "latency": {
+    "available": true,
+    "source": "ble_t_local_pi_rx_median_normalized",
+    "mean_latency_ms": -9.781030771683673,
+    "std_latency_ms": 99.70062609764219,
+    "p95_latency_ms": 139.82291259765623,
+    "p99_latency_ms": 269.36417968750004,
+    "max_latency_ms": 319.843017578125,
+    "temporal_std_ms": 38.57822364321543,
+    "outlier_rate": 0.01020408163265306,
+    "sample_count": 98,
+    "median_latency_ms": 0.0,
+    "mad_latency_ms": 87.3665771484375,
+    "p99_threshold_ms": 269.36417968750004,
+    "extreme_count": 1,
+    "extreme_max_ms": 319.843017578125
+  },
+  "reliability": {
+    "loss_rate": 0.02,
+    "actual_events": 98,
+    "expected_events": 100,
+    "missing_events": 2,
+    "extra_events": 0,
+    "duplicates": 0,
+    "method": "seq_range"
+  },
+  "timing": {
+    "mean_interval_ms": 3058.8555876288656,
+    "std_interval_ms": 445.56873194675666,
+    "jitter_ms": 445.56873194675666,
+    "source": "t_local_us"
+  },
+  "data_quality": {
+    "total_rows": 98,
+    "unique_payload_rows": 98,
+    "duplicate_payload_rows": 0
+  }
+}

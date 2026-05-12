@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "script": "python/summarize_w3_run.py",
+    "generated_at_utc": "2026-04-30T12:58:33Z",
+    "generated_at_local": "2026-04-30T15:58:33+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.3",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.1",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.2"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R622/raw"
+    ],
+    "outputs": [
+      "experiments/runs/R622/analysis/summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_zigbee_auto_moderate"
+    }
+  },
+  "run_id": "W3_zigbee_auto_moderate",
+  "boot_selection": {
+    "original_rows": 75,
+    "selected_rows": 75,
+    "selected_boot_id": []
+  },
+  "latency": {
+    "available": true,
+    "source": "ha_time_pi_rx_median_normalized",
+    "mean_latency_ms": 1.0991240533333344,
+    "std_latency_ms": 4.181734960997758,
+    "p95_latency_ms": 9.664204799999997,
+    "p99_latency_ms": 11.392875520000002,
+    "max_latency_ms": 11.917056000000002,
+    "temporal_std_ms": 1.7167845995921518,
+    "outlier_rate": 0.0,
+    "sample_count": 75,
+    "median_latency_ms": 0.0,
+    "mad_latency_ms": 2.2271999999999963,
+    "p99_threshold_ms": 11.392875520000002,
+    "extreme_count": 1,
+    "extreme_max_ms": 11.917056000000002
+  },
+  "reliability": {
+    "loss_rate": 0.25,
+    "actual_events": 75,
+    "expected_events": 100,
+    "missing_events": 25,
+    "extra_events": 0,
+    "duplicates": 0,
+    "method": "event_id_count"
+  },
+  "timing": {
+    "mean_interval_ms": 3051.9020270270275,
+    "std_interval_ms": 3086.19481117928,
+    "jitter_ms": 3086.19481117928,
+    "source": "pi_rx_time_ns"
+  },
+  "data_quality": {
+    "total_rows": 75,
+    "unique_payload_rows": 75,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

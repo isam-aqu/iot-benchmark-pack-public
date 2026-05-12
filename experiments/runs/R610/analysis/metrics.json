@@ -1,0 +1,39 @@
+{
+  "run_id": "R610",
+  "baseline_run_id": "R600",
+  "w3_context": {
+    "comparison_group": "W3_wifi_auto",
+    "load_level": "moderate",
+    "interference": "iperf",
+    "iperf_profile": "20Mbps_tcp",
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0
+  },
+  "w3": {
+    "mean_latency_ms": 15.676180000000002,
+    "std_latency_ms": 3.958151633163023,
+    "p95_latency_ms": 23.956899999999997,
+    "temporal_std_ms": 1.5076536780338146,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0
+  },
+  "baseline": {
+    "mean_latency_ms": 29.000539999999997,
+    "std_latency_ms": 144.0940816996908,
+    "p95_latency_ms": 20.03415,
+    "temporal_std_ms": 45.4964039454695,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0
+  },
+  "w3_delta": {
+    "delta_mean_latency_ms": -13.324359999999995,
+    "delta_std_latency_ms": -140.13593006652778,
+    "delta_p95_latency_ms": 3.922749999999997,
+    "delta_temporal_std_ms": -43.98875026743569,
+    "delta_drop_rate": 0.0,
+    "delta_reliability_rate": 0.0,
+    "pct_mean_latency_increase": -45.94521343395673,
+    "pct_p95_latency_increase": 19.580316609389453
+  },
+  "impact_label": "negligible"
+}

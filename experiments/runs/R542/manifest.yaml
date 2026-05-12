@@ -1,0 +1,147 @@
+run_id: R542
+title: W2 v2 control run at 9 s
+date: 2026-04-19
+git:
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+versions:
+  firmware: 0.3.0
+  ha_config: 0.1.1
+  analysis: 0.3.0
+  pipeline: 0.3.0
+experiment:
+  plan_id: W2
+  workload: W2
+  comparison_group: W2_9s
+  run_type: control
+  replicate_id: rep1
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 9000
+  trigger: periodic_internal
+  timestamp_source: ESP32 t_local_us + serial_power + MQTT_event
+  normalization_method: none
+  is_baseline: false
+hardware:
+  controller: Raspberry Pi 4 running Home Assistant OS
+  logger_host: external laptop (Ethernet; Wi-Fi disabled)
+  esp32_node: wifi01_power
+  node_id: wifi01_power
+  sensor: INA231
+  shunt_resistor_ohm: 0.1
+  bus_connection: BUS pin connected to ESP32 VIN
+software:
+  home_assistant: 2026.3.4
+  supervisor: 2026.03.2
+  os: 17.1
+  frontend: 20260312.1
+  mqtt_broker: Mosquitto
+  mqtt_telemetry_enabled: false
+  mqtt_power_reporting_enabled: false
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+  ack_helper_enabled: false
+timing:
+  timestamp_source: ESP32 t_local_us + serial_power + MQTT_event
+  power_sampling_interval_ms: 100
+  experiment_duration_ms: 540000
+  ntp_enabled: false
+  timezone: Asia/Hebron
+artifacts:
+  raw:
+    - raw/W2_wifi_periodic_9s_quiet_ctrl_v2_rep2_meta.json
+    - raw/W2_wifi_periodic_9s_quiet_ctrl_v2_rep2_mqtt_events.csv
+    - raw/W2_wifi_periodic_9s_quiet_ctrl_v2_rep2_power_samples.csv
+    - raw/W2_wifi_periodic_9s_quiet_ctrl_v2_rep2_serial.log
+  analysis:
+    - analysis/metrics.json
+    - analysis/summary.json
+    - analysis/summary.md
+  derived: []
+  figures: []
+result_summary:
+  status: complete
+  power_sample_count: 5401
+  event_count: 60
+  key_observation: 9s control near long-interval instability
+  anomalies: []
+analysis:
+  summary:
+    run_id: W2_wifi_periodic_9s_quiet_ctrl_v2_rep2
+    power:
+      power_sample_count: 5401
+      mean_power_mW: 366.6758792456952
+      median_power_mW: 332.213715
+      std_power_mW: 108.95506199945834
+      min_power_mW: 224.732819
+      p95_power_mW: 703.511414
+      max_power_mW: 832.977051
+      samples_above_500mW: 519
+      fraction_above_500mW: 0.09609331605258285
+      mean_current_mA: 73.51176147009812
+      median_current_mA: 65.758774
+      max_current_mA: 161.123657
+      mean_bus_v: 5.022364839844474
+      min_bus_v: 4.825
+      max_bus_v: 5.08625
+    energy_mJ: 198020.7995378097
+    latency:
+      available: false
+      source: null
+      kind: null
+      sample_count: 0
+      reason: No recognized latency column with valid numeric samples.
+    timing:
+      mean_interval_ms: 8999.99893220339
+      median_interval_ms: 8999.991
+      std_interval_ms: 0.045397046997609096
+      jitter_ms: 0.045397046997609096
+      max_interval_ms: 9000.088
+      min_interval_ms: 8999.915
+    reliability:
+      expected_events: 60
+      actual_events: 60
+      missing_events: 0
+      loss_rate: 0.0
+      duplicates: 0
+    events:
+      event_count: 60
+      mean_event_interval_ms: 8999.99893220339
+      median_event_interval_ms: 8999.991
+      max_event_interval_ms: 9000.088
+  metrics:
+    run_id: W2_wifi_periodic_9s_quiet_ctrl_v2_rep2
+    run_sheet_id: R542
+    baseline_run_id: null
+    energy:
+      total_per_event_mJ: 3300.346658963495
+      incremental_per_event_mJ: null
+    latency:
+      available: false
+      source: null
+      kind: null
+      sample_count: 0
+      reason: No recognized latency column with valid numeric samples.
+    timing:
+      mean_interval_ms: 8999.99893220339
+      median_interval_ms: 8999.991
+      std_interval_ms: 0.045397046997609096
+      jitter_ms: 0.045397046997609096
+      max_interval_ms: 9000.088
+      min_interval_ms: 8999.915
+    reliability:
+      expected_events: 60
+      actual_events: 60
+      missing_events: 0
+      loss_rate: 0.0
+      duplicates: 0
+    event_coupling:
+    power_event_relation:
+    quality_flags:
+      missing_latency: true
+notes: 9s control near long-interval instability

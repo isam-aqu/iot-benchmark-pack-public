@@ -1,0 +1,112 @@
+run_id: R622
+title: W3 Zigbee moderate Wi-Fi interference invalid attempt
+date: 2026-04-30
+
+git:
+  branch: testbed-dev
+  commit: f74f23b
+  tag: null
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  pipeline: "0.4.3"
+  logger: "0.4.1"
+  analysis: "0.4.1"
+
+experiment:
+  plan_id: W3_A
+  workload: W3
+  protocol: zigbee
+  topology: near
+  interference: iperf
+  load_level: moderate
+  node_count: 1
+  interval_ms: "3000+/-250"
+  comparison_group: W3_zigbee_auto
+  run_type: load
+  replicate_id: primary
+  baseline_ref: R620
+  trigger: home_assistant_rest_toggle
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  zigbee_device: "light.benchmark_device"
+  coordinator: "Sonoff Zigbee Coordinator"
+  iperf_server: "iperf-server (<private-ip>)"
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: "ZHA"
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ha_time + python_logger"
+  expected_events: 100
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  timezone: "Asia/Hebron"
+
+load:
+  tool: iperf3
+  profile: "20Mbps_tcp"
+  target_mbps: 20
+  mean_interval_mbps: 20.016576
+  std_interval_mbps: 0.446204
+  interval_samples: 368
+
+commands:
+  run: >
+    EXP_RUN_ID=R622 ./run_all.sh --run-id W3_zigbee_auto_moderate
+    --disable-ble --disable-ack --duration-sec 360 --iperf-load moderate
+    --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100
+    --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250
+  analysis:
+    - >
+      python3 python/summarize_w3_run.py experiments/runs/R622/raw
+      --run-id W3_zigbee_auto_moderate --expected-events 100
+    - >
+      python3 python/analyze_w3_run.py experiments/runs/R622/raw
+      --run-id R622 --run-sheet docs/run_sheet.csv
+  secrets_omitted:
+    - HA_TOKEN
+    - HOME_ASSISTANT_TOKEN
+
+artifacts:
+  raw:
+    - raw/W3_zigbee_auto_moderate_mqtt_events.csv
+    - raw/W3_zigbee_auto_moderate_power_samples.csv
+    - raw/W3_zigbee_auto_moderate_zigbee_trigger_schedule.csv
+    - raw/W3_zigbee_auto_moderate_zigbee_trigger_schedule.csv.meta.json
+    - raw/W3_zigbee_auto_moderate_iperf.log
+    - raw/W3_zigbee_auto_moderate_iperf_summary.json
+    - raw/run_metadata.json
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  notes:
+    - notes.md
+
+result_summary:
+  status: invalid
+  expected_events: 100
+  trigger_commands_recorded: 76
+  trigger_commands_http_200: 75
+  trigger_errors: 1
+  actual_events: 75
+  missing_events: 25
+  duplicate_payload_rows: 0
+  event_loss_rate: 0.25
+  key_observation: "The iperf load was valid, but the Zigbee trigger schedule failed before completing the 100-command experiment."
+  anomalies:
+    - "Command 76 timed out."
+    - "Many off commands took about 5.3 s from command start to HA state change."
+
+notes: >
+  Do not use this run as the moderate-load W3 Zigbee result. The background
+  20 Mbps TCP iperf load was active and stable, but the Home Assistant service
+  call path stalled repeatedly. The trigger schedule stopped at command 76
+  after a timeout, leaving only 75 captured MQTT events. R622 should be rerun
+  after the runner watchdog change in pipeline 0.4.4.

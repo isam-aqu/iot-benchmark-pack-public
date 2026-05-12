@@ -1,0 +1,38 @@
+# W2_wifi_periodic_1s_quiet_telemetry_v2 Summary
+
+## Power
+- power_sample_count: 3001
+- mean_power_mW: 373.5833490086637
+- median_power_mW: 332.213715
+- std_power_mW: 121.11722389664601
+- min_power_mW: 224.732819
+- p95_power_mW: 725.496155
+- max_power_mW: 757.251892
+- samples_above_500mW: 354
+- fraction_above_500mW: 0.11796067977340886
+- mean_current_mA: 74.8669935074975
+- median_current_mA: 65.563362
+- max_current_mA: 154.772507
+- mean_bus_v: 5.028610046651116
+- min_bus_v: 4.8625
+- max_bus_v: 5.08875
+- duration_s_from_t_local: 299.999239
+- mean_sample_interval_ms: 99.99974633333333
+- median_sample_interval_ms: 100.001
+- max_sample_interval_ms: 100.166
+- energy_mJ: 112090.7173782094
+- unique_last_event_seq_count: 301
+- mean_dt_since_event_ms: 538.2989766666667
+- median_dt_since_event_ms: 538.021
+- max_dt_since_event_ms: 988.757
+
+## Events
+- event_count: 301
+- first_event_seq: 1
+- last_event_seq: 301
+- unique_event_seq_count: 301
+- duration_s_from_events: 299.999338
+- mean_event_interval_ms: 999.9977933333333
+- median_event_interval_ms: 1000.002
+- max_event_interval_ms: 1000.695
+- trigger_counts: {'periodic': 301}

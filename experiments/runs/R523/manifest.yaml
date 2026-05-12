@@ -1,0 +1,22 @@
+run_id: R523
+experiment: W2
+role: telemetry
+comparison_group: W2_5s
+replicate_id: rep2
+status: invalid
+description: 5s periodic telemetry repeat after interval correction
+interval_ms: 5000
+protocol: wifi
+distance: near
+environment: quiet
+node_count: 1
+features:
+  ble: false
+  ack: false
+  telemetry: true
+duration_sec: 450
+data_sources:
+  - serial_power
+  - mqtt_events
+  - t_local_us
+notes: Excluded from final grouped analysis due to physically invalid raw power measurements, including zero-voltage rows and implausible voltage spikes. This run must not be used for quantitative W2_5s interpretation.

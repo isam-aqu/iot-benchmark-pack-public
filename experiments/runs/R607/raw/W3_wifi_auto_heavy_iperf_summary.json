@@ -1,0 +1,9 @@
+{
+  "iperf_log": "W3_wifi_auto_heavy_iperf.log",
+  "interval_samples": 369,
+  "target_mbps": 50,
+  "mean_interval_mbps": 49.99891598915989,
+  "std_interval_mbps": 0.47912841610433843,
+  "min_interval_mbps": 48.9,
+  "max_interval_mbps": 51.0
+}

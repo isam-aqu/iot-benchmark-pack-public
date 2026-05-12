@@ -1,0 +1,100 @@
+exp_run_id: R521
+run_id: W2_wifi_periodic_3s_quiet_telemetry_v2
+
+study:
+  workload: W2
+  objective: >
+    Matched telemetry run for 3 s Wi-Fi periodic workload under W2 v2.
+    Quantifies device-level power and energy impact of telemetry publication.
+
+classification:
+  protocol: wifi
+  mode: telemetry
+  comparison_group: W2_3s
+  replicate_id: primary
+  is_baseline: false
+
+environment:
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+
+software:
+  pipeline_version: 0.3.0
+  firmware_version: 0.3.0
+  ha_config_version: 0.3.0
+  analysis_version: 0.3.0
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+
+execution:
+  duration_sec: 330
+  target_effective_window_sec: 300
+  interval_ms: 3000
+  serial_port: /dev/serial-port
+  serial_baud: 115200
+  ble_logger: disabled
+  ack_helper: disabled
+  timestamp_source: "ESP32 t_local_us + serial_power + MQTT_event"
+
+logging:
+  raw_dir: experiments/runs/R521/raw
+  analysis_dir: experiments/runs/R521/analysis
+
+artifacts:
+  raw:
+    - W2_wifi_periodic_3s_quiet_telemetry_v2_serial.log
+    - W2_wifi_periodic_3s_quiet_telemetry_v2_power_samples.csv
+    - W2_wifi_periodic_3s_quiet_telemetry_v2_mqtt_events.csv
+    - W2_wifi_periodic_3s_quiet_telemetry_v2_meta.json
+  analysis:
+    - summary.json
+    - summary.md
+    - metrics.json
+
+results:
+  power_sample_count: 3001
+  event_count: 100
+  mean_power_mW: 391.4876097324225
+  median_power_mW: 332.213715
+  std_power_mW: 139.9047989152815
+  min_power_mW: 227.175568
+  p95_power_mW: 727.938904
+  max_power_mW: 796.335876
+  energy_mJ: 117465.65082735202
+
+  timing:
+    mean_interval_ms: 2999.999757575758
+    median_interval_ms: 3000.0
+    std_interval_ms: 0.03862485477394151
+    jitter_ms: 0.03862485477394151
+    max_interval_ms: 3000.099
+    min_interval_ms: 2999.919
+
+  reliability:
+    expected_events: 100
+    actual_events: 100
+    missing_events: 0
+    loss_rate: 0.0
+    duplicates: 0
+
+  latency:
+    available: false
+    reason: "No recognized latency column with valid numeric samples."
+
+comparison:
+  matched_control_run: R520
+  delta_mean_power_mW_vs_R520: 22.714870390869678
+  delta_energy_mJ_vs_R520: 6859.093915876176
+  delta_total_per_event_mJ_vs_R520: 68.59093915876176
+
+quality_assessment:
+  parse_status: passed
+  summary_status: passed
+  metrics_status: passed
+  accepted: true
+  notes: >
+    Clean 3 s telemetry run with correct event count, very low scheduler jitter,
+    no observed event loss, and clearly higher power/energy than matched control.

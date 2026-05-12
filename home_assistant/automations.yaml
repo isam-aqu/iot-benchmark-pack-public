@@ -1,0 +1,67 @@
+# ======================================
+# Zigbee Benchmark Automation
+# ======================================
+# ha_automation_version: 0.4.0
+# pipeline_version: 0.4.0
+# workload: W1
+# scenario_source: input_text.current_experiment_id
+# guard:
+#   - input_boolean.benchmark_run_enabled must be on
+#   - input_text.current_experiment_id must be set
+# measurement_model:
+#   - Home Assistant timestamp: ha_time
+#   - Logger timestamp: pi_rx_time_ns
+# notes:
+#   - seq is fixed to 0 for Zigbee because no device-side sequence is available
+#   - event_id and ha_context_id are used as unique event identifiers
+#   - retain is explicitly disabled for benchmark topics
+
+alias: Zigbee State to MQTT
+mode: parallel
+
+trigger:
+  - platform: state
+    entity_id:
+      - light.benchmark_device
+      # Add more benchmark entities only when needed for other runs:
+      # - light.tzl001
+      # - sensor.tzths001_temperature
+
+action:
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: input_boolean.benchmark_run_enabled
+            state: "on"
+          - condition: template
+            value_template: >
+              {{ states('input_text.current_experiment_id') not in
+                 ['unknown', 'unavailable', '', 'unset', None] }}
+        sequence:
+          - service: mqtt.publish
+            data:
+              topic: iotbench/zigbee/event
+              retain: false
+              payload: >
+                {
+                  "type": "event",
+                  "node": "{{ trigger.entity_id }}",
+                  "protocol": "zigbee",
+                  "exp": "{{ states('input_text.current_experiment_id') }}",
+                  "seq": 0,
+                  "event_id": "{{ trigger.to_state.context.id if trigger.to_state else '' }}",
+                  "ha_context_id": "{{ trigger.to_state.context.id if trigger.to_state else '' }}",
+                  "trigger": "state_changed",
+                  "t_local_us": 0,
+                  "old_state": "{{ trigger.from_state.state if trigger.from_state else '' }}",
+                  "new_state": "{{ trigger.to_state.state if trigger.to_state else '' }}",
+                  "ha_time": "{{ now().isoformat() }}"
+                }
+    default:
+      - service: system_log.write
+        data:
+          level: warning
+          message: >
+            Zigbee event for {{ trigger.entity_id }} was blocked because either
+            input_boolean.benchmark_run_enabled is off or
+            input_text.current_experiment_id is not set.

@@ -1,0 +1,34 @@
+exp_run_id: R510
+run_id: W2_wifi_periodic_10s_quiet_ctrl_v2
+
+workload: W2
+protocol: wifi
+mode: periodic_control
+
+interval_ms: 10000
+duration_s: 300
+
+mqtt_telemetry: false
+mqtt_power_reporting: false
+
+power_measurement:
+  method: ina231
+  transport: serial
+  sample_interval_ms: 100
+
+environment:
+  scenario: W1_equivalent
+  distance: near
+  interference: low
+  nodes: single
+
+results:
+  power_sample_count: 3001
+  event_count: 30
+  mean_power_mw: 365.31
+  energy_mj: 109606.22
+
+validity:
+  power: valid
+  events: valid
+  accepted: true

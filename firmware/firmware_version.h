@@ -1,0 +1,18 @@
+#ifndef IOT_FIRMWARE_VERSION_H
+#define IOT_FIRMWARE_VERSION_H
+
+// Shared semantic firmware version for all benchmark sketches.
+// Bump these values according to firmware/VERSIONING.md.
+#define IOT_FIRMWARE_VERSION_MAJOR 0
+#define IOT_FIRMWARE_VERSION_MINOR 5
+#define IOT_FIRMWARE_VERSION_PATCH 0
+
+#define IOT_STRINGIFY_INNER(x) #x
+#define IOT_STRINGIFY(x) IOT_STRINGIFY_INNER(x)
+
+#define IOT_FIRMWARE_VERSION \
+  IOT_STRINGIFY(IOT_FIRMWARE_VERSION_MAJOR) "." \
+  IOT_STRINGIFY(IOT_FIRMWARE_VERSION_MINOR) "." \
+  IOT_STRINGIFY(IOT_FIRMWARE_VERSION_PATCH)
+
+#endif

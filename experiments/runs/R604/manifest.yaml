@@ -1,0 +1,93 @@
+run_id: R604
+title: "W3 Wi-Fi auto baseline (rep1)"
+date: "2026-04-25"
+
+git:
+  branch: "testbed-dev"
+  commit: "db9c9e5"
+  tag: "v0.4.0"
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  analysis: "0.4.0"
+  pipeline: "0.4.0"
+
+experiment:
+  plan_id: "W3_B0"
+  workload: "W3"
+  comparison_group: "W3_wifi_auto"
+  run_type: "baseline"
+  replicate_id: "rep1"
+  baseline_ref: null
+  protocol: "wifi"
+  topology: "near"
+  interference: "quiet"
+  load_level: "baseline"
+  node_count: 1
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  trigger: "auto"
+  timestamp_source: "ESP32_RTT"
+  normalization_method: "none"
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  iperf_server: null
+  esp32_node: "wifi01"
+  node_id: "wifi01"
+  sensor: null
+
+software:
+  home_assistant: "2026.3.4"
+  mqtt_broker: "Mosquitto"
+  iperf_profile: null
+  iperf_target_mbps: null
+  iperf_mean_interval_mbps: null
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+
+timing:
+  timestamp_source: "ESP32 RTT using rtt_us"
+  expected_events: 100
+  actual_events: 100
+  mean_interval_ms: 3011.748
+  jitter_ms: 148.306
+  selected_boot_id: 1009542261
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - "raw/W3_wifi_auto_baseline_mqtt_events.csv"
+    - "raw/W3_wifi_auto_baseline_power_samples.csv"
+    - "raw/W3_wifi_auto_baseline_serial.log"
+  analysis:
+    - "analysis/metrics.json"
+    - "analysis/summary.json"
+  derived: []
+  figures: []
+
+result_summary:
+  status: "complete"
+  baseline_run: null
+  power_sample_count: 0
+  event_count: 100
+  expected_event_count: 100
+  latency_sample_count: 100
+  mean_latency_ms: 14.597
+  median_latency_ms: 13.038
+  p95_latency_ms: 22.986
+  max_latency_ms: 36.986
+  drop_rate: 0.0
+  reliability_rate: 1.0
+  delta_mean_latency_ms: null
+  delta_p95_latency_ms: null
+  impact_label: "baseline"
+  key_observation: "Baseline replicate completed with 100 of 100 expected events and median RTT 13.04 ms."
+  anomalies:
+    []
+
+notes: >
+  Quiet W3 Wi-Fi automated baseline replicate `rep1` for the `W3_wifi_auto` comparison group. Event reliability was complete for the selected boot segment. The RTT distribution is compact, with no extreme tail sample above 500 ms.

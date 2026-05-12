@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "script": "run_all.sh",
+    "generated_at_utc": "2026-04-30T16:26:50Z",
+    "generated_at_local": "2026-04-30T19:26:50+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.5",
+      "firmware": "0.4.0",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.2",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.4"
+    },
+    "git": {
+      "commit": "f74f23b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260430192043-49024",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R639/raw/run_metadata.json"
+    ],
+    "extra": {
+      "phase": "end",
+      "exp_run_id": "R639",
+      "run_id": "W3_zigbee_auto_heavy"
+    }
+  },
+  "run": {
+    "exp_run_id": "R639",
+    "run_id": "W3_zigbee_auto_heavy",
+    "run_instance_id": "20260430192043-49024",
+    "command": {
+      "cwd": "<local-path>",
+      "shell": "EXP_RUN_ID=R639 ./run_all.sh --run-id W3_zigbee_auto_heavy --disable-ble --disable-ack --duration-sec 360 --iperf-load heavy --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100 --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250",
+      "secrets_omitted": [
+        "HA_TOKEN",
+        "HOME_ASSISTANT_TOKEN"
+      ]
+    },
+    "status": "complete",
+    "exit_code": 0,
+    "duration_sec": "360",
+    "enable_ble": "0",
+    "enable_ack": "0",
+    "reset_esp32": "0",
+    "iperf_load": "heavy",
+    "iperf_load_mbps": "50",
+    "iperf_proto": "tcp",
+    "iperf_server": "<private-ip>",
+    "iperf_port": "5201",
+    "zigbee_trigger": "1",
+    "zigbee_entity_id": "light.benchmark_device",
+    "zigbee_event_count": "100",
+    "zigbee_base_interval_ms": "3000",
+    "zigbee_jitter_ms": "250",
+    "started_at_utc": "2026-04-30T16:20:43Z",
+    "started_at_local": "2026-04-30T19:20:43+03:00",
+    "ended_at_utc": "2026-04-30T16:26:50Z",
+    "ended_at_local": "2026-04-30T19:26:50+03:00"
+  },
+  "history": [
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-04-30T16:20:43Z",
+      "generated_at_local": "2026-04-30T19:20:43+03:00"
+    },
+    {
+      "phase": "end",
+      "status": "complete",
+      "exit_code": 0,
+      "generated_at_utc": "2026-04-30T16:26:50Z",
+      "generated_at_local": "2026-04-30T19:26:50+03:00"
+    }
+  ]
+}

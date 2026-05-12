@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "script": "run_all.sh:analyze_iperf_log",
+    "generated_at_utc": "2026-05-02T16:21:11Z",
+    "generated_at_local": "2026-05-02T19:21:11+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "eaf2d88",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260502191503-61694",
+    "inputs": [
+      "experiments/runs/R675/raw/W3_ble_auto_heavy_iperf.log"
+    ],
+    "outputs": [
+      "experiments/runs/R675/raw/W3_ble_auto_heavy_iperf_summary.json"
+    ],
+    "extra": {
+      "run_id": "W3_ble_auto_heavy"
+    }
+  },
+  "iperf_log": "W3_ble_auto_heavy_iperf.log",
+  "interval_samples": 369,
+  "target_mbps": 50,
+  "mean_interval_mbps": 50.00108401084011,
+  "std_interval_mbps": 0.5022221446699787,
+  "min_interval_mbps": 48.6,
+  "max_interval_mbps": 51.2
+}

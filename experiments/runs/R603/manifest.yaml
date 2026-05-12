@@ -1,0 +1,101 @@
+run_id: R603
+title: W3 Wi-Fi auto latency under heavy iperf load
+date: 2026-04-24
+
+git:
+  branch: testbed-dev
+  commit: "db9c9e5"
+  tag: "v0.4.0"
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  analysis: "0.4.0"
+  pipeline: "0.4.0"
+
+experiment:
+  plan_id: W3_A
+  workload: W3
+  comparison_group: W3_wifi_auto
+  run_type: load
+  replicate_id: primary
+  baseline_ref: R600
+  protocol: wifi
+  topology: near
+  interference: iperf
+  load_level: heavy
+  node_count: 1
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  trigger: auto
+  timestamp_source: ESP32_RTT
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  iperf_server: "iperf-server (<private-ip>)"
+  esp32_node: "wifi01"
+  node_id: "wifi01"
+  sensor: null
+
+software:
+  home_assistant: "2026.3.4"
+  mqtt_broker: "Mosquitto"
+  iperf_profile: "50Mbps_tcp"
+  iperf_target_mbps: 50
+  iperf_mean_interval_mbps: 49.999
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+
+timing:
+  timestamp_source: "ESP32 RTT using rtt_us"
+  expected_events: 100
+  actual_events: 93
+  mean_interval_ms: 3245.565
+  jitter_ms: 2195.029
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W3_wifi_auto_heavy_serial.log
+    - raw/W3_wifi_auto_heavy_iperf.log
+    - raw/W3_wifi_auto_heavy_iperf_summary.json
+    - raw/W3_wifi_auto_heavy_power_samples.csv
+    - raw/W3_wifi_auto_heavy_mqtt_events.csv
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  derived: []
+  figures: []
+
+result_summary:
+  status: complete
+  baseline_run: R600
+  power_sample_count: 0
+  event_count: 93
+  expected_event_count: 100
+  latency_sample_count: 88
+  mean_latency_ms: 42.547
+  median_latency_ms: 16.911
+  p95_latency_ms: 24.969
+  max_latency_ms: 1395.921
+  drop_rate: 0.07
+  reliability_rate: 0.93
+  delta_mean_latency_ms: 13.547
+  delta_p95_latency_ms: 4.935
+  pct_mean_latency_increase: 46.712
+  pct_p95_latency_increase: 24.631
+  impact_label: high
+  key_observation: "Heavy iperf load caused measurable degradation: 7% event loss, higher temporal jitter, and a high mean-latency increase relative to R600."
+  anomalies:
+    - "Seven expected event sequences were missing."
+    - "Only 88 RTT samples were available for latency analysis."
+    - "One extreme RTT sample reached 1395.921 ms."
+    - "Power sample CSV is header-only; W3 latency analysis uses MQTT RTT rows."
+
+notes: >
+  Primary heavy-load W3 Wi-Fi run. Compared with R600, this run shows clear
+  robustness degradation through event loss, increased interval jitter, and a
+  high mean-latency impact label.

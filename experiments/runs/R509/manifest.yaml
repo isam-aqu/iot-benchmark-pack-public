@@ -1,0 +1,119 @@
+run_id: R509
+title: W2 v2 control run at 5 s with serial power logging
+date: 2026-04-14
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.3.0"
+  ha_config: "0.1.1"
+  analysis: "0.3.0"
+
+experiment:
+  plan_id: W2
+  workload: W2
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 5000
+  trigger: periodic_internal
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "wifi01_power"
+  node_id: "wifi01_power"
+  sensor: "INA231"
+  shunt_resistor_ohm: 0.1
+  bus_connection: "BUS pin connected to ESP32 VIN"
+
+software:
+  home_assistant: "2026.3.4"
+  supervisor: "2026.03.2"
+  os: "17.1"
+  frontend: "20260312.1"
+  mqtt_broker: "Mosquitto"
+  mqtt_telemetry_enabled: false
+  mqtt_power_reporting_enabled: false
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+  ack_helper_enabled: false
+
+timing:
+  timestamp_source: "ESP32 t_local_us (serial power + parsed event stream)"
+  power_sampling_interval_ms: 100
+  experiment_duration_ms: 300000
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W2_wifi_periodic_5s_quiet_ctrl_v2_serial.log
+    - raw/W2_wifi_periodic_5s_quiet_ctrl_v2_power_samples.csv
+    - raw/W2_wifi_periodic_5s_quiet_ctrl_v2_mqtt_events.csv
+    - raw/W2_wifi_periodic_5s_quiet_ctrl_v2_meta.json
+    - raw/W2_wifi_periodic_5s_quiet_ctrl_v2_summary.json
+    - raw/W2_wifi_periodic_5s_quiet_ctrl_v2_summary.md
+  derived: []
+  figures: []
+
+result_summary:
+  status: complete
+  power_sample_count: 3001
+  event_count: 60
+  key_observation: >
+    Stable 5 s periodic control trace with correct event timing and event-aligned
+    serial power measurements. This rerun indicates that 5 s experiments are
+    affected by measurable run-to-run variability.
+  anomalies: []
+
+analysis:
+  metrics:
+    mean_power_mW: 368.19
+    median_power_mW: 327.33
+    std_power_mW: 115.30
+    min_power_mW: 224.73
+    p95_power_mW: 720.61
+    max_power_mW: 771.91
+    samples_above_500mW: 319
+    fraction_above_500mW: 0.10630
+    mean_current_mA: 73.83
+    median_current_mA: 65.47
+    max_current_mA: 160.44
+    mean_bus_v: 5.025
+    min_bus_v: 4.821
+    max_bus_v: 5.080
+    duration_s: 299.999
+    mean_sample_interval_ms: 99.9997
+    median_sample_interval_ms: 100.000
+    max_sample_interval_ms: 100.988
+    energy_mJ: 110471.59
+    mean_dt_since_event_ms: 2524.97
+    median_dt_since_event_ms: 2485.43
+    max_dt_since_event_ms: 4985.50
+    mean_event_interval_ms: 5000.000
+    median_event_interval_ms: 4999.998
+    max_event_interval_ms: 5000.073
+  role: control
+  interpretation: >
+    R509 isolates the cost of the internal 5 s scheduler without telemetry
+    transmission. It serves as the matched baseline for R512 and indicates that
+    low-rate experiments must be interpreted relative to a non-negligible
+    run-to-run variability floor.
+  comparison_context:
+    matched_telemetry_run: R512
+    intended_difference: "R512 - R509 = 5 s MQTT telemetry overhead"
+
+notes: >
+  W2 v2 control run using the revised methodology. Power samples were logged
+  over the serial interface only, while telemetry MQTT remained disabled.
+  Event rows were still emitted by the internal periodic scheduler and parsed
+  for alignment analysis. This rerun is preferred over the earlier R509 result
+  because it supports better interpretation of the 5 s matched comparison.

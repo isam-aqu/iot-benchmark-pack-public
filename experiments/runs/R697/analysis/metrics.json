@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "script": "python/analyze_w3_run.py",
+    "generated_at_utc": "2026-05-05T15:33:11Z",
+    "generated_at_local": "2026-05-05T18:33:11+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.7",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.5",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.6"
+    },
+    "git": {
+      "commit": "c10cfea",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R697/analysis/summary.json",
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R697/analysis/metrics.json"
+    ],
+    "extra": {
+      "run_id": "R697"
+    }
+  },
+  "run_id": "R697",
+  "baseline_run_id": "R696",
+  "w3_context": {
+    "comparison_group": "W3_zigbee_ap_ch9_20mhz",
+    "load_level": "heavy",
+    "interference": "iperf",
+    "iperf_profile": "50Mbps_tcp",
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0,
+    "ap_model": "netis WF2419",
+    "ap_firmware": "V2.2.36123",
+    "ap_channel_mode": "fixed",
+    "ap_channel": "9",
+    "ap_width_mhz": "20",
+    "ap_control_sideband": "none",
+    "ap_rf_source": "manual_ap_ui"
+  },
+  "w3": {
+    "mean_latency_ms": 1.4267852799780667,
+    "std_latency_ms": 4.499870319488487,
+    "p95_latency_ms": 10.210687999957008,
+    "temporal_std_ms": 0.9711375997633133,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0,
+    "extra_event_rate": 0.0,
+    "duplicate_event_rate": 0.0
+  },
+  "baseline": {
+    "mean_latency_ms": 1.711367680009571,
+    "std_latency_ms": 4.650917603300837,
+    "p95_latency_ms": 10.478720000010798,
+    "temporal_std_ms": 1.7521156939826659,
+    "drop_rate": 0.0,
+    "reliability_rate": 1.0,
+    "extra_event_rate": 0.0,
+    "duplicate_event_rate": 0.0
+  },
+  "w3_delta": {
+    "delta_mean_latency_ms": -0.28458240003150426,
+    "delta_std_latency_ms": -0.15104728381234978,
+    "delta_p95_latency_ms": -0.2680320000537897,
+    "delta_temporal_std_ms": -0.7809780942193526,
+    "delta_drop_rate": 0.0,
+    "delta_reliability_rate": 0.0,
+    "delta_extra_event_rate": 0.0,
+    "delta_duplicate_event_rate": 0.0,
+    "pct_mean_latency_increase": -16.62894557117689,
+    "pct_p95_latency_increase": -2.5578696639810348
+  },
+  "impact_label": "negligible"
+}

@@ -1,0 +1,78 @@
+run_id: R635
+title: "W3 Zigbee heavy Wi-Fi interference rep3"
+date: 2026-04-30
+
+git:
+  branch: testbed-dev
+  commit: f74f23b
+  tag: null
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  pipeline: "0.4.5"
+  logger: "0.4.1"
+  analysis: "0.4.3"
+
+experiment:
+  plan_id: W3_A
+  workload: W3
+  protocol: zigbee
+  topology: near
+  interference: "iperf"
+  load_level: "heavy"
+  node_count: 1
+  interval_ms: "3000+/-250"
+  comparison_group: W3_zigbee_auto
+  run_type: "load"
+  replicate_id: "rep3"
+  baseline_ref: "R620"
+  trigger: home_assistant_rest_toggle
+  normalization_method: median_offset
+
+load:
+  profile: "50Mbps_tcp"
+  target_mbps: 50
+  mean_interval_mbps: 49.959783
+  std_interval_mbps: 0.848343
+  interval_samples: 368
+commands:
+  run: >
+    EXP_RUN_ID=R635 ./run_all.sh --run-id W3_zigbee_auto_heavy --disable-ble --disable-ack --duration-sec 360 --iperf-load heavy --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100 --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250
+  analysis:
+    - >
+      python3 python/summarize_w3_run.py experiments/runs/R635/raw
+      --run-id W3_zigbee_auto_heavy --expected-events 100
+    - >
+      python3 python/analyze_w3_run.py experiments/runs/R635/raw
+      --run-id R635 --run-sheet docs/run_sheet.csv
+  secrets_omitted:
+    - HA_TOKEN
+    - HOME_ASSISTANT_TOKEN
+
+result_summary:
+  status: complete
+  expected_events: 100
+  actual_events: 100
+  missing_events: 0
+  extra_events: 0
+  repeated_event_id_rows: 0
+  duplicate_payload_rows: 0
+  mad_latency_ms: 1.569536
+  p95_latency_ms: 11.788544
+  max_latency_ms: 28.397696
+  command_delay_anomalies: 1
+  impact_label: "moderate"
+
+artifacts:
+  raw:
+    - raw/W3_zigbee_auto_heavy_mqtt_events.csv
+    - raw/W3_zigbee_auto_heavy_zigbee_trigger_schedule.csv
+    - raw/W3_zigbee_auto_heavy_iperf.log
+    - raw/W3_zigbee_auto_heavy_iperf_summary.json
+    - raw/run_metadata.json
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  notes:
+    - notes.md

@@ -1,0 +1,52 @@
+{
+  "run_id": "W3_wifi_auto_baseline",
+  "boot_selection": {
+    "original_rows": 200,
+    "selected_rows": 200,
+    "selected_boot_id": 912847879,
+    "boot_candidates": [
+      {
+        "boot_id": 912847879,
+        "count": 100,
+        "min": 1,
+        "max": 100
+      }
+    ]
+  },
+  "latency": {
+    "available": true,
+    "source": "rtt_us",
+    "mean_latency_ms": 14.051330000000002,
+    "std_latency_ms": 2.959819736030893,
+    "p95_latency_ms": 19.128799999999995,
+    "p99_latency_ms": 23.224980000000034,
+    "max_latency_ms": 30.054,
+    "temporal_std_ms": 0.7863200366969608,
+    "outlier_rate": 0.0,
+    "sample_count": 100,
+    "median_latency_ms": 13.0175,
+    "mad_latency_ms": 1.0164999999999997,
+    "p99_threshold_ms": 23.224980000000034,
+    "extreme_count": 1,
+    "extreme_max_ms": 30.054
+  },
+  "reliability": {
+    "loss_rate": 0.0,
+    "actual_events": 100,
+    "expected_events": 100,
+    "missing_events": 0,
+    "duplicates": 0
+  },
+  "timing": {
+    "mean_interval_ms": 2992.181959595959,
+    "std_interval_ms": 133.83212356225246,
+    "jitter_ms": 133.83212356225246
+  },
+  "data_quality": {
+    "total_rows": 200,
+    "unique_payload_rows": 200,
+    "duplicate_payload_rows": 0,
+    "event_duplicate_payload_rows": 0,
+    "rtt_duplicate_payload_rows": 0
+  }
+}

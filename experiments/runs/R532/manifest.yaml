@@ -1,0 +1,33 @@
+exp_run_id: R532
+run_id: W2_wifi_periodic_4s_quiet_ctrl_v2
+
+classification:
+  protocol: wifi
+  mode: control
+  comparison_group: W2_4s
+  replicate_id: primary
+
+execution:
+  interval_ms: 4000
+  duration_sec: 450
+  ble_logger: disabled
+  ack_helper: disabled
+
+environment:
+  topology: near
+  interference: quiet
+  node_count: 1
+
+software:
+  pipeline_version: 0.3.0
+  commit: 3a23203
+
+logging:
+  raw_dir: experiments/runs/R532/raw
+  analysis_dir: experiments/runs/R532/analysis
+
+status:
+  accepted: true
+
+notes: >
+  4 s control run to refine the energy curve between 3 s and 5 s.

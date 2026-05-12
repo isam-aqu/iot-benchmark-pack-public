@@ -1,0 +1,89 @@
+run_id: R600
+title: W3 Wi-Fi auto baseline with jittered interval
+date: 2026-04-24
+
+git:
+  branch: testbed-dev
+  commit: "db9c9e5"
+  tag: "v0.4.0"
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  analysis: "0.4.0"
+  pipeline: "0.4.0"
+
+experiment:
+  plan_id: W3_B0
+  workload: W3
+  comparison_group: W3_wifi_auto
+  run_type: baseline
+  replicate_id: primary
+  baseline_ref: null
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: baseline
+  node_count: 1
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  trigger: auto
+  timestamp_source: ESP32_RTT
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  iperf_server: null
+  esp32_node: "wifi01"
+  node_id: "wifi01"
+  sensor: null
+
+software:
+  home_assistant: "2026.3.4"
+  mqtt_broker: "Mosquitto"
+  iperf_profile: null
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+
+timing:
+  timestamp_source: "ESP32 RTT using rtt_us"
+  expected_events: 100
+  actual_events: 100
+  mean_interval_ms: 2972.263
+  jitter_ms: 137.073
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W3_wifi_auto_baseline_serial.log
+    - raw/W3_wifi_auto_baseline_power_samples.csv
+    - raw/W3_wifi_auto_baseline_mqtt_events.csv
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  derived: []
+  figures: []
+
+result_summary:
+  status: complete
+  power_sample_count: 0
+  event_count: 100
+  latency_sample_count: 100
+  mean_latency_ms: 29.001
+  median_latency_ms: 14.007
+  p95_latency_ms: 20.034
+  max_latency_ms: 1455.247
+  drop_rate: 0.0
+  reliability_rate: 1.0
+  impact_label: baseline
+  key_observation: "Quiet W3 Wi-Fi baseline completed with no event loss; one extreme RTT outlier inflates mean and standard deviation while P95 remains near 20 ms."
+  anomalies:
+    - "One extreme RTT sample reached 1455.247 ms."
+    - "Power sample CSV is header-only; W3 latency analysis uses MQTT RTT rows."
+
+notes: >
+  Primary quiet baseline for the W3 Wi-Fi automated workload. This run is the
+  comparison reference for R601-R603 under light, moderate, and heavy iperf
+  load.

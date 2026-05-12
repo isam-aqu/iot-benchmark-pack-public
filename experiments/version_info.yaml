@@ -1,0 +1,9 @@
+# Version source of truth for the benchmark pipeline.
+# Update these values when logic or measurement methodology changes.
+pipeline_version: 0.4.8
+firmware_version: 0.5.0
+ha_config_version: 0.3.0
+logger_version: 0.4.1
+analysis_version: 0.4.5
+ha_automation_version: 0.4.0
+experiment_protocol_version: 0.4.6

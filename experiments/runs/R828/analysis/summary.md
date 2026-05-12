@@ -1,0 +1,49 @@
+# Summary for W2_wifi_periodic_10s_quiet_telemetry_v2_rep6
+
+## Energy
+- energy_mJ: 112473.84449415917
+
+## Power
+- power_sample_count: 3001
+- mean_power_mW: 375.04605863812066
+- median_power_mW: 339.541962
+- std_power_mW: 106.9356581775368
+- min_power_mW: 312.671753
+- p95_power_mW: 703.511414
+- max_power_mW: 803.664063
+- samples_above_500mW: 304
+- fraction_above_500mW: 0.10129956681106297
+- mean_current_mA: 72.77744751416193
+- median_current_mA: 65.172516
+- max_current_mA: 160.146561
+- mean_bus_v: 5.178211846051316
+- min_bus_v: 4.9375
+- max_bus_v: 5.245
+
+## Latency
+- available: False
+- source: None
+- kind: None
+- sample_count: 0
+- reason: No recognized latency column with valid numeric samples.
+
+## Timing
+- mean_interval_ms: 9999.6213
+- median_interval_ms: 9999.9975
+- std_interval_ms: 2.080269613659877
+- jitter_ms: 2.080269613659877
+- max_interval_ms: 10000.45
+- min_interval_ms: 9988.656
+
+## Reliability
+- expected_events: 31
+- actual_events: 31
+- missing_events: 0
+- loss_rate: 0.0
+- duplicates: 0
+
+## Events
+- event_count: 31
+- mean_event_interval_ms: 9999.6213
+- median_event_interval_ms: 9999.9975
+- max_event_interval_ms: 10000.45

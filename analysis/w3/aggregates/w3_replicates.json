@@ -1,0 +1,3865 @@
+{
+  "metadata": {
+    "script": "python/analyze_w3_replicates.py",
+    "generated_at_utc": "2026-05-03T11:52:51Z",
+    "generated_at_local": "2026-05-03T14:52:51+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.7",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.5",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.6"
+    },
+    "git": {
+      "commit": "e076962",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "analysis/w3/aggregates/w3_replicates.json"
+    ]
+  },
+  "wifi_baseline_W3_wifi_auto": {
+    "runs": [
+      "R600",
+      "R604",
+      "R608",
+      "R612",
+      "R616"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 13.239999999999998,
+        "ci_low": 12.70065936942758,
+        "ci_high": 13.779340630572417,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.0512999999999997,
+        "ci_low": 0.9417951958712375,
+        "ci_high": 1.160804804128762,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 19.83335,
+        "ci_low": 17.46661473385027,
+        "ci_high": 22.200085266149728,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.4989726959121064,
+        "ci_low": 1.31190633109227,
+        "ci_high": 1.6860390607319427,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 17.036682,
+        "ci_low": 8.716597255260098,
+        "ci_high": 25.3567667447399,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 9.906174937873292,
+        "ci_low": 0.0,
+        "ci_high": 34.6159323654677,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R600",
+      "R604",
+      "R608",
+      "R612",
+      "R616"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 13.239999999999998,
+        "ci_low": 12.70065936942758,
+        "ci_high": 13.779340630572417,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.0512999999999997,
+        "ci_low": 0.9417951958712375,
+        "ci_high": 1.160804804128762,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 19.83335,
+        "ci_low": 17.46661473385027,
+        "ci_high": 22.200085266149728,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.4989726959121064,
+        "ci_low": 1.31190633109227,
+        "ci_high": 1.6860390607319427,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 17.036682,
+        "ci_low": 8.716597255260098,
+        "ci_high": 25.3567667447399,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 9.906174937873292,
+        "ci_low": 0.0,
+        "ci_high": 34.6159323654677,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "wifi_light_W3_wifi_auto": {
+    "runs": [
+      "R601",
+      "R605",
+      "R609",
+      "R613",
+      "R617"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 13.436499999999999,
+        "ci_low": 12.817736800684083,
+        "ci_high": 14.055263199315915,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.6055,
+        "ci_low": 1.0812385295560576,
+        "ci_high": 2.1297614704439423,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 22.882549999999995,
+        "ci_low": 20.34613478662293,
+        "ci_high": 25.41896521337706,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.7050107510811532,
+        "ci_low": 1.4928757407098279,
+        "ci_high": 1.9171457614524785,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 25.454853292929293,
+        "ci_low": 12.390336831267605,
+        "ci_high": 38.51936975459098,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 34.179293076124296,
+        "ci_low": 0.0,
+        "ci_high": 75.79227148919207,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R600",
+      "R604",
+      "R608",
+      "R612",
+      "R616"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 13.239999999999998,
+        "ci_low": 12.70065936942758,
+        "ci_high": 13.779340630572417,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.0512999999999997,
+        "ci_low": 0.9417951958712375,
+        "ci_high": 1.160804804128762,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 19.83335,
+        "ci_low": 17.46661473385027,
+        "ci_high": 22.200085266149728,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.4989726959121064,
+        "ci_low": 1.31190633109227,
+        "ci_high": 1.6860390607319427,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 17.036682,
+        "ci_low": 8.716597255260098,
+        "ci_high": 25.3567667447399,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 9.906174937873292,
+        "ci_low": 0.0,
+        "ci_high": 34.6159323654677,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.19650000000000034,
+      "mad_latency_ms": 0.5542000000000002,
+      "p95_latency_ms": 3.0491999999999955,
+      "tail_inflation_factor": 0.20603805516904683,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 8.418171292929294,
+      "temporal_std_ms": 24.273118138251004
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": 1.4841389728096703,
+      "mad_latency_ms": 52.71568534195762,
+      "p95_latency_ms": 15.374104727643065,
+      "tail_inflation_factor": 13.745284068945313,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 49.412035118864665,
+      "temporal_std_ms": 245.03017855509503
+    }
+  },
+  "wifi_moderate_W3_wifi_auto": {
+    "runs": [
+      "R602",
+      "R606",
+      "R610",
+      "R614",
+      "R618"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 13.963799999999997,
+        "ci_low": 13.740068392413486,
+        "ci_high": 14.187531607586509,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.9271999999999991,
+        "ci_low": 1.7140698124103446,
+        "ci_high": 2.1403301875896537,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 24.16568,
+        "ci_low": 22.676995922693052,
+        "ci_high": 25.654364077306944,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.7305619562050059,
+        "ci_low": 1.628735827834891,
+        "ci_high": 1.8323880845751208,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 23.732167999999994,
+        "ci_low": 9.026768713429284,
+        "ci_high": 38.437567286570705,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 25.813683300203696,
+        "ci_low": 0.0,
+        "ci_high": 70.35400228362435,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R600",
+      "R604",
+      "R608",
+      "R612",
+      "R616"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 13.239999999999998,
+        "ci_low": 12.70065936942758,
+        "ci_high": 13.779340630572417,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.0512999999999997,
+        "ci_low": 0.9417951958712375,
+        "ci_high": 1.160804804128762,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 19.83335,
+        "ci_low": 17.46661473385027,
+        "ci_high": 22.200085266149728,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.4989726959121064,
+        "ci_low": 1.31190633109227,
+        "ci_high": 1.6860390607319427,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 17.036682,
+        "ci_low": 8.716597255260098,
+        "ci_high": 25.3567667447399,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 9.906174937873292,
+        "ci_low": 0.0,
+        "ci_high": 34.6159323654677,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.7237999999999989,
+      "mad_latency_ms": 0.8758999999999995,
+      "p95_latency_ms": 4.332329999999999,
+      "tail_inflation_factor": 0.2315892602928995,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 6.695485999999995,
+      "temporal_std_ms": 15.907508362330404
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": 5.4667673716012,
+      "mad_latency_ms": 83.31589460667742,
+      "p95_latency_ms": 21.84366231625015,
+      "tail_inflation_factor": 15.449865159283659,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 39.30041072551566,
+      "temporal_std_ms": 160.5817428229822
+    }
+  },
+  "wifi_heavy_W3_wifi_auto": {
+    "runs": [
+      "R603",
+      "R607",
+      "R611",
+      "R615",
+      "R619"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 15.6756,
+        "ci_low": 14.53725010868251,
+        "ci_high": 16.81394989131749,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 3.3819000000000004,
+        "ci_low": 2.627952331384274,
+        "ci_high": 4.135847668615726,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 24.051449999999996,
+        "ci_low": 23.284645568406432,
+        "ci_high": 24.81825443159356,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.537018200124125,
+        "ci_low": 1.4597748479657011,
+        "ci_high": 1.614261552282549,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.014000000000000002,
+        "ci_low": 0.0,
+        "ci_high": 0.05287023147276919,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.986,
+        "ci_low": 0.9471297685272309,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 22.729383272727272,
+        "ci_low": 8.675200614214546,
+        "ci_high": 36.78356593124,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 20.118467699822165,
+        "ci_low": 0.0,
+        "ci_high": 61.34606468454429,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R600",
+      "R604",
+      "R608",
+      "R612",
+      "R616"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 13.239999999999998,
+        "ci_low": 12.70065936942758,
+        "ci_high": 13.779340630572417,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.0512999999999997,
+        "ci_low": 0.9417951958712375,
+        "ci_high": 1.160804804128762,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 19.83335,
+        "ci_low": 17.46661473385027,
+        "ci_high": 22.200085266149728,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1.4989726959121064,
+        "ci_low": 1.31190633109227,
+        "ci_high": 1.6860390607319427,
+        "samples": 5
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 17.036682,
+        "ci_low": 8.716597255260098,
+        "ci_high": 25.3567667447399,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 9.906174937873292,
+        "ci_low": 0.0,
+        "ci_high": 34.6159323654677,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 2.435600000000001,
+      "mad_latency_ms": 2.3306000000000004,
+      "p95_latency_ms": 4.218099999999996,
+      "tail_inflation_factor": 0.03804550421201869,
+      "drop_rate": 0.014000000000000002,
+      "reliability_rate": -0.014000000000000012,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 5.692701272727273,
+      "temporal_std_ms": 10.212292761948873
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": 18.395770392749252,
+      "mad_latency_ms": 221.68743460477518,
+      "p95_latency_ms": 21.26771322040904,
+      "tail_inflation_factor": 2.5381052180452475,
+      "drop_rate": null,
+      "reliability_rate": -1.4000000000000012,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 33.41437770997471,
+      "temporal_std_ms": 103.09017179683786
+    }
+  },
+  "zigbee_baseline_W3_zigbee_auto": {
+    "runs": [
+      "R620",
+      "R624",
+      "R628",
+      "R632",
+      "R636"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": -2.1316282072803005e-15,
+        "ci_low": 0.0,
+        "ci_high": 3.786720494924648e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7875711999999986,
+        "ci_low": 1.3635032113014822,
+        "ci_high": 2.211639188698515,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.121377279999997,
+        "ci_low": 8.575272437611206,
+        "ci_high": 11.667482122388789,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 85812788259819.08,
+        "ci_low": 0.0,
+        "ci_high": 6319511396555432.0,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 1.7194634240000002,
+        "ci_low": 1.373950487894188,
+        "ci_high": 2.0649763601058124,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.3472424622592496,
+        "ci_low": 0.9133051685449554,
+        "ci_high": 1.7811797559735438,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R620",
+      "R624",
+      "R628",
+      "R632",
+      "R636"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": -2.1316282072803005e-15,
+        "ci_low": 0.0,
+        "ci_high": 3.786720494924648e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7875711999999986,
+        "ci_low": 1.3635032113014822,
+        "ci_high": 2.211639188698515,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.121377279999997,
+        "ci_low": 8.575272437611206,
+        "ci_high": 11.667482122388789,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 85812788259819.08,
+        "ci_low": 0.0,
+        "ci_high": 6319511396555432.0,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 1.7194634240000002,
+        "ci_low": 1.373950487894188,
+        "ci_high": 2.0649763601058124,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.3472424622592496,
+        "ci_low": 0.9133051685449554,
+        "ci_high": 1.7811797559735438,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": 0.0,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "zigbee_light_W3_zigbee_auto": {
+    "runs": [
+      "R621",
+      "R625",
+      "R629",
+      "R633",
+      "R637"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 2.842170943040401e-15,
+        "ci_low": 0.0,
+        "ci_high": 7.674482423128788e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.9295743999999964,
+        "ci_low": 1.2591358259060976,
+        "ci_high": 2.600012974093895,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.966771200000002,
+        "ci_low": 9.959452122453971,
+        "ci_high": 11.974090277546033,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 1608234526214079.5,
+        "ci_low": 1575971827317069.2,
+        "ci_high": 1640497225111089.8,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 2.087078400000002,
+        "ci_low": 1.4729281644393484,
+        "ci_high": 2.7012286355606556,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.686891078394389,
+        "ci_low": 0.6111416645752341,
+        "ci_high": 2.762640492213544,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R620",
+      "R624",
+      "R628",
+      "R632",
+      "R636"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": -2.1316282072803005e-15,
+        "ci_low": 0.0,
+        "ci_high": 3.786720494924648e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7875711999999986,
+        "ci_low": 1.3635032113014822,
+        "ci_high": 2.211639188698515,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.121377279999997,
+        "ci_low": 8.575272437611206,
+        "ci_high": 11.667482122388789,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 85812788259819.08,
+        "ci_low": 0.0,
+        "ci_high": 6319511396555432.0,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 1.7194634240000002,
+        "ci_low": 1.373950487894188,
+        "ci_high": 2.0649763601058124,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.3472424622592496,
+        "ci_low": 0.9133051685449554,
+        "ci_high": 1.7811797559735438,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 4.973799150320701e-15,
+      "mad_latency_ms": 0.14200319999999778,
+      "p95_latency_ms": 0.8453939200000047,
+      "tail_inflation_factor": 1522421737954260.5,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": 0.0,
+      "mean_latency_ms": 0.3676149760000018,
+      "temporal_std_ms": 0.3396486161351393
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -233.33333333333334,
+      "mad_latency_ms": 7.943918541538255,
+      "p95_latency_ms": 8.352558121418086,
+      "tail_inflation_factor": 1774.1198821611047,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 21.379633371020855,
+      "temporal_std_ms": 25.21065254769121
+    }
+  },
+  "zigbee_moderate_W3_zigbee_auto": {
+    "runs": [
+      "R622",
+      "R626",
+      "R630",
+      "R634",
+      "R638"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": -7.105427357601002e-16,
+        "ci_low": 0.0,
+        "ci_high": 4.121768744328285e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 2.218214400000001,
+        "ci_low": 1.728094707340178,
+        "ci_high": 2.7083340926598236,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.186711039999997,
+        "ci_low": 9.235337426799873,
+        "ci_high": 11.13808465320012,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 786460900767933.6,
+        "ci_low": 0.0,
+        "ci_high": 2.719207796832196e+16,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.008,
+        "ci_low": 0.0,
+        "ci_high": 0.030211560841582386,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.008,
+        "ci_low": 0.0,
+        "ci_high": 0.030211560841582386,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 1.719913885538461,
+        "ci_low": 1.2917502564529715,
+        "ci_high": 2.1480775146239504,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.300686354020993,
+        "ci_low": 1.0761854766205259,
+        "ci_high": 1.52518723142146,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R620",
+      "R624",
+      "R628",
+      "R632",
+      "R636"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": -2.1316282072803005e-15,
+        "ci_low": 0.0,
+        "ci_high": 3.786720494924648e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7875711999999986,
+        "ci_low": 1.3635032113014822,
+        "ci_high": 2.211639188698515,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.121377279999997,
+        "ci_low": 8.575272437611206,
+        "ci_high": 11.667482122388789,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 85812788259819.08,
+        "ci_low": 0.0,
+        "ci_high": 6319511396555432.0,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 1.7194634240000002,
+        "ci_low": 1.373950487894188,
+        "ci_high": 2.0649763601058124,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.3472424622592496,
+        "ci_low": 0.9133051685449554,
+        "ci_high": 1.7811797559735438,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 1.4210854715202003e-15,
+      "mad_latency_ms": 0.4306432000000022,
+      "p95_latency_ms": 0.06533375999999969,
+      "tail_inflation_factor": 700648112508114.5,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.008,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": 0.008,
+      "mean_latency_ms": 0.0004504615384608446,
+      "temporal_std_ms": -0.04655610823825662
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -66.66666666666667,
+      "mad_latency_ms": 24.090967677259655,
+      "p95_latency_ms": 0.6455026642381985,
+      "tail_inflation_factor": 816.4844969105677,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.02619779706700202,
+      "temporal_std_ms": -3.4556592107544364
+    }
+  },
+  "zigbee_heavy_W3_zigbee_auto": {
+    "runs": [
+      "R623",
+      "R627",
+      "R631",
+      "R635",
+      "R639"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 6.23848729535641e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 2.0653055999999994,
+        "ci_low": 1.4943069208045014,
+        "ci_high": 2.6363042791954974,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.726369279999997,
+        "ci_low": 9.381379632796662,
+        "ci_high": 12.071358927203331,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": -86947395125939.0,
+        "ci_low": 0.0,
+        "ci_high": 1.988901935659387e+16,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.008,
+        "ci_low": 0.0,
+        "ci_high": 0.02160174761316514,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.008,
+        "ci_low": 0.0,
+        "ci_high": 0.02160174761316514,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 2.8130279705098045,
+        "ci_low": 0.2974103588473298,
+        "ci_high": 5.328645582172279,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 4.094099876440431,
+        "ci_low": 0.0,
+        "ci_high": 10.679303500088258,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R620",
+      "R624",
+      "R628",
+      "R632",
+      "R636"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": -2.1316282072803005e-15,
+        "ci_low": 0.0,
+        "ci_high": 3.786720494924648e-15,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7875711999999986,
+        "ci_low": 1.3635032113014822,
+        "ci_high": 2.211639188698515,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.121377279999997,
+        "ci_low": 8.575272437611206,
+        "ci_high": 11.667482122388789,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 85812788259819.08,
+        "ci_low": 0.0,
+        "ci_high": 6319511396555432.0,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 1.7194634240000002,
+        "ci_low": 1.373950487894188,
+        "ci_high": 2.0649763601058124,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.3472424622592496,
+        "ci_low": 0.9133051685449554,
+        "ci_high": 1.7811797559735438,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 2.1316282072803005e-15,
+      "mad_latency_ms": 0.2777344000000008,
+      "p95_latency_ms": 0.6049919999999993,
+      "tail_inflation_factor": -172760183385758.06,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.008,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": 0.008,
+      "mean_latency_ms": 1.0935645465098043,
+      "temporal_std_ms": 2.7468574141811817
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -100.0,
+      "mad_latency_ms": 15.536969939994616,
+      "p95_latency_ms": 5.977368329065977,
+      "tail_inflation_factor": -201.32218855619118,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 63.59917467542503,
+      "temporal_std_ms": 203.88738412942067
+    }
+  },
+  "ble_baseline_W3_ble_auto": {
+    "runs": [
+      "R640",
+      "R644",
+      "R648",
+      "R652",
+      "R656"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 89.33828125,
+        "ci_low": 84.71478089337408,
+        "ci_high": 93.9617816066259,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 210.29064697265608,
+        "ci_low": 166.9792328097281,
+        "ci_high": 253.60206113558405,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.024,
+        "ci_low": 0.007341329368813206,
+        "ci_high": 0.04065867063118679,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.976,
+        "ci_low": 0.9593413293688132,
+        "ci_high": 0.9926586706311867,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 15.754616299626928,
+        "ci_low": 0.0,
+        "ci_high": 35.5063984133256,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 30.87205552601042,
+        "ci_low": 26.97431023631636,
+        "ci_high": 34.769800815704485,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R640",
+      "R644",
+      "R648",
+      "R652",
+      "R656"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 89.33828125,
+        "ci_low": 84.71478089337408,
+        "ci_high": 93.9617816066259,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 210.29064697265608,
+        "ci_low": 166.9792328097281,
+        "ci_high": 253.60206113558405,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.024,
+        "ci_low": 0.007341329368813206,
+        "ci_high": 0.04065867063118679,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.976,
+        "ci_low": 0.9593413293688132,
+        "ci_high": 0.9926586706311867,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 15.754616299626928,
+        "ci_low": 0.0,
+        "ci_high": 35.5063984133256,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 30.87205552601042,
+        "ci_low": 26.97431023631636,
+        "ci_high": 34.769800815704485,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": null,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "ble_light_W3_ble_auto": {
+    "runs": [
+      "R641",
+      "R645",
+      "R649",
+      "R653",
+      "R657"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 2.44140625e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00015122688399457637,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 78.7455078125,
+        "ci_low": 65.25801298914978,
+        "ci_high": 92.23300263585021,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 173.7489379882812,
+        "ci_low": 132.90390996426825,
+        "ci_high": 214.59396601229415,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 301192.96666666656,
+        "ci_low": 0.0,
+        "ci_high": 4884031.430259598,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.032,
+        "ci_low": 0.005081365976620945,
+        "ci_high": 0.05891863402337906,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.968,
+        "ci_low": 0.9410813659766208,
+        "ci_high": 0.9949186340233791,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 11.99463477852134,
+        "ci_low": 0.0,
+        "ci_high": 26.426548528769803,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 25.74402794349225,
+        "ci_low": 16.054250285567825,
+        "ci_high": 35.43380560141667,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R640",
+      "R644",
+      "R648",
+      "R652",
+      "R656"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 89.33828125,
+        "ci_low": 84.71478089337408,
+        "ci_high": 93.9617816066259,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 210.29064697265608,
+        "ci_low": 166.9792328097281,
+        "ci_high": 253.60206113558405,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.024,
+        "ci_low": 0.007341329368813206,
+        "ci_high": 0.04065867063118679,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.976,
+        "ci_low": 0.9593413293688132,
+        "ci_high": 0.9926586706311867,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 15.754616299626928,
+        "ci_low": 0.0,
+        "ci_high": 35.5063984133256,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 30.87205552601042,
+        "ci_low": 26.97431023631636,
+        "ci_high": 34.769800815704485,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 2.44140625e-05,
+      "mad_latency_ms": -10.5927734375,
+      "p95_latency_ms": -36.54170898437488,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.008,
+      "reliability_rate": -0.008000000000000007,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -3.7599815211055887,
+      "temporal_std_ms": -5.128027582518172
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": null,
+      "mad_latency_ms": -11.856925485120636,
+      "p95_latency_ms": -17.376763784043312,
+      "tail_inflation_factor": null,
+      "drop_rate": 33.333333333333336,
+      "reliability_rate": -0.8196721311475418,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -23.865903488837272,
+      "temporal_std_ms": -16.610580329507666
+    }
+  },
+  "ble_moderate_W3_ble_auto": {
+    "runs": [
+      "R642",
+      "R646",
+      "R650",
+      "R654",
+      "R658"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 75.30888671875,
+        "ci_low": 62.08806671464444,
+        "ci_high": 88.52970672285556,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 169.6790258789062,
+        "ci_low": 122.9253886477587,
+        "ci_high": 216.4326631100537,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.028000000000000004,
+        "ci_low": 0.00411611611900016,
+        "ci_high": 0.05188388388099985,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.9719999999999999,
+        "ci_low": 0.948116116119,
+        "ci_high": 0.9958838838809997,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 10.869379790380721,
+        "ci_low": 0.0,
+        "ci_high": 26.618502744970378,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 32.83947378375758,
+        "ci_low": 24.86977927944358,
+        "ci_high": 40.80916828807159,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R640",
+      "R644",
+      "R648",
+      "R652",
+      "R656"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 89.33828125,
+        "ci_low": 84.71478089337408,
+        "ci_high": 93.9617816066259,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 210.29064697265608,
+        "ci_low": 166.9792328097281,
+        "ci_high": 253.60206113558405,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.024,
+        "ci_low": 0.007341329368813206,
+        "ci_high": 0.04065867063118679,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.976,
+        "ci_low": 0.9593413293688132,
+        "ci_high": 0.9926586706311867,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 15.754616299626928,
+        "ci_low": 0.0,
+        "ci_high": 35.5063984133256,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 30.87205552601042,
+        "ci_low": 26.97431023631636,
+        "ci_high": 34.769800815704485,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": -14.029394531249991,
+      "p95_latency_ms": -40.611621093749875,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0040000000000000036,
+      "reliability_rate": -0.004000000000000115,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -4.885236509246207,
+      "temporal_std_ms": 1.9674182577471626
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": null,
+      "mad_latency_ms": -15.703676335557432,
+      "p95_latency_ms": -19.31213854652821,
+      "tail_inflation_factor": null,
+      "drop_rate": 16.666666666666682,
+      "reliability_rate": -0.4098360655737822,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -31.008286183154397,
+      "temporal_std_ms": 6.372812643102327
+    }
+  },
+  "ble_heavy_W3_ble_auto": {
+    "runs": [
+      "R643",
+      "R647",
+      "R651",
+      "R655",
+      "R659"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": -4.8828125e-05,
+        "ci_low": 0.0,
+        "ci_high": 3.419035408425989e-05,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 87.2828369140625,
+        "ci_low": 85.56903465722436,
+        "ci_high": 88.99663917090064,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 151.4665014648436,
+        "ci_low": 134.3984693755447,
+        "ci_high": 168.53453355414248,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": -1240122.1999999972,
+        "ci_low": 0.0,
+        "ci_high": -430054.63509496243,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.024,
+        "ci_low": 0.009842852230177253,
+        "ci_high": 0.03815714776982275,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.976,
+        "ci_low": 0.9618428522301772,
+        "ci_high": 0.9901571477698228,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 8.832922594040491,
+        "ci_low": 0.0,
+        "ci_high": 26.493695313262045,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 27.954626005798485,
+        "ci_low": 19.478745608914657,
+        "ci_high": 36.43050640268231,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R640",
+      "R644",
+      "R648",
+      "R652",
+      "R656"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 89.33828125,
+        "ci_low": 84.71478089337408,
+        "ci_high": 93.9617816066259,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 210.29064697265608,
+        "ci_low": 166.9792328097281,
+        "ci_high": 253.60206113558405,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.024,
+        "ci_low": 0.007341329368813206,
+        "ci_high": 0.04065867063118679,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 0.976,
+        "ci_low": 0.9593413293688132,
+        "ci_high": 0.9926586706311867,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 15.754616299626928,
+        "ci_low": 0.0,
+        "ci_high": 35.5063984133256,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 30.87205552601042,
+        "ci_low": 26.97431023631636,
+        "ci_high": 34.769800815704485,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": -4.8828125e-05,
+      "mad_latency_ms": -2.0554443359374943,
+      "p95_latency_ms": -58.82414550781249,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -6.921693705586437,
+      "temporal_std_ms": -2.917429520211936
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": null,
+      "mad_latency_ms": -2.3007430937535465,
+      "p95_latency_ms": -27.97278260095959,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -43.934384525444415,
+      "temporal_std_ms": -9.45006566781384
+    }
+  },
+  "ble_baseline_W3_ble_ap_ch1_20mhz": {
+    "runs": [
+      "R660",
+      "R662",
+      "R664"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": -4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00013438528359766206,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 85.11983235677083,
+        "ci_low": 73.51496051916624,
+        "ci_high": 96.72470419437542,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 166.12483723958314,
+        "ci_low": 123.00340522221704,
+        "ci_high": 209.24626925694923,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": -1473923.1999999955,
+        "ci_low": 0.0,
+        "ci_high": -1473923.1999999955,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.04201768486464095,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.957982315135359,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 9.302965760522959,
+        "ci_low": 0.0,
+        "ci_high": 41.07497169080868,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 22.666942319420958,
+        "ci_low": 4.948838763720019,
+        "ci_high": 40.3850458751219,
+        "samples": 3
+      }
+    },
+    "baseline_runs": [
+      "R660",
+      "R662",
+      "R664"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": -4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00013438528359766206,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 85.11983235677083,
+        "ci_low": 73.51496051916624,
+        "ci_high": 96.72470419437542,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 166.12483723958314,
+        "ci_low": 123.00340522221704,
+        "ci_high": 209.24626925694923,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": -1473923.1999999955,
+        "ci_low": 0.0,
+        "ci_high": -1473923.1999999955,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.04201768486464095,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.957982315135359,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 9.302965760522959,
+        "ci_low": 0.0,
+        "ci_high": 41.07497169080868,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 22.666942319420958,
+        "ci_low": 4.948838763720019,
+        "ci_high": 40.3850458751219,
+        "samples": 3
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": -0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "ble_heavy_W3_ble_ap_ch1_20mhz": {
+    "runs": [
+      "R661",
+      "R663",
+      "R665"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": -4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00013438528359766206,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 85.31168619791667,
+        "ci_low": 79.51771915973778,
+        "ci_high": 91.10565323609556,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 145.8098266601562,
+        "ci_low": 84.4646192270158,
+        "ci_high": 207.1550340932966,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": -1031815.6999999996,
+        "ci_low": 0.0,
+        "ci_high": -1031815.6999999996,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.02767550909898714,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.9723244909010129,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 4.33080387842874,
+        "ci_low": 0.0,
+        "ci_high": 51.3075051617372,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 29.083849897415405,
+        "ci_low": 21.09850647148046,
+        "ci_high": 37.069193323350355,
+        "samples": 3
+      }
+    },
+    "baseline_runs": [
+      "R660",
+      "R662",
+      "R664"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": -4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00013438528359766206,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 85.11983235677083,
+        "ci_low": 73.51496051916624,
+        "ci_high": 96.72470419437542,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 166.12483723958314,
+        "ci_low": 123.00340522221704,
+        "ci_high": 209.24626925694923,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": -1473923.1999999955,
+        "ci_low": 0.0,
+        "ci_high": -1473923.1999999955,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.04201768486464095,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.957982315135359,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 9.302965760522959,
+        "ci_low": 0.0,
+        "ci_high": 41.07497169080868,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 22.666942319420958,
+        "ci_low": 4.948838763720019,
+        "ci_high": 40.3850458751219,
+        "samples": 3
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.1918538411458428,
+      "p95_latency_ms": -20.31501057942694,
+      "tail_inflation_factor": 442107.4999999959,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -4.972161882094219,
+      "temporal_std_ms": 6.416907577994447
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -0.0,
+      "mad_latency_ms": 0.22539264450346613,
+      "p95_latency_ms": -12.228761765544359,
+      "tail_inflation_factor": -29.99528740710488,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -53.447062045455844,
+      "temporal_std_ms": 28.309542096890866
+    }
+  },
+  "ble_baseline_W3_ble_ap_ch6_20mhz": {
+    "runs": [
+      "R666",
+      "R668",
+      "R670"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 83.96761067708333,
+        "ci_low": 82.34406913962425,
+        "ci_high": 85.5911522145424,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 144.7517415364583,
+        "ci_low": 99.18234885224231,
+        "ci_high": 190.32113422067428,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.051279163668830695,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.9487208363311693,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 4.755844473260987,
+        "ci_low": 0.0,
+        "ci_high": 42.254950104753384,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 29.564102595570983,
+        "ci_low": 18.44591753244641,
+        "ci_high": 40.68228765869556,
+        "samples": 3
+      }
+    },
+    "baseline_runs": [
+      "R666",
+      "R668",
+      "R670"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 83.96761067708333,
+        "ci_low": 82.34406913962425,
+        "ci_high": 85.5911522145424,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 144.7517415364583,
+        "ci_low": 99.18234885224231,
+        "ci_high": 190.32113422067428,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.051279163668830695,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.9487208363311693,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 4.755844473260987,
+        "ci_low": 0.0,
+        "ci_high": 42.254950104753384,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 29.564102595570983,
+        "ci_low": 18.44591753244641,
+        "ci_high": 40.68228765869556,
+        "samples": 3
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": null,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "ble_heavy_W3_ble_ap_ch6_20mhz": {
+    "runs": [
+      "R667",
+      "R669",
+      "R671"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 81.5242919921875,
+        "ci_low": 72.97986988685867,
+        "ci_high": 90.06871409751633,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 150.32686767578124,
+        "ci_low": 92.24973643578102,
+        "ci_high": 208.40399891578147,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.02767550909898714,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.9723244909010129,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 1.3004367219978274,
+        "ci_low": 0.0,
+        "ci_high": 48.915473852918865,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 30.96913432001799,
+        "ci_low": 18.366914482094682,
+        "ci_high": 43.5713541579413,
+        "samples": 3
+      }
+    },
+    "baseline_runs": [
+      "R666",
+      "R668",
+      "R670"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 83.96761067708333,
+        "ci_low": 82.34406913962425,
+        "ci_high": 85.5911522145424,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 144.7517415364583,
+        "ci_low": 99.18234885224231,
+        "ci_high": 190.32113422067428,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.051279163668830695,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.9487208363311693,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 4.755844473260987,
+        "ci_low": 0.0,
+        "ci_high": 42.254950104753384,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 29.564102595570983,
+        "ci_low": 18.44591753244641,
+        "ci_high": 40.68228765869556,
+        "samples": 3
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": -2.4433186848958286,
+      "p95_latency_ms": 5.575126139322947,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -3.4554077512631594,
+      "temporal_std_ms": 1.4050317244470065
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": null,
+      "mad_latency_ms": -2.909834715069088,
+      "p95_latency_ms": 3.8515088524297667,
+      "tail_inflation_factor": null,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -72.65602924340071,
+      "temporal_std_ms": 4.752492384658059
+    }
+  },
+  "ble_baseline_W3_ble_ap_ch13_20mhz": {
+    "runs": [
+      "R672",
+      "R674",
+      "R676"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00021576549193099537,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 72.37080891927083,
+        "ci_low": 30.689358967749477,
+        "ci_high": 114.05225887079217,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 161.50400390624995,
+        "ci_low": 104.66092873416804,
+        "ci_high": 218.34707907833186,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": 1357639.2999999996,
+        "ci_low": 1357639.2999999996,
+        "ci_high": 1357639.2999999996,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.02333333333333333,
+        "ci_low": 0.0,
+        "ci_high": 0.10318718844678497,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9766666666666666,
+        "ci_low": 0.8968128115532148,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 12.873586767007957,
+        "ci_low": 0.0,
+        "ci_high": 50.16189081581225,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 20.795152673040885,
+        "ci_low": 8.535372943533762,
+        "ci_high": 33.054932402548005,
+        "samples": 3
+      }
+    },
+    "baseline_runs": [
+      "R672",
+      "R674",
+      "R676"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00021576549193099537,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 72.37080891927083,
+        "ci_low": 30.689358967749477,
+        "ci_high": 114.05225887079217,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 161.50400390624995,
+        "ci_low": 104.66092873416804,
+        "ci_high": 218.34707907833186,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": 1357639.2999999996,
+        "ci_low": 1357639.2999999996,
+        "ci_high": 1357639.2999999996,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.02333333333333333,
+        "ci_low": 0.0,
+        "ci_high": 0.10318718844678497,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9766666666666666,
+        "ci_low": 0.8968128115532148,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 12.873586767007957,
+        "ci_low": 0.0,
+        "ci_high": 50.16189081581225,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 20.795152673040885,
+        "ci_low": 8.535372943533762,
+        "ci_high": 33.054932402548005,
+        "samples": 3
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "ble_heavy_W3_ble_ap_ch13_20mhz": {
+    "runs": [
+      "R673",
+      "R675",
+      "R677"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": -8.138020833333333e-05,
+        "ci_low": 0.0,
+        "ci_high": 9.369517943099539e-05,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 84.82914225260417,
+        "ci_low": 69.5996574645061,
+        "ci_high": 100.05862704070225,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 142.12804361979158,
+        "ci_low": 66.79036742205004,
+        "ci_high": 217.4657198175331,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": -1042960.7499999988,
+        "ci_low": 0.0,
+        "ci_high": 640061.8342224127,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.013333333333333334,
+        "ci_low": 0.0,
+        "ci_high": 0.04201768486464095,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9866666666666667,
+        "ci_low": 0.957982315135359,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 9.211952826052295,
+        "ci_low": 0.0,
+        "ci_high": 48.372060700929964,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 29.10751941593011,
+        "ci_low": 3.4513121570088003,
+        "ci_high": 54.76372667485142,
+        "samples": 3
+      }
+    },
+    "baseline_runs": [
+      "R672",
+      "R674",
+      "R676"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 4.0690104166666664e-05,
+        "ci_low": 0.0,
+        "ci_high": 0.00021576549193099537,
+        "samples": 3
+      },
+      "mad_latency_ms": {
+        "mean": 72.37080891927083,
+        "ci_low": 30.689358967749477,
+        "ci_high": 114.05225887079217,
+        "samples": 3
+      },
+      "p95_latency_ms": {
+        "mean": 161.50400390624995,
+        "ci_low": 104.66092873416804,
+        "ci_high": 218.34707907833186,
+        "samples": 3
+      },
+      "tail_inflation_factor": {
+        "mean": 1357639.2999999996,
+        "ci_low": 1357639.2999999996,
+        "ci_high": 1357639.2999999996,
+        "samples": 1
+      },
+      "drop_rate": {
+        "mean": 0.02333333333333333,
+        "ci_low": 0.0,
+        "ci_high": 0.10318718844678497,
+        "samples": 3
+      },
+      "reliability_rate": {
+        "mean": 0.9766666666666666,
+        "ci_low": 0.8968128115532148,
+        "ci_high": 1.0,
+        "samples": 3
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 3
+      },
+      "repeated_event_id_rate": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "samples": 0
+      },
+      "mean_latency_ms": {
+        "mean": 12.873586767007957,
+        "ci_low": 0.0,
+        "ci_high": 50.16189081581225,
+        "samples": 3
+      },
+      "temporal_std_ms": {
+        "mean": 20.795152673040885,
+        "ci_low": 8.535372943533762,
+        "ci_high": 33.054932402548005,
+        "samples": 3
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": -0.0001220703125,
+      "mad_latency_ms": 12.458333333333343,
+      "p95_latency_ms": -19.375960286458366,
+      "tail_inflation_factor": -2400600.0499999984,
+      "drop_rate": -0.009999999999999997,
+      "reliability_rate": 0.01000000000000012,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -3.661633940955662,
+      "temporal_std_ms": 8.312366742889225
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -300.0,
+      "mad_latency_ms": 17.214583503178105,
+      "p95_latency_ms": -11.997201194903965,
+      "tail_inflation_factor": -176.8216381184604,
+      "drop_rate": -42.85714285714285,
+      "reliability_rate": 1.0238907849829475,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -28.442997334197397,
+      "temporal_std_ms": 39.97261704967181
+    }
+  },
+  "zigbee_baseline_W3_zigbee_ap_ch1_20mhz": {
+    "runs": [
+      "R678",
+      "R680",
+      "R682",
+      "R684",
+      "R686"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 1.1641532182693482e-11,
+        "ci_low": 0.0,
+        "ci_high": 3.1434680005135514e-11,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7358847999945284,
+        "ci_low": 1.518645793858669,
+        "ci_high": 1.9531238061303877,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.762977280005579,
+        "ci_low": 9.497889405953776,
+        "ci_high": 12.028065154057382,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 356887620530.69995,
+        "ci_low": 0.0,
+        "ci_high": 715437990799.7302,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 2.1480529920072295,
+        "ci_low": 1.3968641104490975,
+        "ci_high": 2.8992418735653613,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.421965508401796,
+        "ci_low": 1.08512953370811,
+        "ci_high": 1.758801483095482,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R678",
+      "R680",
+      "R682",
+      "R684",
+      "R686"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 1.1641532182693482e-11,
+        "ci_low": 0.0,
+        "ci_high": 3.1434680005135514e-11,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7358847999945284,
+        "ci_low": 1.518645793858669,
+        "ci_high": 1.9531238061303877,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.762977280005579,
+        "ci_low": 9.497889405953776,
+        "ci_high": 12.028065154057382,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 356887620530.69995,
+        "ci_low": 0.0,
+        "ci_high": 715437990799.7302,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 2.1480529920072295,
+        "ci_low": 1.3968641104490975,
+        "ci_high": 2.8992418735653613,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.421965508401796,
+        "ci_low": 1.08512953370811,
+        "ci_high": 1.758801483095482,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.0,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": 0.0,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": 0.0,
+      "mad_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "tail_inflation_factor": 0.0,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": 0.0,
+      "temporal_std_ms": 0.0
+    }
+  },
+  "zigbee_heavy_W3_zigbee_ap_ch1_20mhz": {
+    "runs": [
+      "R679",
+      "R681",
+      "R683",
+      "R685",
+      "R687"
+    ],
+    "primary_metrics": [
+      "median_latency_ms",
+      "mad_latency_ms",
+      "p95_latency_ms",
+      "tail_inflation_factor",
+      "drop_rate",
+      "reliability_rate",
+      "extra_event_rate"
+    ],
+    "secondary_metrics": [
+      "mean_latency_ms",
+      "temporal_std_ms",
+      "duplicate_event_rate",
+      "repeated_event_id_rate"
+    ],
+    "aggregate": {
+      "median_latency_ms": {
+        "mean": 5.820766091346741e-12,
+        "ci_low": 0.0,
+        "ci_high": 3.605529880394372e-11,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.686476800008677,
+        "ci_low": 1.263249364809484,
+        "ci_high": 2.10970423520787,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.378982400014063,
+        "ci_low": 9.393493444992373,
+        "ci_high": 11.364471355035754,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 114520879705.56659,
+        "ci_low": 0.0,
+        "ci_high": 1126644120428.2483,
+        "samples": 3
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.004,
+        "ci_low": 0.0,
+        "ci_high": 0.015105780420791194,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.004,
+        "ci_low": 0.0,
+        "ci_high": 0.015105780420791194,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 2.057178352943934,
+        "ci_low": 1.6303626092089867,
+        "ci_high": 2.4839940966788814,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.263811764231471,
+        "ci_low": 0.8131260419521363,
+        "ci_high": 1.7144974865108056,
+        "samples": 5
+      }
+    },
+    "baseline_runs": [
+      "R678",
+      "R680",
+      "R682",
+      "R684",
+      "R686"
+    ],
+    "baseline_aggregate": {
+      "median_latency_ms": {
+        "mean": 1.1641532182693482e-11,
+        "ci_low": 0.0,
+        "ci_high": 3.1434680005135514e-11,
+        "samples": 5
+      },
+      "mad_latency_ms": {
+        "mean": 1.7358847999945284,
+        "ci_low": 1.518645793858669,
+        "ci_high": 1.9531238061303877,
+        "samples": 5
+      },
+      "p95_latency_ms": {
+        "mean": 10.762977280005579,
+        "ci_low": 9.497889405953776,
+        "ci_high": 12.028065154057382,
+        "samples": 5
+      },
+      "tail_inflation_factor": {
+        "mean": 356887620530.69995,
+        "ci_low": 0.0,
+        "ci_high": 715437990799.7302,
+        "samples": 2
+      },
+      "drop_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "reliability_rate": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "samples": 5
+      },
+      "extra_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "duplicate_event_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "repeated_event_id_rate": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "samples": 5
+      },
+      "mean_latency_ms": {
+        "mean": 2.1480529920072295,
+        "ci_low": 1.3968641104490975,
+        "ci_high": 2.8992418735653613,
+        "samples": 5
+      },
+      "temporal_std_ms": {
+        "mean": 1.421965508401796,
+        "ci_low": 1.08512953370811,
+        "ci_high": 1.758801483095482,
+        "samples": 5
+      }
+    },
+    "delta_vs_baseline": {
+      "median_latency_ms": -5.820766091346741e-12,
+      "mad_latency_ms": -0.049407999985851436,
+      "p95_latency_ms": -0.3839948799915156,
+      "tail_inflation_factor": -242366740825.13336,
+      "drop_rate": 0.0,
+      "reliability_rate": 0.0,
+      "extra_event_rate": 0.004,
+      "duplicate_event_rate": 0.0,
+      "repeated_event_id_rate": 0.004,
+      "mean_latency_ms": -0.09087463906329551,
+      "temporal_std_ms": -0.1581537441703249
+    },
+    "pct_delta_vs_baseline": {
+      "median_latency_ms": -50.0,
+      "mad_latency_ms": -2.8462718255270842,
+      "p95_latency_ms": -3.5677384612235894,
+      "tail_inflation_factor": -67.91122103499374,
+      "drop_rate": null,
+      "reliability_rate": 0.0,
+      "extra_event_rate": null,
+      "duplicate_event_rate": null,
+      "repeated_event_id_rate": null,
+      "mean_latency_ms": -4.230558529116104,
+      "temporal_std_ms": -11.122192713948474
+    }
+  }
+}

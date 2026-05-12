@@ -1,0 +1,36 @@
+{
+  "run_id": "W2_wifi_periodic_5s_quiet_ctrl_v2_rep10",
+  "run_sheet_id": "R875",
+  "baseline_run_id": null,
+  "energy": {
+    "total_per_event_mJ": 1829.518397230437,
+    "incremental_per_event_mJ": null
+  },
+  "latency": {
+    "available": false,
+    "source": null,
+    "kind": null,
+    "sample_count": 0,
+    "reason": "No recognized latency column with valid numeric samples."
+  },
+  "timing": {
+    "mean_interval_ms": 4999.81365,
+    "median_interval_ms": 4999.996999999999,
+    "std_interval_ms": 1.4592720245127562,
+    "jitter_ms": 1.4592720245127562,
+    "max_interval_ms": 5000.569,
+    "min_interval_ms": 4988.842
+  },
+  "reliability": {
+    "expected_events": 61,
+    "actual_events": 61,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "event_coupling": {},
+  "power_event_relation": {},
+  "quality_flags": {
+    "missing_latency": true
+  }
+}

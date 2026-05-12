@@ -1,0 +1,37 @@
+{
+  "run_id": "W2_wifi_periodic_9s_quiet_telemetry_v2_rep13",
+  "run_sheet_id": "R941",
+  "baseline_run_id": "R538",
+  "energy": {
+    "total_per_event_mJ": 3472.387260657178,
+    "baseline_per_event_mJ": 3274.8341009424125,
+    "incremental_per_event_mJ": 197.55315971476557
+  },
+  "latency": {
+    "available": false,
+    "source": null,
+    "kind": null,
+    "sample_count": 0,
+    "reason": "No recognized latency column with valid numeric samples."
+  },
+  "timing": {
+    "mean_interval_ms": 8999.88968627451,
+    "median_interval_ms": 9000.0045,
+    "std_interval_ms": 1.1203515093765615,
+    "jitter_ms": 1.1203515093765615,
+    "max_interval_ms": 9000.458,
+    "min_interval_ms": 8988.81
+  },
+  "reliability": {
+    "expected_events": 103,
+    "actual_events": 103,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "event_coupling": {},
+  "power_event_relation": {},
+  "quality_flags": {
+    "missing_latency": true
+  }
+}

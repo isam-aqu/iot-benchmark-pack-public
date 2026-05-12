@@ -1,0 +1,67 @@
+run_id: R204
+title: Zigbee baseline rerun with Ethernet-connected logger
+date: 2026-03-31
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: zigbee
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: home_assistant_state_change
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: null
+  node_id: null
+  zigbee_device: "light.benchmark_device"
+  coordinator: "Sonoff Zigbee Coordinator"
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: "ZHA"
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ha_time + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_zigbee_near_quiet_v3_mqtt_events.csv
+    - raw/W1_zigbee_near_quiet_v3_power_samples.csv
+  derived:
+    - derived/W1_zigbee_near_quiet_v3_zigbee_events_processed_full.csv
+    - derived/W1_zigbee_near_quiet_v3_zigbee_events_processed.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "With the logger moved to Ethernet and Wi-Fi disabled on the laptop, Zigbee latency became tightly bounded with no outliers."
+  anomalies: []
+
+notes: >
+  This run was performed to test whether variability seen in the earlier Zigbee
+  baseline was introduced by the Wi-Fi-connected logger rather than by the
+  Zigbee path itself. Under the Ethernet-connected logger configuration, all
+  100 samples remained within the core range, with normalized P95 about
+  11.6 ms and maximum normalized delay below 15 ms. This run should be treated
+  as the true W1 Zigbee baseline under controlled conditions.

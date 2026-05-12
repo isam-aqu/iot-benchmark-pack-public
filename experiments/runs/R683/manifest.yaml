@@ -1,0 +1,107 @@
+run_id: R683
+title: W3 Zigbee AP-channel extension ch1 overlap heavy load
+date: 2026-05-03
+
+git:
+  branch: testbed-dev
+  commit: e076962
+  tag: null
+  dirty: true
+
+versions:
+  pipeline: 0.4.7
+  firmware: 0.4.1
+  ha_config: 0.3.0
+  analysis: 0.4.5
+  logger: 0.4.1
+  ha_automation: 0.4.0
+  experiment_protocol: 0.4.6
+
+experiment:
+  plan_id: W3_ZB_CH
+  workload: W3
+  protocol: zigbee
+  topology: near
+  interference: iperf
+  load_level: heavy
+  node_count: 1
+  interval_ms: "3000±250"
+  comparison_group: W3_zigbee_ap_ch1_20mhz
+  run_type: load
+  replicate_id: rep3
+  baseline_ref: R682
+  trigger: home_assistant_rest_toggle
+  normalization_method: median_offset
+  ap_channel_mode: fixed
+  ap_channel: 1
+  ap_width_mhz: 20
+  ap_control_sideband: none
+  ap_rf_source: manual_ap_ui
+  zigbee_channel: 20
+  rf_channel_note: AP channel 1 at 20 MHz is the non-overlap/control block for Zigbee channel 20.
+
+hardware:
+  controller: Raspberry Pi 4 running Home Assistant OS
+  logger_host: external laptop (Ethernet; Wi-Fi disabled)
+  zigbee_device: light.benchmark_device
+  coordinator: Sonoff Zigbee Coordinator
+  wifi_ap: netis WF2419, firmware V2.2.36123
+  iperf_server: iperf-server (<private-ip>)
+
+software:
+  home_assistant: 2026.3.4
+  zigbee_stack: ZHA
+  mqtt_broker: Mosquitto
+  iperf_profile: 50Mbps_tcp
+
+timing:
+  timestamp_source: ha_time + python_logger
+  expected_events: 100
+  actual_events: 100
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  timezone: Asia/Hebron
+
+commands:
+  run: >
+    EXP_RUN_ID=R683 ./run_all.sh --run-id W3_zigbee_auto_heavy_ch1 --disable-ble --disable-ack --duration-sec 360 --iperf-load heavy --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100 --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250 --ap-channel-mode fixed --ap-channel 1 --ap-width-mhz 20 --ap-sideband none --ap-rf-source manual_ap_ui
+  analysis:
+    - >
+      python3 python/summarize_w3_run.py experiments/runs/R683/raw
+      --run-id W3_zigbee_auto_heavy_ch1 --expected-events 100
+    - >
+      python3 python/analyze_w3_run.py experiments/runs/R683/raw
+      --run-id R683 --run-sheet docs/run_sheet.csv
+
+artifacts:
+  raw:
+    - raw/W3_zigbee_auto_heavy_ch1_iperf.log
+    - raw/W3_zigbee_auto_heavy_ch1_iperf_summary.json
+    - raw/W3_zigbee_auto_heavy_ch1_mqtt_events.csv
+    - raw/W3_zigbee_auto_heavy_ch1_power_samples.csv
+    - raw/W3_zigbee_auto_heavy_ch1_zigbee_trigger_schedule.csv
+    - raw/run_metadata.json
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  notes:
+    - notes.md
+
+result_summary:
+  status: complete
+  expected_events: 100
+  actual_events: 100
+  missing_events: 0
+  extra_events: 0
+  repeated_event_id_rows: 0
+  median_latency_ms: 0
+  mad_latency_ms: 1.844992
+  p95_latency_ms: 9.77664
+  p99_latency_ms: 11.744584
+  max_latency_ms: 12.537344
+  iperf_mean_mbps: 49.996196
+  p95_delta_vs_R682_ms: -1.431424
+  p95_delta_vs_R682_pct: -12.771376
+  key_observation: Heavy 50 Mbps TCP on AP ch1/20 MHz produced P95 change of -1.431424 ms versus paired baseline R682.
+  anomalies:
+    - none

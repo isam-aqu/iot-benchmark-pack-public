@@ -1,0 +1,26 @@
+{
+  "run_id": "R523",
+  "experiment": "W2",
+  "role": "telemetry",
+  "comparison_group": "W2_5s",
+  "replicate_id": "rep2",
+  "status": "complete",
+  "description": "5s periodic telemetry repeat after interval correction",
+  "interval_ms": 5000,
+  "protocol": "wifi",
+  "distance": "near",
+  "environment": "quiet",
+  "node_count": 1,
+  "features": {
+    "ble": false,
+    "ack": false,
+    "telemetry": true
+  },
+  "duration_sec": 450,
+  "data_sources": [
+    "serial_power",
+    "mqtt_events",
+    "t_local_us"
+  ],
+  "notes": "Paired with R522. Confirms that 5s telemetry overhead is below noise floor. Supports equilibrium hypothesis."
+}

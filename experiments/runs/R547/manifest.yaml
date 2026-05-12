@@ -1,0 +1,148 @@
+run_id: R547
+title: W2 v2 telemetry run at 10 s
+date: 2026-04-19
+git:
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+versions:
+  firmware: 0.3.0
+  ha_config: 0.1.1
+  analysis: 0.3.0
+  pipeline: 0.3.0
+experiment:
+  plan_id: W2
+  workload: W2
+  comparison_group: W2_10s
+  run_type: telemetry
+  replicate_id: rep2
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 10000
+  trigger: periodic_telemetry
+  timestamp_source: ESP32 t_local_us + serial_power + MQTT_event
+  normalization_method: none
+  is_baseline: false
+hardware:
+  controller: Raspberry Pi 4 running Home Assistant OS
+  logger_host: external laptop (Ethernet; Wi-Fi disabled)
+  esp32_node: wifi01_power
+  node_id: wifi01_power
+  sensor: INA231
+  shunt_resistor_ohm: 0.1
+  bus_connection: BUS pin connected to ESP32 VIN
+software:
+  home_assistant: 2026.3.4
+  supervisor: 2026.03.2
+  os: 17.1
+  frontend: 20260312.1
+  mqtt_broker: Mosquitto
+  mqtt_telemetry_enabled: true
+  mqtt_power_reporting_enabled: false
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+  ack_helper_enabled: false
+timing:
+  timestamp_source: ESP32 t_local_us + serial_power + MQTT_event
+  power_sampling_interval_ms: 100
+  experiment_duration_ms: 600000
+  ntp_enabled: false
+  timezone: Asia/Hebron
+artifacts:
+  raw:
+    - raw/W2_wifi_periodic_10s_quiet_telemetry_v2_rep2_meta.json
+    - raw/W2_wifi_periodic_10s_quiet_telemetry_v2_rep2_mqtt_events.csv
+    - raw/W2_wifi_periodic_10s_quiet_telemetry_v2_rep2_power_samples.csv
+    - raw/W2_wifi_periodic_10s_quiet_telemetry_v2_rep2_serial.log
+  analysis:
+    - analysis/metrics.json
+    - analysis/summary.json
+    - analysis/summary.md
+  derived: []
+  figures: []
+result_summary:
+  status: complete
+  power_sample_count: 6002
+  event_count: 60
+  key_observation: 10s telemetry repeat
+  anomalies: []
+analysis:
+  summary:
+    run_id: W2_wifi_periodic_10s_quiet_telemetry_v2_rep2
+    power:
+      power_sample_count: 6002
+      mean_power_mW: 365.1377091728045
+      median_power_mW: 327.328247
+      std_power_mW: 110.0237916479106
+      min_power_mW: 236.946564
+      p95_power_mW: 708.396912
+      max_power_mW: 771.908386
+      samples_above_500mW: 589
+      fraction_above_500mW: 0.09813395534821726
+      mean_current_mA: 73.28738883169471
+      median_current_mA: 65.465645
+      max_current_mA: 162.980133
+      mean_bus_v: 5.01296388101983
+      min_bus_v: 4.79125
+      max_bus_v: 5.075
+    energy_mJ: 219098.07176196337
+    latency:
+      available: false
+      source: null
+      kind: null
+      sample_count: 0
+      reason: No recognized latency column with valid numeric samples.
+    timing:
+      mean_interval_ms: 10000.000152542374
+      median_interval_ms: 10000.008
+      std_interval_ms: 0.0406790692428109
+      jitter_ms: 0.0406790692428109
+      max_interval_ms: 10000.067
+      min_interval_ms: 9999.909
+    reliability:
+      expected_events: 60
+      actual_events: 60
+      missing_events: 0
+      loss_rate: 0.0
+      duplicates: 0
+    events:
+      event_count: 60
+      mean_event_interval_ms: 10000.000152542374
+      median_event_interval_ms: 10000.008
+      max_event_interval_ms: 10000.067
+  metrics:
+    run_id: W2_wifi_periodic_10s_quiet_telemetry_v2_rep2
+    run_sheet_id: R547
+    baseline_run_id: R510
+    energy:
+      total_per_event_mJ: 3651.634529366056
+      baseline_per_event_mJ: 3653.5405626908982
+      incremental_per_event_mJ: -1.9060333248421557
+    latency:
+      available: false
+      source: null
+      kind: null
+      sample_count: 0
+      reason: No recognized latency column with valid numeric samples.
+    timing:
+      mean_interval_ms: 10000.000152542374
+      median_interval_ms: 10000.008
+      std_interval_ms: 0.0406790692428109
+      jitter_ms: 0.0406790692428109
+      max_interval_ms: 10000.067
+      min_interval_ms: 9999.909
+    reliability:
+      expected_events: 60
+      actual_events: 60
+      missing_events: 0
+      loss_rate: 0.0
+      duplicates: 0
+    event_coupling:
+    power_event_relation:
+    quality_flags:
+      missing_latency: true
+notes: 10s telemetry repeat

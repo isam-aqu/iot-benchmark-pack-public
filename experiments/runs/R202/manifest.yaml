@@ -1,0 +1,71 @@
+run_id: R202
+title: Zigbee final median-normalized dataset
+date: 2026-03-27
+
+git:
+  branch: testbed-dev
+  commit: 0c374ef
+  tag: null
+
+versions:
+  firmware: "0.1.0"
+  ha_config: "unversioned@0c374ef"
+  analysis: "unversioned@0c374ef"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: zigbee
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: home_assistant_state_change
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: null
+  node_id: null
+  zigbee_device: "light.benchmark_device"
+  coordinator: "Sonoff Zigbee Coordinator"
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "unversioned"
+  zigbee_stack: "ZHA"
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ha_time + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_zigbee_near_quiet_mqtt_events.csv
+    - raw/W1_zigbee_near_quiet_power_samples.csv
+  derived:
+    - derived/W1_zigbee_near_quiet_zigbee_events_processed.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "Lowest average latency among protocols in the current W1 near-quiet dataset."
+  anomalies:
+    - "One outlier removed from 63 total samples, leaving 62 core samples."
+
+dataset:
+  total_samples: 63
+  core_samples: 62
+  outlier_handling: "1 outlier removed"
+  filtering_range_ms: [-200, 200]
+
+notes: >
+  Final Zigbee W1 dataset using median-offset normalization. Latency was
+  derived from Home Assistant event time (ha_time) and Raspberry Pi/laptop
+  receive time, with median normalization applied because the Zigbee path does
+  not provide device-local timestamps.

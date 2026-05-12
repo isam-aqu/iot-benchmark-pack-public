@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "script": "run_all.sh",
+    "generated_at_utc": "2026-05-03T12:10:35Z",
+    "generated_at_local": "2026-05-03T15:10:35+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.7",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.5",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.6"
+    },
+    "git": {
+      "commit": "e076962",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "run_instance_id": "20260503150427-43530",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R689/raw/run_metadata.json"
+    ],
+    "extra": {
+      "phase": "end",
+      "exp_run_id": "R689",
+      "run_id": "W3_zigbee_auto_heavy_ch9"
+    }
+  },
+  "run": {
+    "exp_run_id": "R689",
+    "run_id": "W3_zigbee_auto_heavy_ch9",
+    "run_instance_id": "20260503150427-43530",
+    "command": {
+      "cwd": "<local-path>",
+      "shell": "EXP_RUN_ID=R689 ./run_all.sh --run-id W3_zigbee_auto_heavy_ch9 --iperf-load heavy --disable-ble --disable-ack --duration-sec 360 --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100 --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250 --ap-channel-mode fixed --ap-channel 9 --ap-width-mhz 20 --ap-sideband none --ap-rf-source manual_ap_ui",
+      "secrets_omitted": [
+        "HA_TOKEN",
+        "HOME_ASSISTANT_TOKEN"
+      ]
+    },
+    "status": "complete",
+    "exit_code": 0,
+    "duration_sec": "360",
+    "enable_ble": "0",
+    "ble_expected_exp_code": null,
+    "enable_ack": "0",
+    "reset_esp32": "0",
+    "iperf_load": "heavy",
+    "iperf_load_mbps": "50",
+    "iperf_proto": "tcp",
+    "iperf_server": "<private-ip>",
+    "iperf_port": "5201",
+    "ap_rf": {
+      "model": "netis WF2419",
+      "firmware": "V2.2.36123",
+      "channel_mode": "fixed",
+      "channel": "9",
+      "ap_width_mhz": "20",
+      "control_sideband": "none",
+      "source": "manual_ap_ui"
+    },
+    "zigbee_trigger": "1",
+    "zigbee_entity_id": "light.benchmark_device",
+    "zigbee_event_count": "100",
+    "zigbee_base_interval_ms": "3000",
+    "zigbee_jitter_ms": "250",
+    "started_at_utc": "2026-05-03T12:04:27Z",
+    "started_at_local": "2026-05-03T15:04:27+03:00",
+    "ended_at_utc": "2026-05-03T12:10:35Z",
+    "ended_at_local": "2026-05-03T15:10:35+03:00"
+  },
+  "history": [
+    {
+      "phase": "start",
+      "status": "running",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-03T12:04:27Z",
+      "generated_at_local": "2026-05-03T15:04:27+03:00"
+    },
+    {
+      "phase": "end",
+      "status": "complete",
+      "exit_code": 0,
+      "generated_at_utc": "2026-05-03T12:10:35Z",
+      "generated_at_local": "2026-05-03T15:10:35+03:00"
+    }
+  ]
+}

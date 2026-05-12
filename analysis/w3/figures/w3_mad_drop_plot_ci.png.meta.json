@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "script": "python/plot_w3_results.py",
+    "generated_at_utc": "2026-05-01T16:44:53Z",
+    "generated_at_local": "2026-05-01T19:44:53+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "c997f4b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "analysis/w3/aggregates/w3_replicates.json"
+    ],
+    "outputs": [
+      "analysis/w3/figures/w3_mad_drop_plot_ci.png",
+      "analysis/w3/figures/w3_mad_drop_plot_ci.png.meta.json"
+    ],
+    "extra": {
+      "plot_name": "W3 Wi-Fi variability and reliability under load",
+      "metrics": [
+        "mad_latency_ms",
+        "drop_rate"
+      ]
+    }
+  },
+  "source_metadata": {
+    "script": "python/analyze_w3_replicates.py",
+    "generated_at_utc": "2026-05-01T16:44:35Z",
+    "generated_at_local": "2026-05-01T19:44:35+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "c997f4b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "analysis/w3/aggregates/w3_replicates.json"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "W2_wifi_periodic_10s_quiet_ctrl_v2_rep9",
+  "power": {
+    "power_sample_count": 3001,
+    "mean_power_mW": 373.40752057147625,
+    "median_power_mW": 339.541962,
+    "std_power_mW": 106.71817550488088,
+    "min_power_mW": 307.786255,
+    "p95_power_mW": 703.511414,
+    "max_power_mW": 776.793884,
+    "samples_above_500mW": 296,
+    "fraction_above_500mW": 0.09863378873708764,
+    "mean_current_mA": 72.49453996367876,
+    "median_current_mA": 64.977097,
+    "max_current_mA": 156.7267,
+    "mean_bus_v": 5.17667694101966,
+    "min_bus_v": 4.94625,
+    "max_bus_v": 5.23875
+  },
+  "energy_mJ": 111981.76905268108,
+  "latency": {
+    "available": false,
+    "source": null,
+    "kind": null,
+    "sample_count": 0,
+    "reason": "No recognized latency column with valid numeric samples."
+  },
+  "timing": {
+    "mean_interval_ms": 9999.6232,
+    "median_interval_ms": 10000.0055,
+    "std_interval_ms": 2.074213725562249,
+    "jitter_ms": 2.074213725562249,
+    "max_interval_ms": 10000.398,
+    "min_interval_ms": 9988.693
+  },
+  "reliability": {
+    "expected_events": 31,
+    "actual_events": 31,
+    "missing_events": 0,
+    "loss_rate": 0.0,
+    "duplicates": 0
+  },
+  "events": {
+    "event_count": 31,
+    "mean_event_interval_ms": 9999.6232,
+    "median_event_interval_ms": 10000.0055,
+    "max_event_interval_ms": 10000.398
+  }
+}

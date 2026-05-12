@@ -1,0 +1,72 @@
+# Python
+python/.venv/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Arduino / C++
+*.elf
+*.bin
+*.hex
+*.map
+build/
+
+# Environment & secrets
+.env
+.env.*
+*.secret
+firmware/secrets.h
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+
+# ---- ChatGPT snapshot scripts ----
+scripts/make_chatgpt_snapshot.sh
+scripts/make_chatgpt_snapshot_light.sh
+
+# ---- Any leftover manual snapshots ----
+chat_snapshot/
+repo_tree.txt
+data_tree.txt
+
+# ---- Safety: ignore accidental nested snapshots anywhere ----
+**/chat_snapshot_*/
+**/chat_snapshot_light_*/
+**/chat_snapshot_*.zip
+**/chat_snapshot_light_*.zip
+
+# Generated benchmark logs
+data/raw/*.csv
+data/raw/*.parquet
+data/raw/*.log
+tmp/
+
+# Keep directory structure
+!data/raw/.gitkeep
+chat_snapshot.zip
+
+# Generated public-release exports
+_public_release/

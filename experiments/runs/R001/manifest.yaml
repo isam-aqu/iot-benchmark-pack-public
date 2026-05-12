@@ -1,0 +1,60 @@
+run_id: R001
+title: Wi-Fi RTT validation run
+date: 2026-03-27
+
+git:
+  branch: testbed-dev
+  commit: 0c374ef
+  tag: null
+
+versions:
+  firmware: "0.1.0"
+  ha_config: "unversioned@0c374ef"
+  analysis: "unversioned@0c374ef"
+
+experiment:
+  plan_id: W0
+  workload: W0
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 5000
+  trigger: periodic_validation
+  normalization_method: none
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "ESP32 dev board"
+  node_id: "wifi01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "unversioned"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw: []
+  derived: []
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "Pre-experiment Wi-Fi RTT validation run completed successfully."
+  anomalies: []
+
+notes: >
+  Informal W0 validation run recorded in the checked-in run sheet. This run is
+  not part of the formal W1-W5 protocol. It served as initial end-to-end RTT
+  validation before the W1 baselines.

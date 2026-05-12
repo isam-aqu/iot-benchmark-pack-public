@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "script": "python/analyze_w3_run.py",
+    "generated_at_utc": "2026-05-01T08:51:53Z",
+    "generated_at_local": "2026-05-01T11:51:53+03:00",
+    "timezone": "EEST",
+    "versions": {
+      "pipeline": "0.4.6",
+      "firmware": "0.4.1",
+      "ha_config": "0.3.0",
+      "analysis": "0.4.4",
+      "logger": "0.4.1",
+      "ha_automation": "0.4.0",
+      "experiment_protocol": "0.4.5"
+    },
+    "git": {
+      "commit": "76f662b",
+      "branch": "testbed-dev",
+      "dirty": true
+    },
+    "python": "3.12.4",
+    "inputs": [
+      "experiments/runs/R641/analysis/summary.json",
+      "docs/run_sheet.csv"
+    ],
+    "outputs": [
+      "experiments/runs/R641/analysis/metrics.json"
+    ],
+    "extra": {
+      "run_id": "R641"
+    }
+  },
+  "run_id": "R641",
+  "baseline_run_id": "R640",
+  "w3_context": {
+    "comparison_group": "W3_ble_auto",
+    "load_level": "light",
+    "interference": "iperf",
+    "iperf_profile": "5Mbps_tcp",
+    "interval_nominal_ms": 3000.0,
+    "interval_jitter_ms": 250.0
+  },
+  "w3": {
+    "mean_latency_ms": 0.6762172154017857,
+    "std_latency_ms": 103.11388066832185,
+    "p95_latency_ms": 147.99174804687493,
+    "temporal_std_ms": 31.577032005176804,
+    "drop_rate": 0.02,
+    "reliability_rate": 0.98,
+    "extra_event_rate": 0.0,
+    "duplicate_event_rate": 0.0
+  },
+  "baseline": {
+    "mean_latency_ms": 27.674647013346355,
+    "std_latency_ms": 108.02623145868611,
+    "p95_latency_ms": 215.00482177734375,
+    "temporal_std_ms": 28.439811245662003,
+    "drop_rate": 0.04,
+    "reliability_rate": 0.96,
+    "extra_event_rate": 0.0,
+    "duplicate_event_rate": 0.0
+  },
+  "w3_delta": {
+    "delta_mean_latency_ms": -26.99842979794457,
+    "delta_std_latency_ms": -4.912350790364258,
+    "delta_p95_latency_ms": -67.01307373046882,
+    "delta_temporal_std_ms": 3.1372207595148005,
+    "delta_drop_rate": -0.02,
+    "delta_reliability_rate": 0.020000000000000018,
+    "delta_extra_event_rate": 0.0,
+    "delta_duplicate_event_rate": 0.0,
+    "pct_mean_latency_increase": -97.55654619523901,
+    "pct_p95_latency_increase": -31.168172497948305
+  },
+  "impact_label": "negligible"
+}

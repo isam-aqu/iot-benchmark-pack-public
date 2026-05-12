@@ -1,0 +1,101 @@
+run_id: R620
+title: W3 Zigbee automated baseline after logger dedupe fix
+date: 2026-04-30
+
+git:
+  branch: testbed-dev
+  commit: f74f23b
+  tag: null
+
+versions:
+  firmware: "0.4.0"
+  ha_config: "0.3.0"
+  pipeline: "0.4.2"
+  logger: "0.4.1"
+  analysis: "0.4.3"
+
+experiment:
+  plan_id: W3_B0
+  workload: W3
+  protocol: zigbee
+  topology: near
+  interference: quiet
+  load_level: baseline
+  node_count: 1
+  interval_ms: "3000±250"
+  comparison_group: W3_zigbee_auto
+  run_type: baseline
+  replicate_id: primary
+  baseline_ref: null
+  trigger: home_assistant_rest_toggle
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop (Ethernet; Wi-Fi disabled)"
+  zigbee_device: "light.benchmark_device"
+  coordinator: "Sonoff Zigbee Coordinator"
+  iperf_server: "iperf-server (<private-ip>)"
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: "ZHA"
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "ha_time + python_logger"
+  expected_events: 100
+  interval_nominal_ms: 3000
+  interval_jitter_ms: 250
+  timezone: "Asia/Hebron"
+
+commands:
+  run: >
+    EXP_RUN_ID=R620 ./run_all.sh --run-id W3_zigbee_auto_baseline
+    --disable-ble --disable-ack --duration-sec 360 --iperf-load 0
+    --zigbee-trigger --zigbee-entity-id light.benchmark_device --zigbee-events 100
+    --zigbee-base-interval-ms 3000 --zigbee-jitter-ms 250
+  analysis:
+    - >
+      python3 python/summarize_w3_run.py experiments/runs/R620/raw
+      --run-id W3_zigbee_auto_baseline --expected-events 100
+    - >
+      python3 python/analyze_w3_run.py experiments/runs/R620/raw
+      --run-id R620 --run-sheet docs/run_sheet.csv
+  secrets_omitted:
+    - HA_TOKEN
+    - HOME_ASSISTANT_TOKEN
+
+artifacts:
+  raw:
+    - raw/W3_zigbee_auto_baseline_mqtt_events.csv
+    - raw/W3_zigbee_auto_baseline_power_samples.csv
+    - raw/W3_zigbee_auto_baseline_zigbee_trigger_schedule.csv
+    - raw/run_metadata.json
+  analysis:
+    - analysis/summary.json
+    - analysis/metrics.json
+  notes:
+    - notes.md
+
+result_summary:
+  status: complete
+  expected_events: 100
+  actual_events: 100
+  missing_events: 0
+  duplicate_payload_rows: 0
+  median_latency_ms: 0.0
+  mad_latency_ms: 1.461632
+  p95_latency_ms: 11.215232
+  max_latency_ms: 13.410304
+  key_observation: "Zigbee HA-to-logger latency remained tightly bounded in the quiet W3 baseline, with complete event capture after the MQTT logger dedupe fix."
+  anomalies:
+    - "One command-to-HA state-change delay of about 5.18 s occurred at command 51."
+
+notes: >
+  This run replaces the failed first R620 capture, which was invalidated by
+  MQTT logger deduplication of Zigbee events with fixed seq=0 and t_local_us=0.
+  After the 0.4.2 logger fix, all 100 trigger commands produced unique MQTT
+  events. Retain this run as the primary W3 Zigbee quiet baseline while noting
+  one actuation-side command-to-state delay outside the HA-to-logger latency
+  metric.

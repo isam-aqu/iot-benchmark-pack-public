@@ -1,0 +1,5 @@
+pi_rx_time_ns,topic,type,node,protocol,exp,boot_id,seq,trigger,t_local_us,wifi_rssi,rtt_us,old_state,new_state,ha_time,event_id,ha_context_id,mqtt_retain,pipeline_version
+1777547916679131000,iotbench/zigbee/event,event,light.benchmark_device,zigbee,W3_zigbee_probe2,,0,state_changed,0,,,off,on,2026-04-30T14:18:36.589680+03:00,01KQF1SD7BVNFXVGD6MFWZEQGY,01KQF1SD7BVNFXVGD6MFWZEQGY,0,0.4.2
+1777547919694184000,iotbench/zigbee/event,event,light.benchmark_device,zigbee,W3_zigbee_probe2,,0,state_changed,0,,,on,off,2026-04-30T14:18:39.633761+03:00,01KQF1SG6DAYWG6FS4W1ZDAS8Q,01KQF1SG6DAYWG6FS4W1ZDAS8Q,0,0.4.2
+1777547922645430000,iotbench/zigbee/event,event,light.benchmark_device,zigbee,W3_zigbee_probe2,,0,state_changed,0,,,off,on,2026-04-30T14:18:42.587210+03:00,01KQF1SK2XP603GWTBJ4XN79MP,01KQF1SK2XP603GWTBJ4XN79MP,0,0.4.2
+1777547925661736000,iotbench/zigbee/event,event,light.benchmark_device,zigbee,W3_zigbee_probe2,,0,state_changed,0,,,on,off,2026-04-30T14:18:45.603742+03:00,01KQF1SP169S7BCR5KYJ9MFJQX,01KQF1SP169S7BCR5KYJ9MFJQX,0,0.4.2

@@ -1,0 +1,79 @@
+run_id: R304
+title: BLE confound-check rerun after removing suspected ambient BLE advertiser
+date: 2026-04-07
+
+git:
+  branch: testbed-dev
+  commit: "32e8e1e"
+  tag: "v0.1.1"
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: ble
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: button_press
+  normalization_method: median_offset
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "ble01"
+  node_id: "ble01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "2026.3.4"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "t_local_us + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_ble_near_quiet_v4_ble_events.csv
+    - raw/W1_ble_near_quiet_v4_mqtt_events.csv
+    - raw/W1_ble_near_quiet_v4_power_samples.csv
+  derived:
+    - derived/W1_ble_near_quiet_v4_ble_events_processed_full.csv
+    - derived/W1_ble_near_quiet_v4_ble_events_processed.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "Removing the suspected ambient BLE advertiser did not improve BLE baseline behavior in this rerun."
+  anomalies:
+    - "Sequence 14 was not captured during the run."
+    - "Sequence 31 was not captured during the run."
+    - "Sequence 55 was not captured during the run."
+    - "Captured 97 out of 100 triggered BLE events."
+    - "Five captured samples exceeded the ±200 ms core range."
+    - "Mean RSSI was weaker than in R303."
+
+notes: >
+  This run was performed after identifying a television with a BLE remote
+  control as a possible ambient BLE confound in the room. The run repeated the
+  corrected Ethernet-logger BLE baseline with that suspected ambient advertiser
+  removed or made inactive. However, the rerun did not improve BLE behavior:
+  compared with R303, it showed more missed events, more filtered outliers, and
+  a worse core P95. This suggests that the previously observed BLE variability
+  is not primarily explained by that specific ambient BLE source. Because R304
+  also exhibited weaker mean RSSI than R303, the comparison does not completely
+  isolate all physical-layer differences. R304 should therefore be treated as a
+  confound-check rerun, while R303 remains the retained primary BLE baseline under the
+  corrected measurement setup.

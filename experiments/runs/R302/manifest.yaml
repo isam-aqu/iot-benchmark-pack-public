@@ -1,0 +1,87 @@
+run_id: R302
+title: BLE final baseline rerun with 100+ triggers
+date: 2026-03-30
+
+git:
+  branch: testbed-dev
+  commit: null
+  tag: null
+
+versions:
+  firmware: "0.1.1"
+  ha_config: "0.1.1"
+  analysis: "0.1.1"
+
+experiment:
+  plan_id: W1
+  workload: W1
+  protocol: ble
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: manual
+  trigger: button_press
+  normalization_method: median_offset
+  scenario_label: "W1_ble_near_quiet"
+  run_label: "W1_ble_near_quiet_v2"
+
+hardware:
+  controller: "Raspberry Pi 4 running Home Assistant OS"
+  logger_host: "external laptop"
+  esp32_node: "ESP32 dev board"
+  node_id: "ble01"
+  zigbee_device: null
+  coordinator: null
+  sensor: null
+  shunt_resistor_ohm: null
+
+software:
+  home_assistant: "versioned via experiments/version_info.yaml"
+  zigbee_stack: null
+  mqtt_broker: "Mosquitto"
+
+timing:
+  timestamp_source: "t_local_us + python_logger"
+  ntp_enabled: false
+  timezone: "Asia/Hebron"
+
+artifacts:
+  raw:
+    - raw/W1_ble_near_quiet_v2_ble_events.csv
+    - raw/W1_ble_near_quiet_v2_mqtt_events.csv
+    - raw/W1_ble_near_quiet_v2_power_samples.csv
+  derived:
+    - derived/W1_ble_near_quiet_v2_ble_events_processed_full.csv
+    - derived/W1_ble_near_quiet_v2_ble_events_processed.csv
+  figures: []
+
+result_summary:
+  status: complete
+  key_observation: "BLE showed high variability, broad latency spread, occasional missed events, and quantized latency clustering despite near-quiet conditions."
+  anomalies:
+    - "Sequence 1 was missed at startup."
+    - "Sequence 83 was not captured during the run."
+    - "Captured 99 out of 101 triggered BLE events."
+    - "7 out of 99 captured samples exceeded the ±200 ms core range."
+    - "BLE core latency exhibited seven distinct clusters with inter-cluster spacing of approximately 45 ms."
+
+dataset:
+  total_triggers: 101
+  captured_samples: 99
+  core_samples: 92
+  outlier_handling: "latency outside ±200 ms excluded from core dataset"
+  filtering_range_ms: [-200, 200]
+  missing_sequences:
+    - 1
+    - 83
+
+notes: >
+  Final BLE baseline rerun using the ESP32 beacon node (ble01) under near-quiet
+  conditions. The first sequence was missed during startup and one additional
+  sequence (83) was not captured during the run. Latency was derived from
+  device-local t_local_us and scanner receive time, with median-offset
+  normalization applied. Subsequent analysis showed that BLE core latency formed
+  seven discrete clusters with approximately 45 ms spacing, consistent with
+  quantized detection opportunities caused by asynchronous advertising and
+  scanning behavior.

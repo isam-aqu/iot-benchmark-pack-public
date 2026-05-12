@@ -1,0 +1,8 @@
+# Optional example if you later want MQTT entities in Home Assistant for your ESP32 nodes.
+# Adjust topics and names as needed.
+
+mqtt:
+  sensor:
+    - name: "WiFi Node RSSI"
+      state_topic: "iotbench/wifi/wifi01/event"
+      value_template: "{{ value_json.wifi_rssi }}"

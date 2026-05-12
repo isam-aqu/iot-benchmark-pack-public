@@ -1,0 +1,147 @@
+run_id: R537
+title: W2 v2 telemetry run at 8 s
+date: 2026-04-18
+git:
+  branch: testbed-dev
+  commit: 3a23203
+  tag: v0.3.0
+versions:
+  firmware: 0.3.0
+  ha_config: 0.1.1
+  analysis: 0.3.0
+  pipeline: 0.3.0
+experiment:
+  plan_id: W2
+  workload: W2
+  comparison_group: W2_8s
+  run_type: telemetry
+  replicate_id: primary
+  protocol: wifi
+  topology: near
+  interference: quiet
+  load_level: single
+  node_count: 1
+  interval_ms: 8000
+  trigger: periodic_telemetry
+  timestamp_source: ESP32 t_local_us + serial_power + MQTT_event
+  normalization_method: none
+  is_baseline: false
+hardware:
+  controller: Raspberry Pi 4 running Home Assistant OS
+  logger_host: external laptop (Ethernet; Wi-Fi disabled)
+  esp32_node: wifi01_power
+  node_id: wifi01_power
+  sensor: INA231
+  shunt_resistor_ohm: 0.1
+  bus_connection: BUS pin connected to ESP32 VIN
+software:
+  home_assistant: 2026.3.4
+  supervisor: 2026.03.2
+  os: 17.1
+  frontend: 20260312.1
+  mqtt_broker: Mosquitto
+  mqtt_telemetry_enabled: true
+  mqtt_power_reporting_enabled: false
+  wifi_connected: true
+  mqtt_connected: true
+  ble_logger_enabled: false
+  ack_helper_enabled: false
+timing:
+  timestamp_source: ESP32 t_local_us + serial_power + MQTT_event
+  power_sampling_interval_ms: 100
+  experiment_duration_ms: 480000
+  ntp_enabled: false
+  timezone: Asia/Hebron
+artifacts:
+  raw:
+    - raw/W2_wifi_periodic_8s_quiet_telemetry_v2_meta.json
+    - raw/W2_wifi_periodic_8s_quiet_telemetry_v2_mqtt_events.csv
+    - raw/W2_wifi_periodic_8s_quiet_telemetry_v2_power_samples.csv
+    - raw/W2_wifi_periodic_8s_quiet_telemetry_v2_serial.log
+  analysis:
+    - analysis/metrics.json
+    - analysis/summary.json
+    - analysis/summary.md
+  derived: []
+  figures: []
+result_summary:
+  status: complete
+  power_sample_count: 4801
+  event_count: 60
+  key_observation: 8s telemetry mid high-interval regime
+  anomalies: []
+analysis:
+  summary:
+    run_id: W2_wifi_periodic_8s_quiet_telemetry_v2
+    power:
+      power_sample_count: 4801
+      mean_power_mW: 369.36222050885226
+      median_power_mW: 332.213715
+      std_power_mW: 113.07761259301559
+      min_power_mW: 236.946564
+      p95_power_mW: 715.725159
+      max_power_mW: 791.450378
+      samples_above_500mW: 487
+      fraction_above_500mW: 0.10143720058321183
+      mean_current_mA: 74.18612849427201
+      median_current_mA: 65.954193
+      max_current_mA: 162.784729
+      mean_bus_v: 5.017189387627577
+      min_bus_v: 4.81125
+      max_bus_v: 5.07625
+    energy_mJ: 177309.37220862042
+    latency:
+      available: false
+      source: null
+      kind: null
+      sample_count: 0
+      reason: No recognized latency column with valid numeric samples.
+    timing:
+      mean_interval_ms: 8000.000762711864
+      median_interval_ms: 8000.001
+      std_interval_ms: 0.037653290822438686
+      jitter_ms: 0.037653290822438686
+      max_interval_ms: 8000.089
+      min_interval_ms: 7999.911
+    reliability:
+      expected_events: 60
+      actual_events: 60
+      missing_events: 0
+      loss_rate: 0.0
+      duplicates: 0
+    events:
+      event_count: 60
+      mean_event_interval_ms: 8000.000762711864
+      median_event_interval_ms: 8000.001
+      max_event_interval_ms: 8000.089
+  metrics:
+    run_id: W2_wifi_periodic_8s_quiet_telemetry_v2
+    run_sheet_id: R537
+    baseline_run_id: null
+    energy:
+      total_per_event_mJ: 2955.1562034770072
+      incremental_per_event_mJ: null
+    latency:
+      available: false
+      source: null
+      kind: null
+      sample_count: 0
+      reason: No recognized latency column with valid numeric samples.
+    timing:
+      mean_interval_ms: 8000.000762711864
+      median_interval_ms: 8000.001
+      std_interval_ms: 0.037653290822438686
+      jitter_ms: 0.037653290822438686
+      max_interval_ms: 8000.089
+      min_interval_ms: 7999.911
+    reliability:
+      expected_events: 60
+      actual_events: 60
+      missing_events: 0
+      loss_rate: 0.0
+      duplicates: 0
+    event_coupling:
+    power_event_relation:
+    quality_flags:
+      missing_latency: true
+notes: 8s telemetry mid high-interval regime
