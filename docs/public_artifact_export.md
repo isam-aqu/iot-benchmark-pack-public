@@ -166,13 +166,18 @@ The public repository is:
 https://github.com/isam-aqu/iot-benchmark-pack-public.git
 ```
 
+The archived artifact DOI is:
+
+```text
+https://doi.org/10.5281/zenodo.20137155
+```
+
 For later updates, regenerate the export, review it, then commit and push from
 the generated export repository.
 
 After the public GitHub repository is updated, create a versioned GitHub release.
-If a Zenodo DOI is needed, connect Zenodo to the public repository and archive
-that release. Then update the paper's data and code availability statement with
-the public release URL and DOI.
+If the release changes materially, archive the new release on Zenodo and update
+the paper's data and code availability statement with the current release DOI.
 
 Recommended first release metadata:
 

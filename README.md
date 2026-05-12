@@ -10,6 +10,9 @@ in a **Home Assistant-centered smart-home testbed**, using a
 Public artifact repository:
 `https://github.com/isam-aqu/iot-benchmark-pack-public`
 
+Archived release DOI:
+`https://doi.org/10.5281/zenodo.20137155`
+
 Citation metadata is provided in `CITATION.cff`. Source code is licensed under
 the MIT License. Datasets, run metadata, generated tables, generated figures,
 and documentation are licensed under CC BY 4.0 unless otherwise noted in

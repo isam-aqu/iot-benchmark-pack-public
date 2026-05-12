@@ -8,6 +8,7 @@ authors:
     affiliation: "College of Engineering, Al-Quds University, Abu Dis, Jerusalem, Palestine"
 repository-code: "https://github.com/isam-aqu/iot-benchmark-pack-public"
 url: "https://github.com/isam-aqu/iot-benchmark-pack-public"
+doi: "10.5281/zenodo.20137155"
 version: "1.0.0"
 date-released: "2026-05-12"
 license: "MIT"
