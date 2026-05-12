@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite it using the metadata below."
+title: "IoT Benchmark Pack Public Artifact"
+abstract: "Public data, firmware, run metadata, and analysis scripts supporting a measurement-aware evaluation of heterogeneous IoT systems across Wi-Fi, Zigbee, BLE, and ESP32 Wi-Fi telemetry-energy experiments."
+authors:
+  - family-names: "Ishaq"
+    given-names: "Isam"
+    affiliation: "College of Engineering, Al-Quds University, Abu Dis, Jerusalem, Palestine"
+repository-code: "https://github.com/isam-aqu/iot-benchmark-pack-public"
+url: "https://github.com/isam-aqu/iot-benchmark-pack-public"
+version: "1.0.0"
+date-released: "2026-05-12"
+license: "MIT"
+keywords:
+  - "IoT"
+  - "Wi-Fi"
+  - "Zigbee"
+  - "Bluetooth Low Energy"
+  - "MQTT"
+  - "latency"
+  - "energy measurement"
+  - "measurement artifacts"

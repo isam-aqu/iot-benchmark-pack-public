@@ -18,8 +18,8 @@ Sanitization applied during export:
 
 Export summary:
 
-- copied files: 3417
-- text files sanitized: 3379
+- copied files: 3421
+- text files sanitized: 3383
 - excluded tracked files: 45
 
 Before publishing, inspect this folder, initialize it as a fresh Git repository,

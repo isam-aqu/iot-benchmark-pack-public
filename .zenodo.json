@@ -1,0 +1,34 @@
+{
+  "title": "IoT Benchmark Pack Public Artifact",
+  "upload_type": "software",
+  "description": "Public data, firmware, run metadata, and analysis scripts supporting a measurement-aware evaluation of heterogeneous IoT systems across Wi-Fi, Zigbee, BLE, and ESP32 Wi-Fi telemetry-energy experiments. The artifact includes sanitized measurement data and excludes local credentials, host-specific identifiers, manuscript drafts, and private environment files.",
+  "creators": [
+    {
+      "name": "Ishaq, Isam",
+      "affiliation": "College of Engineering, Al-Quds University, Abu Dis, Jerusalem, Palestine"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "IoT",
+    "Wi-Fi",
+    "Zigbee",
+    "Bluetooth Low Energy",
+    "BLE",
+    "MQTT",
+    "latency",
+    "energy measurement",
+    "telemetry overhead",
+    "measurement artifacts",
+    "Home Assistant"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/isam-aqu/iot-benchmark-pack-public",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Source code is licensed under the MIT License. Datasets, run metadata, generated tables, generated figures, and documentation are licensed under CC BY 4.0 unless otherwise noted in DATA_LICENSE.md."
+}

@@ -48,6 +48,7 @@ EXCLUDE_PATTERNS = [
 TEXT_SUFFIXES = {
     "",
     ".csv",
+    ".cff",
     ".h",
     ".ino",
     ".json",
@@ -87,6 +88,10 @@ def git_files(root: Path) -> list[Path]:
     # Include the export tooling even before it has been committed in the
     # private repo, so first-time exports are self-documenting.
     for extra_path in (
+        Path(".zenodo.json"),
+        Path("CITATION.cff"),
+        Path("DATA_LICENSE.md"),
+        Path("LICENSE"),
         Path("python/export_public_artifact.py"),
         Path("docs/public_artifact_export.md"),
     ):
@@ -183,13 +188,20 @@ def write_manifest(
     )
 
 
-def ensure_safe_output(root: Path, out_dir: Path, force: bool) -> None:
+def ensure_safe_output(root: Path, out_dir: Path, force: bool, allow_delete_git_output: bool) -> None:
     out_dir = out_dir.resolve()
     if out_dir == root.resolve():
         raise SystemExit("Refusing to export into the repository root.")
     if root.resolve() in out_dir.parents and out_dir.name in {"", ".", ".."}:
         raise SystemExit("Refusing unsafe output path.")
     if out_dir.exists():
+        if (out_dir / ".git").exists() and not allow_delete_git_output:
+            raise SystemExit(
+                f"Output contains a Git repository: {out_dir}. "
+                "Refusing to delete it. Export to a separate staging directory, "
+                "or pass --allow-delete-git-output if you intentionally want "
+                "to replace this Git working copy."
+            )
         if not force:
             raise SystemExit(f"Output exists: {out_dir}. Re-run with --force to replace it.")
         shutil.rmtree(out_dir)
@@ -200,6 +212,11 @@ def main() -> None:
     parser.add_argument("--out", default=DEFAULT_OUTPUT, help="Output directory")
     parser.add_argument("--force", action="store_true", help="Replace existing output directory")
     parser.add_argument("--dry-run", action="store_true", help="Show counts without copying")
+    parser.add_argument(
+        "--allow-delete-git-output",
+        action="store_true",
+        help="Allow --force to delete an output directory that contains .git",
+    )
     parser.add_argument(
         "--include-excluded-file-list",
         action="store_true",
@@ -220,7 +237,7 @@ def main() -> None:
         print(f"Excluded tracked files: {len(excluded_files)}")
         return
 
-    ensure_safe_output(root, out_dir, args.force)
+    ensure_safe_output(root, out_dir, args.force, args.allow_delete_git_output)
     out_dir.mkdir(parents=True, exist_ok=False)
 
     copied_files: list[str] = []

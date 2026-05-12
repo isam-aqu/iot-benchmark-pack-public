@@ -1,12 +1,16 @@
 {
-  "generated_at_utc": "2026-05-12T10:09:21.996155+00:00",
+  "generated_at_utc": "2026-05-12T11:03:05.210055+00:00",
   "generator": "python/export_public_artifact.py",
-  "copied_file_count": 3417,
+  "copied_file_count": 3421,
   "excluded_file_count": 45,
   "excluded_pattern_count": 22,
   "copied_files": [
     ".gitignore",
+    ".zenodo.json",
+    "CITATION.cff",
     "CURRENT_STATE.md",
+    "DATA_LICENSE.md",
+    "LICENSE",
     "README.md",
     "analysis/README.md",
     "analysis/merged/ble_events.parquet",

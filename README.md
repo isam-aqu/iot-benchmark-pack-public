@@ -7,6 +7,14 @@ A reproducible starter pack for benchmarking heterogeneous IoT protocols
 in a **Home Assistant-centered smart-home testbed**, using a
 **controller-level, application-driven evaluation model**.
 
+Public artifact repository:
+`https://github.com/isam-aqu/iot-benchmark-pack-public`
+
+Citation metadata is provided in `CITATION.cff`. Source code is licensed under
+the MIT License. Datasets, run metadata, generated tables, generated figures,
+and documentation are licensed under CC BY 4.0 unless otherwise noted in
+`DATA_LICENSE.md`.
+
 ------------------------------------------------------------------------
 
 # 🏗️ System Architecture
@@ -671,4 +679,5 @@ observations, and interpretation.
 
 Before publishing the data and analysis package, generate a fresh sanitized
 artifact repository instead of making this private working repository public.
-Usage is documented in `docs/public_artifact_export.md`.
+Usage is documented in `docs/public_artifact_export.md`. The public artifact
+repository is `https://github.com/isam-aqu/iot-benchmark-pack-public.git`.

@@ -33,6 +33,11 @@ Generate or replace the public export:
 python3 python/export_public_artifact.py --force
 ```
 
+The script refuses to delete an output directory that contains a `.git`
+directory. This protects the local public-repository clone from being removed by
+accident. Use a separate staging export when updating an already initialized
+public repository.
+
 Inspect the generated folder before publishing:
 
 ```bash
@@ -89,6 +94,13 @@ The export also writes:
 - `PUBLIC_RELEASE_NOTES.md`
 - `PUBLIC_EXPORT_MANIFEST.json`
 
+The public artifact should also contain:
+
+- `LICENSE` for source code
+- `DATA_LICENSE.md` for datasets, tables, figures, and documentation
+- `CITATION.cff` for GitHub citation metadata
+- `.zenodo.json` for Zenodo release metadata
+
 By default, the manifest records copied files and summary counts. It does not
 list excluded file names.
 
@@ -131,16 +143,42 @@ git init
 git add .
 git commit -m "Initial public artifact release"
 git branch -M main
-git remote add origin <new-public-repo-url>
+git remote add origin https://github.com/isam-aqu/iot-benchmark-pack-public.git
 git push -u origin main
 ```
 
 Do not run these commands from the private working repository root.
 
-After the public GitHub repository is ready, create a versioned GitHub release.
+After this first push, treat the generated folder as a Git working copy. Do not
+run `python3 python/export_public_artifact.py --force` directly over it. For
+updates, use a separate staging folder:
+
+```bash
+python3 python/export_public_artifact.py --out _public_release/iot-benchmark-pack-public-staging --force
+```
+
+Then copy the reviewed staging contents into the local public-repository clone
+and commit from that clone.
+
+The public repository is:
+
+```text
+https://github.com/isam-aqu/iot-benchmark-pack-public.git
+```
+
+For later updates, regenerate the export, review it, then commit and push from
+the generated export repository.
+
+After the public GitHub repository is updated, create a versioned GitHub release.
 If a Zenodo DOI is needed, connect Zenodo to the public repository and archive
 that release. Then update the paper's data and code availability statement with
 the public release URL and DOI.
+
+Recommended first release metadata:
+
+- Tag: `v1.0.0`
+- Title: `IoT Benchmark Pack Public Artifact v1.0.0`
+- Description: `Public data, firmware, run metadata, and analysis scripts supporting the measurement-aware heterogeneous IoT evaluation.`
 
 ## Updating The Export Rules
 
